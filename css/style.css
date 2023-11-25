@@ -1,5 +1,5 @@
 /********** Template CSS **********/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
 
 :root {
     --primary: #05A5C2;
@@ -8,8 +8,8 @@
     --dark: #05A5C2;
 }
 
-*{
-    font-family: 'Montserrat', sans-serif;
+* {
+    font-family: 'Open sans', sans-serif !important;
 }
 
 
@@ -723,4 +723,3 @@ h6,
 .footer .clickable:hover{
     color: #FFFFFF;
 }
-
