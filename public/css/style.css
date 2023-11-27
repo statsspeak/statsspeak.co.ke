@@ -12,6 +12,10 @@
     font-family: 'Open sans', sans-serif !important;
 }
 
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free" !important;
+}
+
 
 /*** Spinner ***/
 #spinner {
