@@ -1,0 +1,96 @@
+---
+import GATag from "../components/webanalytics/google-analytics-tag.astro";
+const { frontmatter } = Astro.props;
+---
+
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="img/faviconn.png" />
+        <link href="img/favicon.ico" rel="icon" />
+        <link rel="stylesheet" type="text/css" href="/css/press-release.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content={frontmatter.summary} />
+        <meta property="og:image" content={frontmatter.image} />
+        <title>Statsspeak - {frontmatter.title}</title>
+        <GATag />
+    </head>
+    <body>
+        <article>
+            <div class="width-limit">
+                <a class="logo" href="/index.html" class="navbar-brand">
+                    <img src="/img/nav-bar-blue-logo.png" class="logo" />
+                </a>
+                <p class="token1">PRESS RELEASE</p>
+                <h1>{frontmatter.title}</h1>
+            </div>
+            <div class="og-image">
+                <img src={frontmatter.image} />
+            </div>
+        </article>
+        <div class="content width-limit">
+            <slot />
+        </div>
+
+        <style lang="scss">
+            body {
+                font-family: Montserrat;
+                font-weight: 300;
+                overflow-x: hidden;
+            }
+
+            .logo {
+                margin-top: 56px;
+                margin-bottom: 100px;
+                img {
+                    width: 100px;
+                }
+            }
+
+            :global(p) {
+                line-height: 1.8rem;
+            }
+
+            .og-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 48px;
+                padding-bottom: 48px;
+                margin-top: 48px;
+                margin-bottom: 48px;
+                background-color: hsla(0, 0%, 80%, 0.1);
+
+                img {
+                    width: 80vw;
+                    max-width: 900px;
+                    border-radius: 2%;
+                }
+            }
+
+            article {
+                width: 100vw;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                padding-bottom: 48px;
+            }
+
+            .width-limit {
+                width: 90vw;
+                margin: auto;
+                max-width: 960px;
+            }
+
+            .token1 {
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: hsl(0, 0%, 50%);
+            }
+        </style>
+    </body>
+</html>
