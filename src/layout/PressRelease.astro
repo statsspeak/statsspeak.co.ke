@@ -3,18 +3,19 @@ import GATag from "../components/webanalytics/google-analytics-tag.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<html>
+<html lang="en">
     <head>
+        <GATag />
         <link rel="shortcut icon" type="image/x-icon" href="img/faviconn.png" />
         <link href="img/favicon.ico" rel="icon" />
         <link rel="stylesheet" type="text/css" href="/css/press-release.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={frontmatter.summary} />
         <meta property="og:title" content={frontmatter.title} />
         <meta property="og:type" content="article" />
         <meta property="og:description" content={frontmatter.summary} />
         <meta property="og:image" content={frontmatter.image} />
         <title>Statsspeak - {frontmatter.title}</title>
-        <GATag />
     </head>
     <body>
         <article>
