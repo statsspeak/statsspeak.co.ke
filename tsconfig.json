@@ -1,0 +1,15 @@
+{
+<<<<<<< HEAD
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "$lib/*": ["src/lib/*"]
+    }
+  }
+}
+=======
+  "extends": "astro/tsconfigs/strict"
+}
+>>>>>>> 550001f (Implemented the Blog section and switched most components to astro)

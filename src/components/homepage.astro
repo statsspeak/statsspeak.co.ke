@@ -1,0 +1,29 @@
+---
+  import "../lib/css/main.css";
+  import AboutUs from "../lib/views/home/about-us.astro";
+  import TopBar from "../lib/views/home/top-bar.svelte";
+  import HeroSection from "../lib/views/home/hero-section.astro";
+  import TrustedBy from "../lib/views/home/trusted-by.astro";
+  import WhyChooseUs from "../lib/views/home/why-choose-us.astro";
+  import OurServices from "../lib/views/home/our-services.astro";
+  import OurTeam from "../lib/views/home/our-team.svelte";
+  import CaseStudies from "../lib/views/home/case-studies.svelte";
+  import Blog from "../lib/views/home/blog.svelte";
+  import ContactUs from "../lib/views/home/contact-us.astro";
+  import Footer from "../lib/views/home/footer.astro";
+---
+
+
+<div class="page">
+  <TopBar client:only="svelte"/>
+  <HeroSection />
+  <TrustedBy />
+  <AboutUs />
+  <WhyChooseUs />
+  <OurServices />
+  <OurTeam client:only="svelte" />
+  <CaseStudies client:only="svelte" />
+  <Blog client:only="svelte" />
+  <ContactUs />
+  <Footer />
+</div>

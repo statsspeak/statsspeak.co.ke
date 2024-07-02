@@ -1,0 +1,80 @@
+<div id="trusted-by" class="trusted-by inline-container">
+    <p class="header">Trusted by your favorite brands</p>
+    <div class="logos">
+        <img src="/partner-logos/amref.png" alt="amref" />
+        <img src="/partner-logos/lipachat.png" alt="amref" />
+        <img src="/partner-logos/moh.png" alt="amref" />
+        <img src="/partner-logos/digitax.png" alt="amref" />
+    </div>
+</div>
+
+<style>
+    .inline-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--gray-100);
+    }
+    .header {
+        color: var(--gray-500);
+        font-weight: 600;
+        font-size: large;
+        text-align: center;
+    }
+    .logos {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        max-width: 200px;
+    }
+
+
+    /*Media Queries */
+    @media (min-width: 320px) and (max-width: 468px) {
+        .trusted-by img {
+            padding-inline: 1.5em;
+        }
+
+        .logos {
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    @media (min-width: 468px) and (max-width: 768px) {
+        .trusted-by img {
+            padding-inline: 1.5em;
+        }
+
+        .logos {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .trusted-by img {
+            padding-inline: 1.5em;
+        }
+
+        .logos {
+            gap: .5em;
+        }
+
+    }
+
+    @media (min-width: 1024px) {
+        .trusted-by img {
+            padding-inline: 1.5em;
+        }
+    }
+
+
+</style>
