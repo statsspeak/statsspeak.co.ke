@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-# Astro Starter Kit: Minimal
-
-```sh
-npm create astro@latest -- --template minimal
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-=======
 # Astro Starter Kit: Basics
 
 ```sh
@@ -26,7 +12,6 @@ npm create astro@latest -- --template basics
 
 ![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
->>>>>>> 550001f (Implemented the Blog section and switched most components to astro)
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
@@ -34,16 +19,12 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-<<<<<<< HEAD
-├── src/
-=======
 │   └── favicon.svg
 ├── src/
 │   ├── components/
 │   │   └── Card.astro
 │   ├── layouts/
 │   │   └── Layout.astro
->>>>>>> 550001f (Implemented the Blog section and switched most components to astro)
 │   └── pages/
 │       └── index.astro
 └── package.json
