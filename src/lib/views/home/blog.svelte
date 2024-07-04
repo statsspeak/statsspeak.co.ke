@@ -94,7 +94,9 @@
 .title {
   font-family: var(--font-family-secondary), "Source Sans 3", sans-serif;
   color: var(--secondary-500);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+  font-size: 2.5em;
+  font-weight: 600;
 }
 
 .description {

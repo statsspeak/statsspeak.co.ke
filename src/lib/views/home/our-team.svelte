@@ -151,10 +151,17 @@ function setParticlesToShow(width: number) {
       padding-bottom: 112px;
   }
 
+  .heading-section h4{
+    font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+
   .title {
       font-family: var(--font-family-secondary), "Source Sans 3", sans-serif;
       color: var(--secondary-500);
-      margin-bottom: 24px;
+      margin-bottom: 14px;
+      font-size: 3em;
+      font-weight: 600;
   }
 
   .member-list-item {

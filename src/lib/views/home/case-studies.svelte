@@ -2,11 +2,11 @@
 import Carousel from 'svelte-carousel'
 
 const images = [
-'/case-studies/nvip.png',
+'/case-studies/case-1.jpg',
 '/case-studies/MoH.png',
-'/case-studies/twiga.png',
-'/case-studies/amref.png',
-'/case-studies/clinton.jpeg'
+'/case-studies/case-3.jpg',
+'/case-studies/amref.jpg',
+'/case-studies/case-4.jpg'
 ];
 </script>
 
@@ -72,7 +72,10 @@ display: flex;
 .title {
 font-family: var(--font-family-secondary), "Source Sans 3", sans-serif;
 color: var(--secondary-500);
-margin-bottom: 24px;
+margin-bottom: 14px;
+font-size: 2em;
+font-weight: 600;
+/* margin-top: .5em; */
 }
 
 .description {
@@ -155,12 +158,17 @@ grid-column: 2 / 3; /* Occupies the second column */
 grid-row: 2 / span 2; /* Spans the second and third rows */
 }
 
-/* .grid-gallery .grid-item:nth-child(4) {
-grid-column: 3 / 4;
-grid-row: 1 / span 2;
-} */
+.grid-gallery .grid-item:nth-child(4) {
+  /* grid-column: 3 / 4;
+  grid-row: 1 / span 2; */
+  border: 1px solid red;
+  }
 
-.grid-gallery .grid-item:nth-child(5) {
+  .grid-gallery .grid-item:nth-child(4):hover {
+    border: none;
+  }
+
+  .grid-gallery .grid-item:nth-child(5) {
 grid-column: 3 / 4;
 grid-row: 1 / span 3;
 }
