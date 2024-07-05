@@ -7,7 +7,7 @@
 <div class="inline-container footer-highlight">
   <h5>Transform Your Business with Insights</h5>
 </div>
-<div class="footer inline-container">
+<div class="footer">
   <div class="footer-section pitch">
       <SSLogoSVG />
       <p>
@@ -18,9 +18,15 @@
   <div class="footer-section">
       <h4>Contact</h4>
       <div class="footer-section-list">
-          <div>+254715644881</div>
-          <div>info @ statsspeak.co.ke</div>
-          <div>10th Floor, Mercure, Upperhill, Nairobi</div>
+        <div>
+          <a href="tel:+254715644881">+254715644881</a>
+        </div>
+        <div>
+          <a href="mailto:info@statsspeak.co.ke">info@statsspeak.co.ke</a>
+        </div>
+        <div>
+          <a href="https://www.google.com/maps/place/Mercure+Nairobi+Upper+Hill/" target="_blank" rel="noopener noreferrer">10th Floor, Mercure, Upperhill, Nairobi</a>
+        </div>
       </div>
   </div>
   <div class="footer-section">
@@ -45,6 +51,7 @@
 </div>
 
 <style lang="scss">
+
   .footer-highlight {
       display: flex;
       align-items: center;
@@ -60,15 +67,16 @@
   }
 
   .footer {
+    width: 1800px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       gap: 24px;
       padding: 56px 0;
       margin: 56px auto;
       margin-bottom: 26px;
-      border-top: 1px solid var(--gray-100);
+      border-top: 1px solid var(--gray-200);
       border-bottom: 1px solid var(--gray-100);
-
+        // border-left: 1px solid red;
       & p {
           font-family: var(--font-family-secondary);
           color: var(--gray-400);
