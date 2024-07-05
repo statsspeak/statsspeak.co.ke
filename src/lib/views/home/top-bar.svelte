@@ -9,7 +9,6 @@
     const html = document.querySelector('html');
     html?.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Save theme preference
-		console.log("Clicked")
   };
 
   onMount(() => {
@@ -80,13 +79,13 @@
       </ul>
     </nav>
   </div>
-  <button class="nav-toggle" aria-label="Toggle navigation" on:click={toggleTheme}>
+  <!-- <button class="nav-toggle" aria-label="Toggle navigation" on:click={toggleTheme}>
     {#if isDarkMode}
       Light Mode
     {:else}
       Dark Mode
     {/if}
-  </button>
+  </button> -->
 </div>
 
 <style>
