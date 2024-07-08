@@ -1,5 +1,6 @@
 ---
-	import OurServicesCover from '../../components/svgs/our-services-cover.svelte';
+	// import OurServicesCover from '../../components/svgs/our-services-cover.svelte';
+ 	import OurServicesCover from '../../components/svgs/our-services-cover-dark.svelte';
 ---
 
 <div id="our-services" class="inline-container z-stack">
@@ -327,8 +328,8 @@
 	}
 
 	:global(.services-cover) {
-		width: 100%;
 		position: absolute;
+		width: 100%;
 		top: 0;
 		height: 100%;
 		/* border-radius: 8px; */
@@ -343,7 +344,8 @@
 	}
 
 	.title {
-		margin-top: 35%;
+		position: relative;
+		margin-top: 8em;
 		margin-bottom: 9em;
 	}
 
@@ -395,6 +397,7 @@
 			border-radius: 8px;
 			min-height: 300px;
 			margin-bottom: 2em;
+			border: var(--service-border)
 		}
 
 		& h4 {
@@ -496,7 +499,7 @@
 	@media (min-width: 1025px) {
 		.section-container {
 		position: static;
-		transform: translateY(-1em);
+		transform: translateY(12em);
 		/* border: 1px solid blue; */
 		padding-inline: 25em;our-services
 		padding-top: 5em;

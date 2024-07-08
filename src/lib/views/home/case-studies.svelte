@@ -63,6 +63,11 @@ const images = [
 </div>
 
 <style>
+
+#our-team {
+  margin-top: 15%;
+}
+
 .heading-section {
 margin-top: 3em;
 display: flex;

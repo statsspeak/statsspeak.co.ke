@@ -85,6 +85,7 @@
       <li><a href="#trusted-by">About us</a></li>
       <li><a href="#our-services">Our Services</a></li>
       <li><a href="#our-team">Our Team</a></li>
+      <li>Resources</li>
     </ul>
   </nav>
   <div class="top-cat">
