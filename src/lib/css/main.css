@@ -162,6 +162,15 @@ body::-webkit-scrollbar {
   --contact-form: #00ABC8;
   --footer-border: 1px solid #1211271;
   --service-border: none;
+  --team-card-bg: #fcfcfc;
+  --tab-border: 1px solid hsl(0, 0%, 80%);
+  --hero-button-bg: #ffffff;
+  --hero-button-text:#00ABC8;
+  --contact-form-bg: inherit;
+  --contact-form-input-bg: inherit;
+  --contact-form-border: 1px solid #bec2d3;
+  --contact-form-text: #D6D6D6;
+  --contact-form-border-rd: 12px;
 }
 
 .dark-mode {
@@ -181,6 +190,15 @@ body::-webkit-scrollbar {
   --contact-form: linear-gradient(89.81deg, #003759 0.14%, #00ABC8 98.85%);
   --footer-border: none;
   --service-border: 1px solid #575756;
+  --team-card-bg: #e1e1e1;
+  --tab-border: 1px solid hsl(0, 0%, 30%);
+  --hero-button-bg: #00ABC8;
+  --hero-button-text: #ffffff;
+  --contact-form-bg: #102A43;
+  --contact-form-input-bg: #001A33;
+  --contact-form-border: none;
+  --contact-form-text: #BEC2D3;
+  --contact-form-border-rd: none;
 }
 
 body {

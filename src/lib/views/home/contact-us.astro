@@ -57,7 +57,7 @@
 			<div>10th Floor, Mercure, Upperhill, Nairobi</div>
 		</div>
 	</div>
-	<div>
+	<div class="form">
 		<form action="https://formspree.io/f/xgegdpyz" method="POST">
 			<div class="form-control">
 				<label for="name">Name</label>
@@ -86,7 +86,7 @@
 	.contact-us {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 24px;
+		// gap: 24px;
 		min-height: 578px;
 		margin-top: 56px;
 		margin-bottom: 56px;
@@ -107,7 +107,7 @@
 		background: var(--contact-form);
 		padding: 24px;
 		color: white;
-        border-radius: 12px;
+    border-radius: var(--contact-form-border-rd);
 	}
 
 	.contact-set {
@@ -132,13 +132,22 @@
 		font-family: var(--font-family-secondary);
 	}
 
+	.form {
+		background-color: var(--contact-form-bg);
+		width: 100%;
+		padding-inline: 4em;
+		padding-block: 2em;
+	}
+
 	form {
 		display: grid;
 		gap: 24px;
+		// background-color: #102A43;
 	}
 	textarea,
 	input {
-		border: 1px solid #bec2d3;
+		background-color: var(--contact-form-input-bg);
+		border: var(--contact-form-border);
 		border-radius: 5px;
 		flex: none;
 		order: 1;
@@ -154,6 +163,10 @@
         &:focus {
             border: 2px solid var(--primary-500);
         }
+
+				&::placeholder {
+					color: var(--contact-form-text)
+				}
 	}
 	textarea {
 		height: 204px;

@@ -85,7 +85,15 @@
       <li><a href="#trusted-by">About us</a></li>
       <li><a href="#our-services">Our Services</a></li>
       <li><a href="#our-team">Our Team</a></li>
-      <li>Resources</li>
+      <li>
+        <a href="#" >Resources</a>
+        <div class="dropdown-content">
+          <a href="/blog">Blog</a>
+          <a href="/case-studies">Case Studies</a>
+          <a href="/whitepapers">Whitepapers</a>
+          <a href="/webinars">Webinars</a>
+        </div>
+      </li>
     </ul>
   </nav>
   <div class="top-cat">
@@ -182,6 +190,30 @@
     padding: 0;
   }
 
+  .nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 160px;
+  z-index: 1;
+}
+
+.nav .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
   .top-cat {
     display: flex;
     align-items: center;
@@ -189,8 +221,8 @@
   }
 
   .top-cat button {
-    color: var(--primary-500);
-    background-color: white;
+    color: var(--hero-button-text);
+    background-color: var(--hero-button-bg);
   }
 
   #mobile-nav {
