@@ -130,7 +130,7 @@
 
 <style>
   .shadow {
-    background: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%);
+    background: var(--linear-gradient);
     box-shadow: 0px 1px 3px rgb(0 0 0 / 0.5), 0px 1px 2px rgb(0 0 0 / 0.1);
   }
 

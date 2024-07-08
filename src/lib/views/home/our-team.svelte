@@ -93,7 +93,7 @@ function setParticlesToShow(width: number) {
           <div class="title">Our Team</div>
           <h4>Meet Our Experienced Team Members</h4>
       </div>
-      <div style="font-family: var(--font-family-secondary)">
+      <div class="description">
           Our team members are more than just experts; they are passionate problem solvers, data enthusiasts, and
           software wizards dedicated to bringing your ideas to life. Get to know the individuals who drive our
           success, and explore the diverse skills and backgrounds they bring to the table. At Statsspeak, it's our
@@ -145,15 +145,20 @@ function setParticlesToShow(width: number) {
 </div>
 
 <style>
+
+    #our-team {
+       margin-top: 4em;
+    }
+
     .heading-section {
         display: grid;
-        grid-template-columns: 0.7fr 1fr;
         padding-bottom: 112px;
     }
 
     .heading-section h4{
-      font-size: 1.4em;
+      font-size: 2em;
       margin-bottom: 1em;
+      color: var(--description-text)
     }
 
     .title {
@@ -166,6 +171,13 @@ function setParticlesToShow(width: number) {
 
     .team {
       height: 100%;
+  }
+
+  .description {
+    font-family: var(--font-family-secondary);
+    margin-top: 1em;
+    color: var(--paragraph-text);
+    font-size: 1.15em;
   }
 
 
@@ -366,7 +378,8 @@ function setParticlesToShow(width: number) {
     @media (min-width: 1281px){
 
         .heading-section {
-            grid-template-columns: 1fr;
+            /* grid-template-columns: 2fr; */
+            grid-template-columns: 0.7fr 1fr;
             padding-bottom: 48px;
             gap: 1em;
         }

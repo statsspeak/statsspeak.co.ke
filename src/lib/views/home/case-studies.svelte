@@ -69,6 +69,10 @@ display: flex;
 /* padding-bottom: 112px; */
 }
 
+.heading-section div h4{
+  color: var(--description-text)
+}
+
 .title {
 font-family: var(--font-family-secondary), "Source Sans 3", sans-serif;
 color: var(--secondary-500);

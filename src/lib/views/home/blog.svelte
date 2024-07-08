@@ -110,12 +110,23 @@
 </div>
 
 <style>
+
+#blog {
+  margin-top: 8em;
+}
+
 .heading-section {
   margin-top: 3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+}
+
+.heading-section div h4 {
+  color: var(--description-text);
+}
+
+.heading-section .description {
+  margin-top: 2em;
 }
 
 .title {
@@ -224,8 +235,14 @@
   margin-block: 1em;
 }
 
+.blog-title h6 {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: var(--blog-heading);
+}
+
 .blog-desc {
-  color: #575756;
+  color: var(--paragraph-text)
 }
 
 .grid-carousel {

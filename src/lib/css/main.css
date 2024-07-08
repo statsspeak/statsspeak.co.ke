@@ -152,6 +152,12 @@ body::-webkit-scrollbar {
   --text-color: #000000;
   --primary-color: #6200ee;
   --secondary-color: #03dac6;
+  --linear-gradient: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%);
+  --description-text: #061C3D;
+  --paragraph-text: #575756;
+  --blog-heading: #061C3D;
+  --footer-text: var(--gray-400);
+
 }
 
 .dark-mode {
@@ -160,6 +166,11 @@ body::-webkit-scrollbar {
   --text-color: #ffffff;
   --primary-color: #bb86fc;
   --secondary-color: #03dac6;
+  --linear-gradient: linear-gradient(89.81deg, #171C2F 0.14%, #2E4057 98.85%);
+  --description-text: #FFFFFF;
+  --paragraph-text: var(--gray-400);
+  --blog-heading: #FFFFFF;
+  --footer-text: #ffffff;
 }
 
 body {
