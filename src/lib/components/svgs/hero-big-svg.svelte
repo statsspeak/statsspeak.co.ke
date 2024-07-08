@@ -1,28 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import HeroBig from '../../components/svgs/hero-big-svg-light.svelte';
 	import HeroBigDark from '../../components/svgs/hero-big-svg-dark.svelte';
-	import { writable } from 'svelte/store';
-
-	// Using a writable store for reactivity
-	let mode = writable('light');
-
-	onMount(() => {
-			if (typeof window !== 'undefined') {
-					const storedMode = localStorage.getItem('mode') || 'light';
-					mode.set(storedMode); // Update the mode reactively
-			}
-	});
-
-	function toggleMode() {
-			mode.update(currentMode => {
-					const newMode = currentMode === 'light' ? 'dark' : 'light';
-					if (typeof window !== 'undefined') {
-							localStorage.setItem('mode', newMode);
-					}
-					return newMode;
-			});
-	}
+	import { mode } from "../../../stores/themeStore"
 </script>
 
 {#if $mode === 'light'}

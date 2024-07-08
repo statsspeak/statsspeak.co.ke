@@ -146,6 +146,8 @@ body::-webkit-scrollbar {
 :root {
   --font-family-primary: 'Montserrat', sans-serif;
   --font-family-secondary: 'Source Sans 3', sans-serif;
+  --gray-400: #9E9E9E; /* Example gray color, adjust as needed */
+  --gray-200: #E0E0E0; /* Example gray color, adjust as needed */
 
   /* Light theme colors */
   --background-color: #ffffff;
@@ -157,10 +159,15 @@ body::-webkit-scrollbar {
   --paragraph-text: #575756;
   --blog-heading: #061C3D;
   --footer-text: var(--gray-400);
-
+  --contact-form: #00ABC8;
+  --footer-border: 1px solid #1211271;
+  --service-border: none;
 }
 
 .dark-mode {
+  /* Ensure gray-400 is defined or adjusted for dark mode if necessary */
+  --gray-400: #676767; /* Adjusted for dark mode */
+
   /* Dark theme colors */
   --background-color: #171C2F;
   --text-color: #ffffff;
@@ -171,6 +178,9 @@ body::-webkit-scrollbar {
   --paragraph-text: var(--gray-400);
   --blog-heading: #FFFFFF;
   --footer-text: #ffffff;
+  --contact-form: linear-gradient(89.81deg, #003759 0.14%, #00ABC8 98.85%);
+  --footer-border: none;
+  --service-border: 1px solid #575756;
 }
 
 body {
