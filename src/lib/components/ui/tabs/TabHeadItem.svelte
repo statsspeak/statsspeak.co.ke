@@ -7,7 +7,7 @@
 
 	$: registrySettings = $tabRegistry[registryId]
 	$: isActiveTab = registrySettings ? registrySettings.activeTab === key : isDefault
-	
+
 </script>
 
 <button
@@ -32,6 +32,7 @@
 		height: 32px;
 		align-items: center;
 		border-bottom: 2.5px solid var(--secondary-500);
+		/* border-bottom: var(--footer-border); */
 		outline: 0;
 		width: 100%;
 
@@ -43,7 +44,7 @@
 		border-bottom: none;
 
 		&:hover {
-		
+
 			transition-duration: 0.1s;
 		}
 	}
