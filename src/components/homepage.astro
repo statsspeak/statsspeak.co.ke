@@ -26,4 +26,157 @@
   <Blog client:only="svelte" />
   <ContactUs />
   <Footer />
-</div>
+  <div id="cookies-banner">
+    <div class="cookie-container">
+      <div class="item">
+        <!-- <i class="fa-solid fa-cookie-bite"></i> -->
+         <img src="cookie-svg.svg"/>
+      </div>
+      <div class="item">
+        <p>We use third-party cookies in order to personalize your site experience.</p>
+      </div>
+      <div class="item">
+        <button id="allow">Allow</button>
+        <button id="decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookiesBanner = document.getElementById('cookies-banner');
+      const allowButton = document.getElementById('allow');
+      const declineButton = document.getElementById('decline');
+
+      // Function to check cookie consent
+      function checkCookieConsent() {
+        const consent = getCookie('cookieConsent');
+        if (consent === 'true') {
+          cookiesBanner.style.display = 'none';
+        } else {
+          cookiesBanner.style.display = 'flex';
+        }
+      }
+
+      // Function to get a cookie by name
+      function getCookie(name) {
+        let cookieArray = document.cookie.split(';');
+        for(let i = 0; i < cookieArray.length; i++) {
+          let cookiePair = cookieArray[i].split('=');
+          if(name === cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+          }
+        }
+        return null;
+      }
+
+      // Function to set a cookie
+      function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+          let date = new Date();
+          date.setTime(date.getTime() + (days*24*60*60*1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+      }
+
+      // Event listener for "Allow" button
+      allowButton.addEventListener('click', function() {
+        setCookie('cookieConsent', 'true', 365);
+        cookiesBanner.style.display = 'none';
+      });
+
+      // Event listener for "Decline" button
+      declineButton.addEventListener('click', function() {
+        // Optionally handle decline. Here, just hiding the banner.
+        cookiesBanner.style.display = 'none';
+      });
+
+      // Check cookie consent on page load
+      checkCookieConsent();
+    });
+  </script>
+
+<style>
+  #cookies-banner{
+  font-size: 0.9rem;
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  border-radius: 10px;
+  background-color: #333333;
+  z-index: 1;
+  margin-bottom: 16px;
+  margin-left: 24%;
+}
+
+.cookie-container {
+  min-height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70px auto 200px;
+  justify-items: center;
+  align-items: center;
+  padding-inline-end: 2em;
+}
+
+.cookie-container img {
+  /* padding: 5px; */
+  /* background-color: #1a1a1a; */
+  /* border-radius: 50%; */
+  /* font-size: 1.5rem; */
+  height: 24px;
+  width: 24px;
+}
+
+.item {
+  display: flex;
+  gap: 1em;
+  /* border: 1px solid red; */
+}
+
+.item p{
+  font-size: 1.4em;
+}
+
+#allow,
+#decline {
+  width: 90px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: 1px solid rgba(211, 211, 211, 0.3);
+  background-color: #1a1a1a;
+  color: white;
+}
+
+#decline {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+@media(max-width:800px){
+  #cookies-banner{
+    width: 100%;
+    margin: auto;
+    border-radius: 0;
+  }
+
+  .cookie-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+</style>
