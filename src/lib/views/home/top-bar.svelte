@@ -86,7 +86,7 @@
       <li><a href="#our-services">Our Services</a></li>
       <li><a href="#our-team">Our Team</a></li>
       <li>
-        <a href="#" >Resources</a>
+        <span class="dropdown" >Resources</span>
         <div class="dropdown-content">
           <a href="/blog">Blog</a>
           <a href="/case-studies">Case Studies</a>
