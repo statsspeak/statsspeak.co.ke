@@ -157,11 +157,6 @@
     /* border: 1px solid reborder: 1px solid redd; */
   }
 
-  .logo{
-    /* width: 90px; */
-    /* border: 1px solid red; */
-  }
-
   nav {
     display: flex;
     align-items: center;
@@ -199,8 +194,12 @@
   z-index: 1;
 }
 
+.dropdown {
+  color: var(--constant-white);
+}
+
 .nav .dropdown-content a {
-  color: black;
+  color: var(--constant-white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
