@@ -1,148 +1,110 @@
 <script lang="ts">
-  import { writable } from 'svelte/store';
-  import { tick, onDestroy, onMount } from 'svelte';
-
-let Carousel: any;
-  let particlesToShow = 1;
-let resizeListener: EventListener;
-
-  onMount(async () => {
-      const module = await import('svelte-carousel');
-      Carousel = module.default;
-
-      if (typeof window !== 'undefined') {
-          // Set initial value based on window width
-          setParticlesToShow(window.innerWidth);
-
-          resizeListener = () => setParticlesToShow(window.innerWidth);
-          window.addEventListener('resize', resizeListener);
+    let currentIndex = 0;
+    const teamMembers = [
+      {
+        name: "Washington Ogol",
+        title: "Chief Executive Officer",
+        img: "/team-photos/washington-ogol.jpeg",
+        desc: "In the realm of leadership, Washington Ogol stands out as a beacon of team collaboration. As the Chief Executive Officer, he embodies a profound affinity for team membership, exemplifying a people-focused approach that permeates our organizational culture."
+      },
+      {
+        name: "Anne Ngatia",
+        title: "Chief Marketing Officer",
+        img: "/team-photos/anne-ngatia.jpeg",
+        desc: "Anne Ngatia is a seasoned financial expert with a passion for driving business growth. As the Chief Financial Officer, she is responsible for overseeing the financial health of the organization and ensuring that our financial strategies align with our long-term goals."
+      },
+      {
+        name: "Alloys Mila",
+        title: "Chief Technology Officer",
+        img: "/team-photos/alloys-mila.jpeg",
+        desc: "Alloys Mila is a visionary technologist with a knack for turning ideas into reality. As the Chief Technology Officer, he leads our technology team in developing innovative solutions that drive business growth and enhance customer experiences."
+      },
+      {
+        name: "Joram Kabach",
+        title: "Chief Operations Officer",
+        img: "/team-photos/joram-kabach.jpeg",
+        desc: "Joram Kabach is a seasoned operations expert with a passion for driving efficiency and excellence. As the Chief Operations Officer, he oversees our day-to-day operations and ensures that our processes are optimized for success."
+      },
+      {
+        name: "Kelvin Adungosi",
+        title: "Chief Data Engineer",
+        img: "/team-photos/kelvin-adungosi.jpeg",
+        desc: "Kelvin Adungosi is a data wizard with a passion for turning data into actionable insights. As the Chief Data Engineer, he leads our data team in developing cutting-edge data solutions that drive business growth and enhance customer experiences."
+      },
+      {
+        name: "Viola Dimo",
+        title: "Chief Human Resources Officer",
+        img: "/team-photos/viola-dimo.jpeg",
+        desc: "Viola Dimo is a seasoned HR professional with a passion for building high-performing teams. As the Chief Human Resources Officer, she is responsible for attracting, developing, and retaining top talent to drive our organizational success."
       }
-  });
+    ];
 
-  onDestroy(() => {
-      if (typeof window !== 'undefined') {
-          window.removeEventListener('resize', resizeListener);
-      }
-  });
+    function nextMember() {
+      currentIndex = (currentIndex + 1) % teamMembers.length;
+    }
 
-function setParticlesToShow(width: number) {
-      if (width < 620) {
-          particlesToShow = 1;
-      } else if (width < 980) {
-          particlesToShow = 2;
-      } else if (width < 1120) {
-          particlesToShow = 3;
-      } else {
-          particlesToShow = 4;
-      }
-  }
+    function prevMember() {
+      currentIndex = (currentIndex - 1 + teamMembers.length) % teamMembers.length;
+    }
+  </script>
 
-  const activeMember = writable('Anne Ngatia');
-
-  let i = 0;
-
-  const team = [
-      {
-          name: 'Anne Ngatia',
-          role: 'CMO'
-      },
-      {
-          name: 'Washington Ogol',
-          role: 'CEO'
-      },
-      {
-          name: 'Joram Kabach',
-          role: 'COO'
-      },
-      {
-          name: 'Alloys Mila',
-          role: 'CTO'
-      },
-      {
-          name: 'Kelvin Adungosi',
-          role: 'Head of Data'
-      },
-      {
-          name: 'Viola Dimo',
-          role: 'Projects'
-      }
-  ];
-
-  async function autoScroll(){
-      await tick();
-      i = (i + 1) % team.length;
-      activeMember.set(team[i].name);
-  }
-
-  const interval = setInterval(autoScroll, 2000);
-
-  onDestroy(() => {
-      clearInterval(interval);
-  });
-
-
-
-  function imageLink(val: string) {
-      return `/team-photos/${val.toLocaleLowerCase().replace(' ', '-')}.jpeg`;
-  }
-</script>
-
-<div id="our-team" class="inline-container">
-  <div class="heading-section">
+  <div id="our-team" class="inline-container">
+    <div class="heading-section">
       <div>
-          <div class="title">Our Team</div>
-          <h4>Meet Our Experienced Team Members</h4>
+        <div class="title">Our Team</div>
+        <h4>Meet Our Experienced Team Members</h4>
       </div>
       <div class="description">
-          Our team members are more than just experts; they are passionate problem solvers, data enthusiasts, and
-          software wizards dedicated to bringing your ideas to life. Get to know the individuals who drive our
-          success, and explore the diverse skills and backgrounds they bring to the table. At Statsspeak, it's our
-          team's collective expertise and unwavering commitment that make the extraordinary possible.
+        Our team members are more than just experts; they are passionate problem solvers, data enthusiasts, and software wizards dedicated to bringing your ideas to life. Get to know the individuals who drive our success, and explore the diverse skills and backgrounds they bring to the table. At Statsspeak, it's our team's collective expertise and unwavering commitment that make the extraordinary possible.
       </div>
+    </div>
+    <div class="team">
+      <div class="flex">
+        <div class="card">
+          <img src={teamMembers[currentIndex].img} alt={teamMembers[currentIndex].name} class="member-image" />
+          <div class="card-info">
+            <div class="card-title">
+              <span>{teamMembers[currentIndex].name}</span>
+            </div>
+            <div class="card-subtitle">
+              <span>{teamMembers[currentIndex].title}</span>
+            </div>
+          </div>
+          <div class="card-buttons">
+            <button class="prev" on:click={prevMember}>
+              <img src="/prev.svg" alt="prev" />
+            </button>
+            <button class="next" on:click={nextMember}>
+              <img src="/next.svg" alt="next" />
+            </button>
+          </div>
+        </div>
+        <img src="/connector.svg" alt="connector" class="connector" />
+        <div class="next-in-line">
+          <div class="images">
+            {#each teamMembers as member, index}
+                {#if index !== currentIndex}
+                    <div class="next-member">
+                        <img src={member.img} class="next-image" alt={member.name} />
+                    </div>
+                {/if}
+            {/each}
+        </div>
+          <div class="member-description">
+            <div class="social-media-links">
+              <img src="/LinkedIN_white.svg" alt="linkedin" />
+              <img src="/Mail.svg" alt="twitter" />
+            </div>
+            <div>
+              <p class="member-description-text">
+                {teamMembers[currentIndex].desc}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="team">
-      {#if Carousel}
-          <Carousel
-              autoplay
-              autoplayDuration={2000}
-              particlesToShow={particlesToShow}
-          >
-              {#each team as member}
-              <div class="member-list-item" class:active={$activeMember === member.name}>
-                  <div class="card">
-                      <div class="card-info">
-                      <div class="card-avatar">
-                          <img
-                          class="member-image"
-                          src={imageLink(member.name)}
-                          alt={member.name.toLocaleLowerCase()}
-                           />
-                      </div>
-                      <div class="card-title">{member.name}</div>
-                      <div class="card-subtitle">{member.role}</div>
-                      </div>
-                      <ul class="card-social">
-                      <li class="card-social__item">
-                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"></path>
-                    </svg></li>
-                    <li class="card-social__item">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"></path>
-                  </svg></li>
-                  <li class="card-social__item">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"></path>
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              </div>
-              {/each}
-          </Carousel>
-      {/if}
-  </div>
-</div>
 
 <style>
 
@@ -181,112 +143,122 @@ function setParticlesToShow(width: number) {
   }
 
 
-  .member-list-item {
-      padding: 1.5em;
-      scroll-snap-align: start;
-      height: 100%;
+    .flex{
+        display: flex;
+        /* justify-content: space-between; */
+        gap: 4em;
+        align-items: flex-start;
+        position: relative;
+        /* flex-wrap: wrap; */
     }
 
-  .card {
-    width: 230px;
-    height: 264px;
-    /* background: #fcfcfc; */
-    background-color: var(--team-card-bg);
-    padding: 2rem 1.5rem;
-    transition: box-shadow .3s ease, transform .2s ease;
-    border-radius: 15px;
-    border-top: .5px solid rgb(140, 140, 140 );
-    border-left: 1px solid rgb(140, 140, 140 );
-    border-right: 2px solid rgb(140, 140, 140 );
-    border-bottom: 2px solid rgb(140, 140, 140 );
-  }
+    .member-image,.next-image{
+        border-radius: 50%;
+    }
 
-  .card .card-avatar img {
-      border: .5px solid rgb(140, 140, 140 );
-  }
+    .next-image {
+        height: 120px;
+        width: 120px;
+    }
 
-  .card-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform .2s ease, opacity .2s ease;
-  }
+    .card {
+        flex: 0 0 300px;
+        min-height: 270px;
+        min-width: 280px;
+        background: var(--team-card-bg);
+        padding: 2em;
+        border-radius: 9px;
+        transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
 
-  .card-social {
-  transform: translateY(200%);
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  opacity: 0;
-  transition: transform .2s ease, opacity .2s ease;
-  }
-
-  .card-social__item {
-  list-style: none;
-  }
-
-  .card-social__item svg {
-  display: block;
-  height: 18px;
-  width: 18px;
-  fill: #515F65;
-  cursor: pointer;
-  transition: fill 0.2s ease ,transform 0.2s ease;
-  }
-
-  /*Text*/
-  .card-title {
-  color: #333;
-  font-size: 1em;
-  font-weight: 600;
-  line-height: 2rem;
-  margin-top: 1em;
-  }
-
-  .card-subtitle {
-  color: #000;
-  font-size: 0.8em;
-  margin-top: .5em;
-  }
-
-  /*Hover*/
-  .card:hover {
-  transform: translateY(-10px);
-  border: .5px solid rgb(140, 140, 140 );
-  }
-
-  .card:hover .card-social {
-  transform: translateY(100%);
-  opacity: 1;
-  }
-
-  .card-social__item svg:hover {
-  fill: #232323;
-  transform: scale(1.1);
-  }
-
-  .card-avatar {
-    position: relative;
-    overflow: hidden;
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    border-radius: 50%;
-  }
-
-  .card-avatar img {
+    .connector {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
+    top: 80%;
+    left: 28%;
     transform: translate(-50%, -50%);
-    transition: transform 0.5s ease;
-  }
+    z-index: 1;
+    /* margin: 0 20px; */
+}
 
-  .card-avatar img:hover {
-    transform: translate(-50%, -50%) scale(1.2); /* Adjust scale value as needed */
-  }
+    .card-title {
+        padding-top: 1em;justify-content: center;
+        align-items: center;
+    }
+
+    .card-subtitle {
+      color: var(--constant-white);
+    }
+
+    .card-title span {
+        font-size: 1.25em;
+        font-weight: 550;
+        color: var(--constant-white);
+    }
+
+    .card-buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 1em;
+        gap: 10px;
+    }
+
+    .card-buttons button {
+        /* width: 10px;
+        height: 10px; */
+        border-radius: 5px;
+        background-color: inherit;
+        border: 1px solid #fff;
+    }
+
+    .next-in-line {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .next-in-line .images {
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-around;
+        /* gap: 1em; */
+        width: 100%;
+        /* margin-top: 1em; */
+    }
+
+
+    .member-description {
+      background: var(--team-card-bg);
+        /* background: linear-gradient(89.81deg, #006F94 0.14%, #00ABC8 98.85%); */
+        width: 100%;
+        height: 100px;
+        margin-top: 2em;
+        border-radius: 9px;
+        display: flex;
+        padding: 1em;
+    }
+
+    .member-description-text {
+        color: white;
+        font-size: 1em;
+        padding: 1em;
+        margin-left: 1em;
+        /* margin-block: 1em; */
+    }
+
+    .social-media-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5em;
+        margin-left: 2em;
+    }
+
+    .social-media-links img {
+        height: 30px;
+        width: 30px;
+    }
+
 
     /* Media Queries */
     @media (min-width: 320px) and (max-width: 480px){
@@ -295,13 +267,6 @@ function setParticlesToShow(width: number) {
             grid-template-columns: 1fr;
             padding-bottom: 48px;
             gap: 1em;
-        }
-
-        .member-list-item {
-            scroll-snap-align: start;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .member-image {
@@ -319,14 +284,6 @@ function setParticlesToShow(width: number) {
             gap: 1em;
         }
 
-        .member-list-item {
-            scroll-snap-align: start;
-            display: flex;
-            /* border: 1px solid red; */
-            justify-content: center;
-            align-items: center;
-        }
-
         .member-image {
             width: 100px;
             height: 100px;
@@ -340,13 +297,6 @@ function setParticlesToShow(width: number) {
             grid-template-columns: 1fr;
             padding-bottom: 48px;
             gap: 1em;
-        }
-
-        .member-list-item {
-            scroll-snap-align: start;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .member-image {
@@ -363,13 +313,6 @@ function setParticlesToShow(width: number) {
             gap: 1em;
         }
 
-        .member-list-item {
-            scroll-snap-align: start;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         .member-image {
             width: 100px;
             height: 100px;
@@ -383,13 +326,6 @@ function setParticlesToShow(width: number) {
             grid-template-columns: 0.7fr 1fr;
             padding-bottom: 48px;
             gap: 1em;
-        }
-
-        .member-list-item {
-            scroll-snap-align: start;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .member-image {
