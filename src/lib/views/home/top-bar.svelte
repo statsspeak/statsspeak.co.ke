@@ -111,7 +111,7 @@
         </svg> |
       {/if}
     </span>
-    <button class="hero-button" onclick={mapScrollIntoView('#contact-us')}>Contact us</button>
+    <button class="hero-button" on:click={mapScrollIntoView('#contact-us')}>Contact us</button>
   </div>
   <div id="mobile-nav">
     <button class="nav-toggle" aria-label="Toggle navigation" on:click={toggleMenu}>
