@@ -104,7 +104,7 @@
 </div>
 </div>
 
-<style lang="scss">
+<!-- <style lang="scss">
 
   .footer-highlight {
       display: flex;
@@ -266,7 +266,174 @@
           padding-bottom: 16px;
       }
   }
+</style> -->
+
+<style lang="scss">
+  .footer-highlight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 12px;
+      background: linear-gradient(89.81deg, #00acc8 0.14%, #003759 98.85%);
+      height: 72px;
+      border-radius: 12px;
+
+      & h5 {
+          color: white;
+      }
+  }
+
+  .footer {
+    width: 100%;
+    max-width: 1800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 56px 24px;
+    margin: 0 auto;
+    border-top: var(--tab-border);
+    border-bottom: var(--footer-border);
+
+    & p {
+        font-family: var(--font-family-secondary);
+        color: var(--footer-text);
+    }
+
+    & h4 {
+        font-size: 1.5rem;
+        color: var(--description-text);
+    }
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 0.5em;
+  }
+
+  .social-media a:hover {
+    cursor: pointer;
+  }
+
+  .footer-section-list a {
+    color: var(--footer-contact-text);
+  }
+
+  .company-list a {
+    color: var(--footer-contact-text);
+  }
+
+  .pitch {
+      display: grid;
+      gap: 32px;
+
+      & p {
+          font-size: small;
+      }
+  }
+
+  .contact-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  :global(.pitch svg) {
+      width: 90px;
+  }
+
+  :global(.footer-section-list) {
+      display: grid;
+      gap: 18px;
+      font-family: var(--font-family-secondary);
+      padding-top: 24px;
+    }
+
+  :global(.footer-section-list a) {
+    font-family: var(--font-family-secondary);
+    color: var(--footer-contact-text);
+    text-decoration: none;
+  }
+
+  .terms {
+    display: flex;
+    font-family: var(--font-family-secondary);
+    color: var(--gray-400);
+    padding-bottom: 26px;
+    align-items: center;
+    gap: 12px;
+
+    a {
+        color: inherit;
+        border-left: 1px solid gray;
+        padding-left: 12px;
+    }
+  }
+
+  .inline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .footer {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 40px 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      grid-template-columns: 1fr;
+      padding: 32px 16px;
+    }
+
+    .inline-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .social-media {
+      flex-direction: row;
+      gap: 12px;
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    .footer {
+      padding: 24px 12px;
+    }
+
+    .footer-section-list {
+      gap: 8px;
+    }
+
+    .terms {
+      padding-bottom: 16px;
+      font-size: 0.875rem;
+
+      a {
+        border-left: none;
+        padding-left: 0;
+      }
+    }
+
+    .inline-container {
+      padding: 12px;
+      gap: 8px;
+
+      .terms.left {
+        margin-left: 0;
+      }
+    }
+  }
 </style>
+
 
 <script type="module">
     const isDarkMode = () => document.body.classList.contains('dark-mode');

@@ -160,8 +160,13 @@
   position: relative;
   /* background-color: #efefef; */
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+  border: inherit;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6); */
+}
+
+.grid-gallery .grid-item:hover {
+  border: 1px solid var(--gray-500);
 }
 
 .grid-gallery .grid-item img {
