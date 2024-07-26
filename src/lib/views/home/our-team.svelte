@@ -179,10 +179,22 @@
     /* flex: 0 0 300px; */
     /* min-height: 270px;
         min-width: 280px; */
+    position: relative;
     background: var(--team-card-bg);
     /* padding: 2em; */
     border-radius: 9px;
     transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    top: 75%;
+    left: 100%; /* Position it to the right of the card */
+    width: 59px; /* Adjust width as needed */
+    height: 5px; /* Adjust height as needed */
+    background: var(--team-card-bg); /* Same background as the card */
+    border-radius: 5px; /* Make the ends rounded */
   }
 
   .connector {
@@ -190,6 +202,7 @@
     top: 80%;
     left: 28%;
     transform: translate(-50%, -50%);
+    display: none;
   }
 
   .card-title {
@@ -270,81 +283,6 @@
     width: 30px;
   }
 
-  /* Media Queries */
-  /* @media (min-width: 320px) and (max-width: 480px){
-
-      .inline-container {
-        margin-top: -70%;
-      }
-
-        .heading-section {
-            grid-template-columns: 1fr;
-            padding-bottom: 48px;
-            gap: 1em;
-        }
-
-        .member-image {
-            width: 50px;
-            height: 50px;
-        }
-
-        .card {
-          min-height: 240px;
-          min-width: 70%;
-          padding: 1em;
-        }
-
-        .card .member-image {
-          height: 100px;
-          width: 100px;
-        }
-
-        .card-buttons button {
-          max-width: 1em;
-        }
-
-        .connector {
-          top: 54%;
-          left: 5%;
-          transform: rotate(90deg);
-          height: 35px;
-          width: 35px;
-        }
-
-
-        .next-in-line .images {
-          display: none;
-        }
-
-        .next-image {
-          height: 100px;
-          width: 100px;
-          box-shadow: none;
-        }
-
-        .next-in-line .member-description {
-          width: 100%;
-          border-radius: 9px;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .next-in-line .social-media-links {
-          display: flex;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: .5em;
-          padding-top: 1em;
-          padding-left: 1em;
-        }
-
-        .flex {
-          display: flex;
-          flex-direction: column;
-          gap: 2em;
-        }
-
-    } */
 
   /* Media Queries */
   @media (min-width: 320px) and (max-width: 480px) {
@@ -505,6 +443,33 @@
 
     .flex {
       display: flex;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    .card::after {
+      top: 105%; /* Position at the bottom edge of the card */
+      left: 20%; /* Center horizontally */
+      width: 30px;
+      transform: translateX(-50%) rotate(90deg); /* Rotate by 90 degrees */
+    }
+  }
+
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .card::after {
+      top: 105%; /* Position at the bottom edge of the card */
+      left: 20%; /* Center horizontally */
+      width: 30px;
+      transform: translateX(-50%) rotate(90deg); /* Rotate by 90 degrees */
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .card::after {
+      top: 80%; /* Position at the bottom edge of the card */
+      left: 100%; /* Center horizontally */
+      width: 30px;
     }
   }
 
