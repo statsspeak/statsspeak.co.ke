@@ -4,6 +4,10 @@
   import Facebook from '../../components/svgs/facebook-svg.svelte';
   import SSLogoSVG from '../../components/svgs/ss-logo-svg.svelte';
   import SectionScrollNav from './section-scroll.astro';
+
+  import Facebooksm from '../../components/svgs/facebook-sm-svg.svelte';
+  import Twittersm from "../../components/svgs/twitter-sm-svg.svelte";
+ import LinkedInsm from "../../components/svgs/linkedIn-sm-svg.svelte";
 ---
 
 <div class="inline-container footer-highlight">
@@ -90,6 +94,18 @@
             <Facebook />
           </a>
       </div>
+      {/* Mobile social media links */}
+      <div class="sm-social-media" >
+        <a href="https://www.linkedin.com/company/statsspeak" target="_blank">
+          <LinkedInsm />
+        </a>
+        <a>
+          <Twittersm />
+        </a>
+        <a>
+          <Facebooksm />
+        </a>
+    </div>
   </div>
 </div>
 <div class="inline-container" >
@@ -152,6 +168,10 @@
   .social-media a:hover {
     cursor: pointer;
   }
+
+  .sm-social-media {
+      display: none;
+    }
 
   .footer-section-list a {
     color: var(--footer-contact-text);
@@ -220,6 +240,8 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       padding: 40px 20px;
     }
+
+
   }
 
   @media (max-width: 768px) {
@@ -237,6 +259,10 @@
     .social-media {
       flex-direction: row;
       gap: 12px;
+    }
+
+    .sm-social-media {
+      display: none;
     }
 
   }
@@ -259,6 +285,25 @@
         padding-left: 0;
       }
     }
+
+    .social-media {
+      display: none;
+    }
+
+    .sm-social-media {
+      display: block;
+    }
+
+    .sm-social-media {
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+    // border: 1px solid red;
+  }
+
+  .social-media a:hover {
+    cursor: pointer;
+  }
 
     .inline-container {
       padding: 12px;
