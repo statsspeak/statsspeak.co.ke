@@ -38,6 +38,8 @@
 	--team-card-bg: #00abc8;
 	--footer-contact-text: #575756;
 	--constant-white: #ffffff;
+	--date-text: #FAA51A;
+
 }
 
 .dark-mode {
@@ -68,6 +70,7 @@
 	--contact-form-border-rd: none;
 	--team-card-bg: linear-gradient(89.81deg, #006f94 0.14%, #00abc8 98.85%);
 	--footer-contact-text: #bec2d3;
+	--date-text: #FAA51A;
 }
 
 body {
