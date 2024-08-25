@@ -1,0 +1,308 @@
+---
+import "../../lib/css/main.css";
+import Footer from "../../lib/views/home/footer.astro";
+import PressReleases from "../../lib/views/home/press-releases.svelte";
+import TopBar from "../../lib/views/home/top-bar.svelte";
+import ReviewStudies from "../../lib/views/home/reviews-studies.svelte"
+
+
+const blogs = [
+  {
+    title: "Blog Post 1",
+    description: "This is the first blog post.",
+    date: "2023-01-01",
+    image: "blogs/blog-1.jpg",
+  },
+  {
+    title: "Blog Post 2",
+    description: "This is the second blog post.",
+    date: "2023-01-02",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    title: "Blog Post 3",
+    description: "This is the third blog post.",
+    date: "2023-01-03",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    title: "Blog Post 4",
+    description: "This is the fourth blog post.",
+    date: "2023-01-04",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    title: "Blog Post 5",
+    description: "This is the fifth blog post.",
+    date: "2023-01-05",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    title: "Blog Post 6",
+    description: "This is the sixth blog post.",
+    date: "2023-01-06",
+    image: "https://via.placeholder.com/150",
+  }]
+
+---
+
+<div class="page resources-section">
+  <TopBar client:only="svelte" />
+  <section class="header">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>></li>
+        <li><a href="#" >Resources</a></li>
+      </ul>
+    </nav>
+    <h3 class="section-heading">Featured Article</h3>
+    <div class="resources-container">
+      <div class="featured-article"  >
+        <div class="article-card">
+          <div class="article-card-image">
+            <img src="/blogs/blog-1.jpg" alt="featured-img" />
+          </div>
+          <div class="author" >
+            <p>By <span class="span-author" >Anne Ngatia</span> | June 20 2023 </p>
+          </div>
+          <div class="article-desc" >
+            <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+            <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            </p>
+          </div>
+          <div>
+            <button>Read More &gt; </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="all-articles" >
+        <div class="all-articles-header" >
+          <h3 class="articles-heading" >All Articles</h3>
+          <p><a href="#" >View All</a></p>
+        </div>
+        <div class="all-articles-container">
+          <ul>
+            <li>
+              <div class="article-card">
+                <div class="article-details" >
+                  <p>By <span class="span-author" >Anne Ngatia</span> | June 14, 2023 </p>
+                </div>
+                <div>
+                  <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="article-card">
+                <div class="article-details" >
+                  <p>By <span class="span-author" >Anne Ngatia</span> | June 14, 2023 </p>
+                </div>
+                <div>
+                  <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="article-card">
+                <div class="article-details" >
+                  <p>By <span class="span-author" >Anne Ngatia</span> | June 14, 2023 </p>
+                </div>
+                <div>
+                  <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="article-card">
+                <div class="article-details" >
+                  <p>By <span class="span-author" >Anne Ngatia</span> | June 14, 2023 </p>
+                </div>
+                <div>
+                  <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="article-card">
+                <div class="article-details" >
+                  <p>By <span class="span-author" >Anne Ngatia</span> | June 14, 2023 </p>
+                </div>
+                <div>
+                  <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="outer-container  resources-page-container" >
+    <ReviewStudies client:only="svelte" />
+    <PressReleases client:only="svelte" />
+  </div>
+  <Footer />
+</div>
+
+<style>
+  .header {
+    min-widht: 100vw;
+    min-height: 5vh;
+    color: white;
+    margin-top: 8em;
+  }
+
+  .outer-container {
+    /* border: 1px solid red; */
+    margin-top: -5%;
+    padding: 0;
+  }
+
+  .resources-page-container :global(.case-studies),
+.resources-page-container :global(.blog) {
+  width: 100vw;
+  max-width: 1400px; /* Adjust this value as needed */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+  .header nav ul {
+    display: flex;
+    gap: 10px;
+    margin-top: 3em;
+    margin-left: 10%;
+  }
+
+  .header nav ul li {
+    list-style: none;
+    font-size: 1.5rem;
+  }
+
+  .header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  .section-heading {
+    margin-left: 10%;
+    margin-top: 1em;
+    color: var(--description-text);
+  }
+
+  .resources-container {
+    display: flex;
+    margin-left: 30%;
+    gap: 10px;
+    margin-top: 3em;
+    margin-left: 10%;
+    min-width: 800px;
+    min-height: 70vh;
+  }
+
+  .featured-article {
+    max-width: 50%
+  }
+
+  .article-card {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 2em;
+    /* margin-top: 1em; */
+  }
+
+  .article-card-image img {
+    min-width: 780px;
+    border-radius: 10px;
+    object-fit: fill;
+    padding-bottom: 1em;
+  }
+
+  .article-desc {
+    margin-block: 1em;
+  }
+
+  .article-desc p {
+    margin-bottom: 2em;
+    /* border: 1px solid red; */
+
+  }
+
+  .articles-heading {
+    color: var(--description-text);
+  }
+
+  .article-desc h3 {
+    font-size: 2.5em;
+    color: var(--description-text);
+    margin-bottom: .5em;
+  }
+
+  .all-articles {
+    margin-top: 1em;
+    width: 100%;
+  }
+
+  .all-articles-header {
+    display: flex;
+    margin-top: -12%;
+    /* margin-left: 5%; */
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5em;
+  }
+
+  .all-articles-header a {
+    color: var(--text-color);
+    /* padding-bottom: .5em; */
+  }
+
+  .all-articles-container {
+    margin-inline: 5em;
+    margin-top: 4em;
+    /* border: 1px solid red; */
+    max-width: 90%;
+  }
+
+  .all-articles-container ul {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0; */
+    /* margin-top: 0; */
+  }
+
+  .all-articles-container ul li {
+    list-style: none;
+  }
+
+ .all-articles-container ul .article-card {
+    margin-top: 0;
+    border: none;
+    padding: 1em;
+  }
+
+  .all-articles-container ul .article-card:hover {
+    border: 1px solid #00ABC8;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .all-articles-container ul .article-card .article-details {
+    /* border: 1px solid red; */
+    margin-bottom: 1em;
+  }
+
+  .all-articles-container ul .article-card h3 {
+    font-size: 2.5rem;
+    color: var(--description-text);
+  }
+
+  .span-author {
+    color: #FAA51A;
+  }
+
+</style>

@@ -1,0 +1,175 @@
+<div id="contact-us" class="contact-us inline-container">
+	<div class="guide">
+		<svg class="figure" width="652" height="578" viewBox="0 0 652 578" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect
+				opacity="0.06"
+				x="600.141"
+				y="242.576"
+				width="162.632"
+				height="162.632"
+				rx="22.7893"
+				transform="rotate(120 600.141 242.576)"
+				fill="#F7F7F7"></rect>
+			<path
+				opacity="0.06"
+				d="M400.549 349.277C419.156 360.02 428.46 365.391 430.903 374.509C433.346 383.627 427.975 392.931 417.232 411.538L381.494 473.437C370.751 492.045 365.38 501.348 356.262 503.792C347.144 506.235 337.84 500.863 319.233 490.12L257.334 454.383C238.726 443.64 229.423 438.268 226.979 429.15C224.536 420.032 229.908 410.729 240.651 392.121L276.388 330.222C287.131 311.615 292.503 302.311 301.621 299.868C310.739 297.425 320.042 302.796 338.65 313.539L400.549 349.277Z"
+				fill="#F7F7F7"></path>
+			<rect
+				opacity="0.06"
+				x="273.57"
+				y="275.964"
+				width="162.632"
+				height="162.632"
+				rx="22.7893"
+				transform="rotate(120 273.57 275.964)"
+				fill="#F7F7F7"></rect>
+			<rect
+				opacity="0.06"
+				x="433.691"
+				y="146.475"
+				width="162.632"
+				height="162.632"
+				rx="22.7893"
+				transform="rotate(120 433.691 146.475)"
+				fill="#F7F7F7"></rect>
+		</svg>
+		<div class="title-highlight">Lets talk</div>
+		<h4 style="color:white">Reach out to us!</h4>
+		<p>Have a project in mind that you think we’d be a great fit for it? We’d love to know what you’re thinking</p>
+		<div class="contact-set">
+			<h4>Contact Info</h4>
+			<div>+254715644881</div>
+			<div>info @ statsspeak.co.ke</div>
+			<div>10th Floor, Mercure, Upperhill, Nairobi</div>
+		</div>
+	</div>
+	<div class="form">
+		<form action="https://formspree.io/f/xgegdpyz" method="POST">
+			<div class="form-control">
+				<label for="name">Name</label>
+				<input name="name" placeholder="Jane Doe" />
+			</div>
+			<div class="form-control">
+				<label for="email">Email</label>
+				<input name="email" placeholder="email@example.com" />
+			</div>
+			<div class="form-control">
+				<label for="subject">Subject</label>
+				<input name="subject" placeholder="Subject" />
+			</div>
+			<div class="form-control">
+				<label for="message">Message</label>
+				<textarea name="message" placeholder="What's on you mind?"> </textarea>
+			</div>
+			<div class="button-control">
+				<button>Send Message</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<style lang="scss">
+	.contact-us {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		// gap: 24px;
+		min-height: 578px;
+		margin-top: 56px;
+		margin-bottom: 56px;
+	}
+
+	@media (max-width: 900px) {
+		.contact-us {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.guide {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		background: var(--contact-form);
+		padding: 24px;
+		color: white;
+		border-radius: var(--contact-form-border-rd);
+	}
+
+	.contact-set {
+		color: white;
+		display: grid;
+		gap: 24px;
+		padding-top: 80px;
+
+		h4 {
+			color: white;
+		}
+	}
+
+	.figure {
+		position: absolute;
+		top: 0px;
+		width: 100%;
+	}
+
+	.title-highlight {
+		color: var(--secondary-500);
+		font-family: var(--font-family-secondary);
+	}
+
+	.form {
+		background-color: var(--contact-form-bg);
+		width: 100%;
+		padding-inline: 4em;
+		padding-block: 2em;
+	}
+
+	form {
+		display: grid;
+		gap: 24px;
+		// background-color: #102A43;
+	}
+	textarea,
+	input {
+		background-color: var(--contact-form-input-bg);
+		border: var(--contact-form-border);
+		border-radius: 5px;
+		flex: none;
+		order: 1;
+		align-self: stretch;
+		flex-grow: 0;
+		height: 48px;
+		padding: 12px;
+		font-size: 18px;
+		font-family: var(--font-family-secondary);
+		outline: none;
+		transition: all 0.5s;
+
+		&:focus {
+			border: 2px solid var(--primary-500);
+		}
+
+		&::placeholder {
+			color: var(--contact-form-text);
+		}
+	}
+	textarea {
+		height: 204px;
+	}
+	.form-control {
+		display: grid;
+		gap: 4px;
+
+		& label {
+			font-weight: bold;
+		}
+	}
+	.button-control {
+		display: flex;
+
+		& button {
+			margin-left: auto;
+		}
+	}
+</style>

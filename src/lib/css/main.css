@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+@import url("./_reboot.css");
+@import url("./colors.css");
+@import url("./box-shadows.css");
+@import url("./buttons.css");
+@import url("./typography.css");
+@import url("./layout.css");
+
+:root {
+	--font-family-primary: "Montserrat", sans-serif;
+	--font-family-secondary: "Source Sans 3", sans-serif;
+	--gray-400: #9e9e9e; /* Example gray color, adjust as needed */
+	--gray-200: #e0e0e0; /* Example gray color, adjust as needed */
+
+	/* Light theme colors */
+	--background-color: #ffffff;
+	--text-color: #000000;
+	--primary-color: #6200ee;
+	--secondary-color: #03dac6;
+	--linear-gradient: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%);
+	--description-text: #061c3d;
+	--paragraph-text: #575756;
+	--blog-heading: #061c3d;
+	--footer-text: var(--gray-400);
+	--contact-form: #00abc8;
+	--footer-border: 1px solid #1211271;
+	--service-border: none;
+	--team-card-bg: #fcfcfc;
+	--tab-border: 1px solid hsl(0, 0%, 80%);
+	--hero-button-bg: #ffffff;
+	--hero-button-text: #00abc8;
+	--contact-form-bg: inherit;
+	--contact-form-input-bg: inherit;
+	--contact-form-border: 1px solid #bec2d3;
+	--contact-form-text: #d6d6d6;
+	--contact-form-border-rd: 12px;
+	--team-card-bg: #00abc8;
+	--footer-contact-text: #575756;
+	--constant-white: #ffffff;
+}
+
+.dark-mode {
+	/* Ensure gray-400 is defined or adjusted for dark mode if necessary */
+	--gray-400: #676767; /* Adjusted for dark mode */
+
+	/* Dark theme colors */
+	--background-color: #171c2f;
+	--text-color: #ffffff;
+	--primary-color: #bb86fc;
+	--secondary-color: #03dac6;
+	--linear-gradient: linear-gradient(89.81deg, #171c2f 0.14%, #2e4057 98.85%);
+	--description-text: #ffffff;
+	--paragraph-text: var(--gray-400);
+	--blog-heading: #ffffff;
+	--footer-text: #ffffff;
+	--contact-form: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%);
+	--footer-border: none;
+	--service-border: 1px solid #575756;
+	--team-card-bg: #e1e1e1;
+	--tab-border: 1px solid hsl(0, 0%, 30%);
+	--hero-button-bg: #00abc8;
+	--hero-button-text: #ffffff;
+	--contact-form-bg: #102a43;
+	--contact-form-input-bg: #001a33;
+	--contact-form-border: none;
+	--contact-form-text: #bec2d3;
+	--contact-form-border-rd: none;
+	--team-card-bg: linear-gradient(89.81deg, #006f94 0.14%, #00abc8 98.85%);
+	--footer-contact-text: #bec2d3;
+}
+
+body {
+	font-family: var(--font-family-primary);
+	background-color: var(--background-color);
+	color: var(--text-color);
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+}
+
+/* Other styles */
+body,
+.font-primary {
+	font-family: var(--font-family-primary);
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+.font-secondary {
+	font-family: var(--font-family-secondary);
+	font-optical-sizing: auto;
+}
+
+html,
+body {
+	overflow: hidden;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.inline-container {
+	margin: auto;
+	width: 90vw;
+	max-width: 1450px;
+	/* border: 1px solid red; */
+}
+
+.flex-centre-children {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}

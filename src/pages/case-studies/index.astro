@@ -1,0 +1,31 @@
+---
+  // import { CaseStudy } from '$lib/components/CaseStudy.astro'
+  import TopBar from '../../lib/views/home/top-bar.svelte'
+---
+
+<!-- <TopBar client:only="svelte"/> -->
+<div class="container" >
+  <img src="in-progress.jpg" alt="In Progress" />
+  <p>Development in Progress</p>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #d0d7df;
+    /* border: 1px solid red; */
+  }
+  img {
+    width: 50%;
+  }
+
+  p {
+    font-size: 2em;
+    color: #1a1a1a;
+    font-family: 'Roboto', sans-serif;
+  }
+</style>

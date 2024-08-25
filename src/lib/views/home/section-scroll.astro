@@ -1,0 +1,52 @@
+---
+let classname = ""; // Initialize with a default value
+export { classname as class };
+
+// This script will now run on the client side after the component is loaded
+const setupScroll = () => {
+	document.querySelectorAll("a[data-scroll]").forEach(anchor => {
+		const target = anchor.getAttribute("href");
+		if (target) {
+			// Ensure target is not null or undefined
+			anchor.addEventListener("click", evt => {
+				evt.preventDefault();
+				const targetElement = document.querySelector(target);
+				if (targetElement) {
+					// Check if the element exists before calling scrollIntoView
+					targetElement.scrollIntoView({ behavior: "smooth" });
+				}
+			});
+		}
+	});
+};
+---
+
+<ul class={classname}>
+	<a href="#top" data-scroll>Home</a>
+	<a href="#trusted-by" data-scroll>About us</a>
+	<a href="#our-services" data-scroll>Our Services</a>
+	<a href="#our-team" data-scroll>Our Team</a>
+</ul>
+
+<style>
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	a {
+		color: var(--footer-contact-text);
+		/* font-weight: 500; */
+		text-decoration: none;
+		display: block;
+		padding: 8px 0;
+	}
+
+	a:hover {
+		color: #00acc8;
+	}
+</style>
+
+<script type="module" is:inline>
+	setupScroll();
+</script>

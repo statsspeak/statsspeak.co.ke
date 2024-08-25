@@ -1,0 +1,33 @@
+button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-inline-start: 24px;
+	padding-inline-end: 24px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	gap: 10px;
+
+	left: 1.5px;
+	top: 64px;
+
+	color: white;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	background-color: var(--primary-500);
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+button.primary {
+	background-color: var(--secondary-500);
+}
+
+button:hover {
+	background-color: var(--primary-700);
+}
+
+button:disabled {
+	background-color: var(--gray-200);
+}
