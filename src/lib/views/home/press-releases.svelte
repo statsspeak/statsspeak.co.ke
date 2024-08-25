@@ -35,7 +35,7 @@
   <div class="blog-section grid-gallery">
     {#each blogs as blog, index}
       <div class="grid-item" key={index}>
-        <a href="/case-studies">
+        <a href="/resources">
           <img src={blog.image} alt={'Case Study ' + (index + 1)} />
           <div class="overlay"></div>
           <div class="overlay-text">
@@ -77,7 +77,7 @@
     >
       {#each blogs as blog, index}
         <div class="grid-item" key={index}>
-          <a href='/case-studies'>
+          <a href='/resources'>
             <img src={blog} alt={'Case Study ' + (index + 1)} />
             <div class="overlay"></div>
             <div class="overlay-text">
@@ -118,7 +118,7 @@
   font-family: var(--font-family-secondary), "Source Sans 3", sans-serif;
   font-size: 2.5em;
   font-weight: 600;
-  margin-left: -20%;
+  /* margin-left: -20%; */
 }
 
 
@@ -135,7 +135,7 @@
   grid-template-rows: auto;
   grid-gap: 2em;
   /* border: 1px solid red; */
-  margin-left: -10%;
+  margin-left: -2%;
 }
 
 .grid-gallery .grid-item {

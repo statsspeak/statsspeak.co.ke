@@ -20,7 +20,7 @@
   <div class="grid-gallery">
     {#each images as image, index}
       <div class="grid-item" key={index}>
-        <a href='/case-studies'>
+        <a href='/resources'>
           <img src={image} alt={'Case Study ' + (index + 1)} />
           <div class="overlay">
             <div class="overlay-text">Read Case Study</div>
@@ -43,7 +43,7 @@
       >
         {#each images as image, index}
           <div class="grid-item" key={index}>
-            <a href={image}>
+            <a href="/resources">
               <img src={image} alt={'Case Study ' + (index + 1)} />
               <div class="overlay">
                 <div class="overlay-text">Read Case Study</div>
@@ -79,7 +79,7 @@
   margin-bottom: 14px;
   font-size: 2em;
   font-weight: 600;
-  margin-left: -80%;
+  /* margin-left: -80%; */
   /* margin-top: .5em; */
   /* border: 1px solid red; */
   }
@@ -94,7 +94,7 @@
   min-width: 100%;
   /* m-width: 1400px; */
   /* margin: 0 auto; */
-  margin-left: -10%;
+  margin-left: -2%;
   padding: 50px 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

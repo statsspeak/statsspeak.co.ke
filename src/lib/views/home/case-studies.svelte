@@ -26,7 +26,7 @@
   <div class="grid-gallery">
     {#each images as image, index}
       <div class="grid-item" key={index}>
-        <a href="/case-studies">
+        <a href="/resources">
           <img src={image} alt={'Case Study ' + (index + 1)} />
           <div class="overlay">
             <div class="overlay-text">Read Case Study</div>
@@ -49,7 +49,7 @@
       >
         {#each images as image, index}
           <div class="grid-item" key={index}>
-            <a href={image}>
+            <a href="/resources">
               <img src={image} alt={'Case Study ' + (index + 1)} />
               <div class="overlay">
                 <div class="overlay-text">Read Case Study</div>
