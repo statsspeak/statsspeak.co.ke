@@ -19,11 +19,11 @@ import Footer from "../../../lib/views/home/footer.astro";
   <header class="header-c">
     <nav>
       <ul>
-        <li>Home</li>
+        <li><a href="/">Home</a></li>
         <span>></span>
-        <li>Resources</li>
+        <li><a href="/resources">Resources</a></li>
         <span>></span>
-        <li>Case Studies</li>
+        <li><a href="/case-studies">Case Studies</a></li>
       </ul>
     </nav>
   </header>
@@ -134,6 +134,8 @@ import Footer from "../../../lib/views/home/footer.astro";
   .page {
     /* border: 1px solid red; */
     margin-block: 6%;
+    transition: all 0.3s ease;
+
   }
 
   .flex {
@@ -157,8 +159,10 @@ import Footer from "../../../lib/views/home/footer.astro";
     list-style-type: none;
   }
 
-  .header-c nav ul li {
+  .header-c nav ul li a {
     font-size: 1.25em;
+    text-decoration: none;
+    color: var(--description-text);
   }
 
   .header-c nav ul li:hover {
@@ -199,6 +203,7 @@ import Footer from "../../../lib/views/home/footer.astro";
     /* border: 1px solid red; */
     max-width: 900px;
     line-height: 1.6;
+    margin-top: -4em;
   }
 
   .case-desc h3 {
@@ -210,6 +215,7 @@ import Footer from "../../../lib/views/home/footer.astro";
     /* border: 1px solid red; */
     margin-inline: 8em;
     padding-inline: 2em;
+    margin-top: -4em;
   }
 
   .metadata {
@@ -222,10 +228,10 @@ import Footer from "../../../lib/views/home/footer.astro";
 
   .metadata div {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     /* align-items: center; */
     /* border: 1px solid red; */
-    max-width: 70%;
+    max-width: 80%;
     /* padding-block: 2em; */
   }
 
@@ -248,6 +254,13 @@ import Footer from "../../../lib/views/home/footer.astro";
     border-bottom: var(--service-border);
     margin-block: 2em;
     padding-bottom: 1.5em;
+  }
+
+  .study-container:hover {
+    /* border: var(--hero-button-bg); */
+    cursor: pointer;
+    /* padding-left: 10px; */
+    transition: all 0.3s ease;
   }
 
   .study-container h6 {
