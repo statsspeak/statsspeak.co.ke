@@ -1,0 +1,308 @@
+---
+import TopBar from "../../../../lib/views/home/top-bar.svelte";
+import "../../../../lib/css/main.css";
+import Footer from "../../../../lib/views/home/footer.astro";
+
+// import '../styles.css';
+---
+
+<TopBar client:only="svelte"/>
+<section class="page" >
+
+  <!-- Header  -->
+  <header class="header-c">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <span>></span>
+        <li><a href="/resources">Resources</a></li>
+        <span>></span>
+        <li><a href="/resources/blog-articles">Blog Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+   <main class="main-blog inline-container" >
+      <div class="main-blog-header" >
+        <div class="author">
+          <img src="/blogs/avatar.jpeg" alt="author" />
+          <div class="author-info">
+            <span>Anne Ngatia | June 14, 2024</span>
+          </div>
+        </div>
+        <div class="main-blog-title">
+          <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+        </div>
+      </div>
+
+      <!-- Featured Blog -->
+      <div>
+        <div>
+          <img src="/blogs/main-blog.jpg" alt="featured-post" />
+        </div>
+        <div class="blog-desc" >
+          <p>
+            In the rapidly evolving landscape of business and technology, data has emerged as the lifeblood that fuels innovation and drives decision-making. For those new to the realm of data consulting, the journey might seem overwhelming. Fear not, for this beginner's guide aims to demystify the intricacies of data consulting, providing a clear roadmap for navigating the vast and dynamic world of data.
+          </p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>At the heart of effective data consulting lies the understanding that not all data is created equal. Quality data forms the foundation upon which successful strategies are built. But what makes data 'quality'? In essence, it's data that is accurate, reliable, relevant, and timely. The guide begins by unraveling the importance of quality data and how businesses can ensure the integrity of their data assets.</p>
+          <br />
+          <br />
+          <p>
+            To prevent the chaos that can ensue from unregulated data usage, this guide introduces the concept of data governance. Learn how to establish policies, procedures, and standards that ensure data quality, privacy, and compliance. We emphasize the role of data stewards and the importance of fostering a data-centric culture within organizations.
+          </p>
+          <br />
+          <br />
+          <p>
+            Armed with foundational knowledge, beginners are ready to embark on their first data consulting projects. This section provides a step-by-step guide on initiating data projects, from defining project objectives and requirements to selecting the right team and technologies. Real-world examples and best practices illuminate the path for those taking their first strides in the field.
+          </p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>
+            Demystifying data consulting is about empowerment. As beginners gain a deeper understanding of the significance of quality data, the intricacies of data-driven decision-making, and the nuances of data technologies, they become equipped to contribute meaningfully to the data landscape. This guide serves as a compass, guiding newcomers through the exciting and ever-expanding realm of data consulting. Embrace the journey, for in the world of data, possibilities are boundless.
+          </p>
+        </div>
+      </div>
+
+      <!-- Other Blogs -->
+       <div class="other-blogs">
+          <h4>What To Read Next</h4>
+          <div class="other-blogs-grid">
+            <a href="/resources/blog-articles/one">
+              <div class="blog-card">
+                  <div class="image-container">
+                    <img src="/blogs/blog-2.png" alt="article" />
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="blog-metadata">
+                    <div class="blog-author">
+                      <p>Alloys | Dec 16, 2023</p>
+                    </div>
+                    <div>
+                      <h5>The Art of Software Consulting</h5>
+                      <p>From defining project requirements to selecting the right technology stack, we explore every facet of the software development life cycle. and the intricacies of software consulting.</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/resources/blog-articles/one">
+              <div class="blog-card">
+                <div class="image-container">
+                  <img src="/blogs/blog-3.png" alt="article" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="blog-metadata" >
+                  <div class="blog-author">
+                    <p>Alloys | Dec 16, 2023</p>
+                  </div>
+                  <div>
+                    <h5>The Art of Software Consulting</h5>
+                    <p>From defining project requirements to selecting the right technology stack, we explore every facet of the software development life cycle. and the intricacies of software consulting.</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="/resources/blog-articles/one" >
+              <div class="blog-card">
+                <div class="image-container">
+                  <img src="/blogs/blog-1.jpg" alt="article" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="blog-metadata" >
+                  <div class="blog-author">
+                    <p>Alloys | Dec 16, 2023</p>
+                  </div>
+                  <div>
+                    <h5>The Art of Software Consulting</h5>
+                    <p>From defining project requirements to selecting the right technology stack, we explore every facet of the software development life cycle. and the intricacies of software consulting.</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+       </div>
+
+   </main>
+
+
+</section>
+
+<Footer/>
+
+<style>
+.header-c {
+    margin-top: 6%;
+    margin-left: 17%;
+  }
+
+  .header-c nav ul {
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+  }
+
+  .header-c nav ul li a {
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--description-text);
+  }
+
+  .header-c nav ul li:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .main-blog {
+    padding-inline: 1em;
+    margin-top: 4em;
+    /* border: 1px solid red; */
+  }
+
+  .main-blog-header .author {
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+    /* border: 1px solid red; */
+    gap: 1em;
+  }
+
+  .main-blog-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .main-blog-title {
+    margin-block: 2em;
+  }
+
+  .main-blog-title h3 {
+    color: var(--description-text);
+  }
+
+  .blog-desc {
+    /* border: 1px solid red; */
+    margin-block: 2em;
+    max-width: 70%;
+  }
+
+  .blog-desc p {
+    /* color: var(--description-text); */
+    font-size: 1.125em;
+    color: #BEC2D3;
+  }
+
+  .other-blogs {
+    margin-block: 8em;
+    max-width: 95%;
+    /* border: 1px solid red; */
+  }
+
+  .other-blogs h4 {
+    color: var(--description-text);
+    margin-bottom: 2em;
+  }
+
+  .other-blogs-grid a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  .other-blogs-grid .blog-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* padding: 1em; */
+  overflow: hidden; /* Ensures the overlay doesn't go outside the card */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+
+.other-blogs-grid .blog-card img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.other-blogs-grid .blog-card:hover img {
+  transform: scale(1.1); /* Zooms in the image on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blog-card:hover {
+  cursor: pointer;
+  /* border: 1px solid var(--tab-border); */
+  border: 1px solid var(--gray-500);
+}
+
+.blog-card:hover .overlay {
+  opacity: 1;
+}
+
+
+  .other-blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+
+  .other-blogs-grid .blog-card img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .other-blogs-grid .blog-card .blog-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* border: 1px solid red; */
+    padding-inline-start: 1em;
+    padding-bottom: 1em;
+  }
+
+  .blog-metadata h5 {
+    color: var(--description-text);
+    margin-block: .5em;
+  }
+
+  .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Make sure the overlay covers the full height of the container */
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+  .blog-card:hover .overlay {
+    opacity: 1;
+  }
+
+</style>
