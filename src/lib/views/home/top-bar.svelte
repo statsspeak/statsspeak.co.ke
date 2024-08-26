@@ -78,10 +78,10 @@
    </div>
    <nav class="nav">
      <ul>
-       <li><a href="#top">Home</a></li>
-       <li><a href="#trusted-by">About us</a></li>
-       <li><a href="#our-services">Our Services</a></li>
-       <li><a href="#our-team">Our Team</a></li>
+       <li><a href="/">Home</a></li>
+       <li><a href="/">About us</a></li>
+       <li><a href="/">Our Services</a></li>
+       <li><a href="/">Our Team</a></li>
        <li>
          <span class="dropdown"><a href="/resources">Resources</a></span>
          <div class="dropdown-content">
@@ -153,7 +153,7 @@
      ></div>
      <nav class="nav-menu" class:show-menu={menuOpen}>
        <ul>
-         <li><a href="#top">Home</a></li>
+         <li><a href="#top#our-team">Home</a></li>
          <li><a href="#trusted-by">About us</a></li>
          <li><a href="#our-services">Our Services</a></li>
          <li><a href="#our-team">Our Team</a></li>

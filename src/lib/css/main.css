@@ -39,7 +39,7 @@
 	--footer-contact-text: #575756;
 	--constant-white: #ffffff;
 	--date-text: #FAA51A;
-
+	--constant-blue: #00ABC8;
 }
 
 .dark-mode {
@@ -71,6 +71,7 @@
 	--team-card-bg: linear-gradient(89.81deg, #006f94 0.14%, #00abc8 98.85%);
 	--footer-contact-text: #bec2d3;
 	--date-text: #FAA51A;
+	--constant-blue: #00ABC8;
 }
 
 body {

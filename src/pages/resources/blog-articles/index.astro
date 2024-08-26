@@ -1,0 +1,52 @@
+---
+import TopBar from "../../../lib/views/home/top-bar.svelte";
+import "../../../lib/css/main.css";
+---
+
+<TopBar client:only="svelte"/>
+<section class="page">
+  <header class="header-c">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <span>></span>
+        <li><a href="/resources">Resources</a></li>
+        <span>></span>
+        <li><a href="/resources/blog-articles">Blog Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+</section>
+
+<style>
+
+.page {
+    /* border: 1px solid red; */
+    margin-block: 6%;
+    transition: all 0.3s ease;
+
+  }
+
+.header-c {
+    /* border: 1px solid red; */
+    /* max-width: 1600px; */
+    margin-left: 10%;
+  }
+
+  .header-c nav ul {
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+  }
+
+  .header-c nav ul li a {
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--description-text);
+  }
+
+  .header-c nav ul li:hover {
+    border-bottom: 1px solid white;
+  }
+</style>
