@@ -1,0 +1,217 @@
+---
+import TopBar from "../../../../lib/views/home/top-bar.svelte";
+import "../../../../lib/css/main.css"
+import Footer from "../../../../lib/views/home/footer.astro";
+import MessageIcon from "../../../../lib/components/svgs/message-icon.svelte";
+import ShareIcon from "../../../../lib/components/svgs/share-icon.svelte";
+import BookMarkIcon from "../../../../lib/components/svgs/bookmark-icon.svelte";
+---
+
+<TopBar client:only="svelte" />
+
+<section class="page" >
+
+    <!-- Header  -->
+    <header class="header-c inline-container">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <span>></span>
+          <li><a href="/resources">Resources</a></li>
+          <span>></span>
+          <li><a href="/resources/press-releases">Press Releases</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section  -->
+     <main>
+        <div class="main-release" >
+          <img src="/press-releases/main-release.jpg" alt="main-release" />
+        </div>
+
+        <div class="main-release-header inline-container">
+          <div class="header-desc" >
+            <div class="author" >
+              <img src="/team-photos/anne-ngatia.jpeg" alt="author" />
+              <p>Anne Ngatia | June 23, 2024</p>
+            </div>
+            <div class="socials" >
+              <div>
+                <!-- <img src="message-icon.svg" alt="" /> -->
+                 <MessageIcon />
+              </div>
+              <div>
+                <!-- <img src="share-icon.svg" alt="" /> -->
+                 <ShareIcon />
+              </div>
+              <div>
+                <!-- <img src="bookmark-icon.svg" alt="" /> -->
+                 <BookMarkIcon />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content inline-container">
+          <h3>Open-Source Data Initiative Gains Momentum with Major Industry Players Joining Forces:</h3>
+          <p>
+            The Open-Source Data Initiative (OSDI), a collaborative effort aiming to accelerate innovation and accessibility in the field of data science through open-source tools and standards, today announced a significant expansion with the addition of several major industry players as members.
+            Joining the OSDI are [List of new industry players and their brief descriptions]. These leading companies bring diverse expertise and resources to the initiative, strengthening its ability to develop and promote open-source solutions that benefit the entire data science community.
+          </p>
+          <br />
+          <br />
+          <br />
+          <p>
+            "We are thrilled to welcome these esteemed organizations to the OSDI,” said [Name and title of OSDI representative]. “Their commitment to open-source collaboration will be instrumental in advancing our mission of democratizing data science and fostering a more vibrant and inclusive ecosystem.”
+          </p>
+          <br />
+          <br />
+          <br />
+
+          <p>The new members of the OSDI will contribute to the initiative in various ways, including:</p>
+          <ul>
+            <li>Sharing expertise and resources: Participating in working groups, contributing to open-source projects, and providing funding for development efforts.</li>
+            <li>Promoting adoption of open-source tools and standards: Collaborating on educational initiatives, organizing events, and advocating for the benefits of open-source data science solutions.</li>
+            <li>Developing new open-source projects: Identifying critical needs within the data science community and working together to create innovative solutions that are freely available and accessible to all.</li>
+          </ul>
+
+          <img src="/press-releases/featured-release.jpg" alt="featured" class="featured" />
+
+          <p>
+            Developing new open-source projects: Identifying critical needs within the data science community and working together to create innovative solutions that are freely available and accessible to all.
+          </p>
+          <br />
+          <br />
+          <br />
+          <ul>
+            <li>
+              Lower the barriers to entry for data science: Making it easier for individuals and organizations of all sizes to participate in data-driven activities.
+            </li>
+            <li>
+              Accelerate innovation: Fostering a culture of collaboration and sharing that leads to the rapid development of new and powerful data science tools and methods.
+            </li>
+            <li>
+              Ensure wider accessibility and adoption: Making sure that the benefits of data science are available to everyone, regardless of their resources or background.
+            </li>
+          </ul>
+
+          <br />
+          <br />
+          <br />
+
+          <p>
+            With the addition of these major industry players, the OSDI is well-positioned to achieve its ambitious goals and make a significant impact on the future of data science.
+About the Open-Source Data Initiative
+          </p>
+
+          <br />
+          <br />
+          <br />
+
+          <p>
+            The Open-Source Data Initiative (OSDI) is a collaborative effort bringing together individuals, organizations, and institutions committed to advancing the field of data science through open-source tools and standards. The OSDI aims to accelerate innovation, promote accessibility, and foster a vibrant and inclusive data science community.
+          </p>
+
+        </div>
+
+
+
+     </main>
+
+</section>
+
+<Footer />
+
+<style>
+  .header-c {
+    margin-top: 6%;
+    /* margin-left: 1em; */
+  }
+
+  .header-c nav ul {
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+  }
+
+  .header-c nav ul li a {
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--description-text);
+  }
+
+  .header-c nav ul li:hover {
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .main-release img {
+    width: 100%;
+    max-height:100%;
+    margin-top: 4em;
+  }
+
+  .header-desc {
+    /* border: 1px solid red; */
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .author img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+  }
+
+  .socials {
+    display: flex;
+    gap: .75em;
+  }
+
+  .socials:hover {
+    cursor: pointer;
+  }
+
+  .content {
+    /* border: 1px solid red; */
+    margin-top: 3em;
+    margin-bottom: 8em;
+  }
+
+  .content h3 {
+    color: var(--description-text);
+    margin-bottom: 1em;
+  }
+
+  .content p {
+    color: var(--blog-text);
+    font-size: 1.25em;
+    max-width: 90%;
+  }
+
+  .content ul {
+    /* border: 1px solid red; */
+    padding-inline: 2em;
+    padding-block: 1em;
+  }
+
+  .content ul li {
+    max-width: 90%;
+    font-size: 1.25em;
+    line-height: 1.5;
+    color: var(--blog-text);
+  }
+
+  .featured {
+    margin-block: 2em;
+  }
+
+</style>
