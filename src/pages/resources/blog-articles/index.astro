@@ -1,5 +1,6 @@
 ---
 import TopBar from "../../../lib/views/home/top-bar.svelte";
+import Footer from "../../../lib/views/home/footer.astro";
 import "../../../lib/css/main.css";
 ---
 
@@ -20,16 +21,84 @@ import "../../../lib/css/main.css";
   </header>
 
   <!-- Main Content -->
-   <div class="featured-post">
-      <div>
-        <span>Featured Post</span>
-        <h4>Demystifying Data: A Beginner's Guide to Data Consulting</h4>
-        <p>By <span>Anne Ngatia</span> </p>
-        <p></p>
+  <div class="featured-post">
+       <div class="flex" >
+       <div class="main-post">
+         <span class="heading" >Featured Post</span>
+         <h3>Demystifying Data: A Beginner's Guide to Data Consulting</h3>
+         <p>By <span>Anne Ngatia</span> | June 14, 2023</p>
+         <p class="desc">From understanding the significance of quality data to implementing data-driven decision-making, we unravel the complexities of managing and optimizing your data.</p>
+         <button>Read More &gt;</button>
+        </div>
+        <div class="featured-post-image" >
+          <img src="/case-studies/featured-post.jpg" alt="featured-post" />
+        </div>
       </div>
-   </div>
+    </div>
+  </a>
+    <!-- All Articles  -->
+    <div class="all-posts inline-container">
+      <div class="all-posts-header" >
+        <h3>All Posts</h3>
+      </div>
+
+      <div class="articles">
+        <a href="/resources/blog-articles/one">
+          <div class="article-card">
+            <img src="/blogs/blog-2.png" alt="article" />
+            <div class="article-metadata" >
+                <p>Alloys | Dec 16, 2023</p>
+                <h3>Crafting Seamless Solutions: The Art of Software Consulting</h3>
+                <p>From defining project requirements to selecting the right technology stack, we explore every facet of the software development life cycle. and the intricacies of software consulting.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/resources/blog-articles/one">
+          <div class="article-card">
+            <img src="/blogs/blog-3.png" alt="article" />
+            <div class="article-metadata" >
+                <p>Alloys | Dec 16, 2023</p>
+                <h3>Strategies for Safeguarding Your Information</h3>
+                <p>This article delves into the world of data security, offering insights into best practices, emerging trends, and strategies to protect your information assets.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/resources/blog-articles/one">
+          <div class="article-card">
+            <img src="/blogs/blog-4.jpg" alt="article" />
+            <div class="article-metadata" >
+                <p>Alloys | Dec 16, 2023</p>
+                <h3>Innovations, Partnerships, and Milestones in Data and Software</h3>
+                <p>Stay informed about the latest happenings in the world of data and software. Our news section brings you real-time updates on our agency's achievements, collaborations, and technological breakthroughs.</p>
+            </div>
+          </div>
+          </a>
+        <a href="/resources/blog-articles/one">
+          <div class="article-card">
+            <img src="/blogs/blog-5.jpg" alt="article" />
+            <div class="article-metadata" >
+                <p>Alloys | Dec 16, 2023</p>
+                <h3>The Rise of AI in Software Development</h3>
+                <p>Uncover the transformative impact of Artificial Intelligence on the software development landscape. From intelligent automation to machine learning algorithms, we explore how AI is reshaping the way we build, deploy, and manage software applications.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/resources/blog-articles/one">
+          <div class="article-card">
+            <img src="/blogs/blog-6.jpg" alt="article" />
+            <div class="article-metadata" >
+                <p>Alloys | Dec 16, 2023</p>
+                <h3>Data Governance: The Key to Unlocking Data's Full Potential</h3>
+                <p>Delve into the crucial role of data governance in ensuring the quality, security, and effective utilization of your data assets. Learn practical strategies to implement robust data governance frameworks and foster a data-driven culture within your organization.</p>
+            </div>
+          </div>
+          </a>
+      </div>
+
+    </div>
 
 </section>
+<Footer />
 
 <style>
 
@@ -43,7 +112,7 @@ import "../../../lib/css/main.css";
 .header-c {
     /* border: 1px solid red; */
     /* max-width: 1600px; */
-    margin-left: 10%;
+    margin-left: 13%;
   }
 
   .header-c nav ul {
@@ -61,4 +130,120 @@ import "../../../lib/css/main.css";
   .header-c nav ul li:hover {
     border-bottom: 1px solid white;
   }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .featured-post {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    background: var(--featured-post-bg);
+    /* margin-left: 10%; */
+    /* margin-right: 10%g-i; */
+    min-height: 20vh;
+    padding-inline: 10%;
+    padding-block: 5%;
+  }
+
+  .featured-post h3 {
+    font-size: 2.5em;
+    color: var(--description-text);
+  }
+
+  .main-post {
+    /* border: 1px solid red; */
+    max-width: 50%;
+    padding-inline: 4em;
+  }
+
+  .main-post h3 {
+    margin-block: .75em;
+  }
+
+  .main-post .heading {
+    font-weight: 600;
+  }
+
+  .main-post span {
+    color: var(--date-text);
+  }
+
+  .main-post .desc {
+    margin-top: 2em;
+    max-width: 90%;
+    font-size: 1.105em;
+  }
+
+  .main-post button {
+    border: none;
+    padding: 1em 2em;
+    margin-top: 3em;
+    cursor: pointer;
+  }
+
+  .featured-post-image img {
+    /* width: 550px;
+    height: 350px; */
+    /* border: 1px solid red; */
+  }
+
+  .all-posts {
+    /* border: 1px solid red; */
+    margin-top: 5em;
+  }
+
+  .articles a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  .all-posts-header h3 {
+    /* border: 1px solid red; */
+    margin-bottom: 1.5em;
+    color: var(--description-text);
+    border-bottom: var(--tab-border);
+    padding-bottom: 1em;
+  }
+
+  .article-card {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 4em;
+    gap: 2em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-bottom: var(--tab-border);
+  }
+
+  .article-card:hover {
+    border-bottom: 1px solid var(--constant-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .article-card img {
+    /* border: 1px solid red; */
+    min-width: 394px;
+    min-height: 223px;
+  }
+
+  .article-metadata {
+    /* border: 1px solid red; */
+    max-width: 70%;
+    padding-inline: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .article-metadata h3 {
+    color: var(--description-text);
+  }
+
 </style>
