@@ -1,6 +1,8 @@
 <script lang="ts">
    import SsLogoSvg from "../../components/svgs/ss-logo-svg.svelte";
    import { onMount } from "svelte";
+	import SunSvg from "../../components/svgs/sun-svg.svelte";
+	import MoonSvg from "../../components/svgs/moon-svg.svelte";
 
    let isDarkMode = false; // Default is light mode
 
@@ -83,12 +85,14 @@
        <li><a href="/">Our Services</a></li>
        <li><a href="/">Our Team</a></li>
        <li>
-         <span class="dropdown"><a href="/resources">Resources</a></span>
+        <span class="dropdown">
+          <a href="/resources">Resources <img src="Chevron-down.svg" alt="chev" class="chevron-icon" /></a>
+        </span>
          <div class="dropdown-content">
-           <a href="/blog">Blog</a>
-           <a href="/case-studies">Case Studies</a>
-           <a href="/whitepapers">Whitepapers</a>
-           <a href="/webinars">Webinars</a>
+           <a href="/resources/case-studies">Case Studies</a>
+           <a href="/resources/blog-articles">Blog Articles</a>
+           <a href="/resources/press-releases">Press Releases</a>
+           <a href="/resources/careers">Careers</a>
          </div>
        </li>
      </ul>
@@ -97,46 +101,19 @@
      <span class="mode-toggle">
        {#if isDarkMode}
          <!-- Moon SVG -->
-         <svg
-           width="20"
-           height="20"
-           viewBox="0 0 24 24"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             d="M21.752 15.002C21.502 15.002 21.262 14.962 21.022 14.882C18.342 14.062 16.442 11.882 16.442 9.002C16.442 7.422 16.962 5.902 17.922 4.702C18.262 4.262 18.282 3.632 17.952 3.192C17.612 2.742 17.012 2.642 16.562 2.982C14.282 4.632 12.812 7.202 12.812 9.992C12.812 14.992 17.322 18.002 21.742 18.002C23.082 18.002 24.352 17.712 25.472 17.172C25.872 16.972 26.062 16.502 25.932 16.052C25.802 15.602 25.352 15.352 24.912 15.502C23.942 15.842 22.862 16.002 21.752 16.002C21.752 15.002 21.752 15.002 21.752 15.002Z"
-             fill="white"
-           />
-         </svg> |
+         <MoonSvg /> |
        {:else}
          <!-- Sun SVG -->
-         <svg
-           width="20"
-           height="20"
-           viewBox="0 0 20 20"
-           fill="none"
-           xmlns="http://www.w3.org/2000/svg"
-         >
-           <path
-             fill-rule="evenodd"
-             clip-rule="evenodd"
-             d="M9.75 6.5C7.95507 6.5 6.5 7.95507 6.5 9.75C6.5 11.5449 7.95507 13 9.75 13C11.5449 13 13 11.5449 13 9.75C13 7.95507 11.5449 6.5 9.75 6.5ZM5 9.75C5 7.12665 7.12665 5 9.75 5C12.3734 5 14.5 7.12665 14.5 9.75C14.5 12.3734 12.3734 14.5 9.75 14.5C7.12665 14.5 5 12.3734 5 9.75Z"
-             fill="white"
-           />
-           <path
-             fill-rule="evenodd"
-             clip-rule="evenodd"
-             d="M9.75 0C10.1642 0 10.5 0.335786 10.5 0.75V1.75C10.5 2.16421 10.1642 2.5 9.75 2.5C9.33579 2.5 9 2.16421 9 1.75V0.75C9 0.335786 9.33579 0 9.75 0ZM2.85567 2.85567C3.14856 2.56278 3.62344 2.56278 3.91633 2.85567L4.62333 3.56267C4.91622 3.85556 4.91622 4.33044 4.62333 4.62333C4.33044 4.91622 3.85556 4.91622 3.56267 4.62333L2.85567 3.91633C2.56278 3.62344 2.56278 3.14856 2.85567 2.85567ZM16.6443 2.85567C16.9372 3.14856 16.9372 3.62344 16.6443 3.91633L15.9373 4.62333C15.6444 4.91622 15.1696 4.91622 14.8767 4.62333C14.5838 4.33044 14.5838 3.85556 14.8767 3.56267L15.5837 2.85567C15.8766 2.56278 16.3514 2.56278 16.6443 2.85567ZM0 9.75C0 9.33579 0.335786 9 0.75 9H1.75C2.16421 9 2.5 9.33579 2.5 9.75C2.5 10.1642 2.16421 10.5 1.75 10.5H0.75C0.335786 10.5 0 10.1642 0 9.75ZM17 9.75C17 9.33579 17.3358 9 17.75 9H18.75C19.1642 9 19.5 9.33579 19.5 9.75C19.5 10.1642 19.1642 10.5 18.75 10.5H17.75C17.3358 10.5 17 10.1642 17 9.75ZM4.62333 14.8767C4.91622 15.1696 4.91622 15.6444 4.62333 15.9373L3.91633 16.6443C3.62344 16.9372 3.14856 16.9372 2.85567 16.6443C2.56278 16.3514 2.56278 15.8766 2.85567 15.5837L3.56267 14.8767C3.85556 14.5838 4.33044 14.5838 4.62333 14.8767ZM14.8767 14.8767C15.1696 14.5838 15.6444 14.5838 15.9373 14.8767L16.6443 15.5837C16.9372 15.8766 16.9372 16.3514 16.6443 16.6443C16.3514 16.9372 15.8766 16.9372 15.5837 16.6443L14.8767 15.9373C14.5838 15.6444 14.5838 15.1696 14.8767 14.8767ZM9.75 17C10.1642 17 10.5 17.3358 10.5 17.75V18.75C10.5 19.1642 10.1642 19.5 9.75 19.5C9.33579 19.5 9 19.1642 9 18.75V17.75C9 17.3358 9.33579 17 9.75 17Z"
-             fill="white"
-           />
-         </svg> |
+         <SunSvg /> |
        {/if}
      </span>
+     <a href="/" >
      <button
        class="hero-button"
-       on:click={() => mapScrollIntoView("#contact-us")}>Contact us</button
-     >
+       on:click={() => mapScrollIntoView("#contact-us")}>
+       Contact us
+      </button>
+    </a>
    </div>
    <div id="mobile-nav">
      <button
@@ -202,11 +179,15 @@
      /* border: 1px solid red; */
    }
 
-   nav a {
+   a {
+    text-decoration: none;
+   }
+
+   /* nav a {
      color: white;
      text-decoration: none;
      font-size: 1em;
-   }
+   } */
 
    nav a:hover {
      text-decoration: underline;
@@ -220,33 +201,80 @@
      padding: 0;
    }
 
+   .nav ul li {
+    position: relative;
+   }
+
    .nav .dropdown-content {
      display: none;
      position: absolute;
-     background-color: #f9f9f9;
+     background-color: var(--dropdown-bg);
      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
      min-width: 160px;
      z-index: 1;
+     /* margin-top: 1.25em; */
    }
 
-   .dropdown {
-     color: var(--constant-white);
-   }
+   .chevron-icon {
+  vertical-align: middle; /* Aligns the chevron vertically with the text */
+  width: 12px;
+  height: 12px;
+}
 
-   .nav .dropdown-content a {
+.dropdown {
+  color: var(--text-color);
+  display: flex;
+  gap: 0.3em; /* Adjust gap to ensure even spacing between text and icon */
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex; /* Ensure flex display for proper alignment */
+  align-items: center;
+}
+
+
+   /* .dropdown {
+     color: var(--text-color);
+     display: flex;
+     gap: .5em;
+     justify-content: center;
+     align-items: center;
+   } */
+
+   /* .nav .dropdown-content a {
      color: var(--constant-white);
      padding: 12px 16px;
      text-decoration: none;
      display: block;
-   }
+   } */
+
+   .nav .dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
    .nav .dropdown-content a:hover {
-     background-color: #f1f1f1;
+     border-bottom: 1px solid var(--constant-blue);
    }
 
    .nav .dropdown:hover .dropdown-content {
      display: block;
    }
+
+   .nav li:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown {
+    cursor: pointer;
+  }
 
    .top-cat {
      display: flex;

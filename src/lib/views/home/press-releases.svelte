@@ -35,7 +35,7 @@
   <div class="blog-section grid-gallery">
     {#each blogs as blog, index}
       <div class="grid-item" key={index}>
-        <a href="/resources">
+        <a href="/resources/press-releases">
           <img src={blog.image} alt={'Case Study ' + (index + 1)} />
           <div class="overlay"></div>
           <div class="overlay-text">
@@ -77,7 +77,7 @@
     >
       {#each blogs as blog, index}
         <div class="grid-item" key={index}>
-          <a href='/resources'>
+          <a href='/resources/press-releases'>
             <img src={blog} alt={'Case Study ' + (index + 1)} />
             <div class="overlay"></div>
             <div class="overlay-text">
