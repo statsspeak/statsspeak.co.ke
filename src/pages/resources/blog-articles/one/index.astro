@@ -10,7 +10,7 @@ import Footer from "../../../../lib/views/home/footer.astro";
 <section class="page" >
 
   <!-- Header  -->
-  <header class="header-c">
+  <header class="header-c inline-container">
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -142,7 +142,7 @@ import Footer from "../../../../lib/views/home/footer.astro";
 <style>
 .header-c {
     margin-top: 6%;
-    margin-left: 17%;
+    /* margin-left: 1em; */
   }
 
   .header-c nav ul {
@@ -158,7 +158,7 @@ import Footer from "../../../../lib/views/home/footer.astro";
   }
 
   .header-c nav ul li:hover {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--text-color);
   }
 
   .main-blog {
