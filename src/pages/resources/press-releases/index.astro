@@ -1,0 +1,148 @@
+---
+import "../../../lib/css/main.css";
+import TopBar from "../../../lib/views/home/top-bar.svelte";
+import Footer from "../../../lib/views/home/footer.astro";
+---
+
+<TopBar client:only="svelte"/>
+
+<section class="page">
+  <header class="header-c inline-container">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <span>></span>
+        <li><a href="/resources">Resources</a></li>
+        <span>></span>
+        <li><a href="/resources/press-releases">Press Releases</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-section inline-container">
+    <h3>Press Releases</h3>
+    <div class="main-section-grid" >
+        <div class="grid-card">
+          <img src="/press-releases/press-release-1.jpg" alt="press-release" />
+        </div>
+        <div class="grid-card">
+          <img src="/press-releases/press-release-2.jpg" alt="press-release" />
+          <div class="desc" >
+          <h6>Cybersecurity Firm Discovers Major Vulnerabilities in Popular Software Applications</h6>
+          <p>Warns users about critical vulnerabilities discovered in widely used software applications. This timely release urges users to update their software immediately and outlines steps to mitigate potential security risks. </p>
+        </div>
+        </div>
+        <div class="grid-card">
+          <img src="/press-releases/press-release-3.jpg" alt="press-release" />
+          <div class="desc">
+            <h6>Breakthrough in Quantum Computing Opens Doors for Powerful Data Processing and Analysis</h6>
+            <p>A significant breakthrough in quantum computing technology, marking a major step towards harnessing the immense potential of quantum processors. This advancement promises to revolutionize data processing.</p>
+          </div>
+        </div>
+        <div class="grid-card">
+          <img src="/press-releases/press-release-1.jpg" alt="press-release" />
+        </div>
+        <div class="grid-card">
+          <img src="/press-releases/press-release-2.jpg" alt="press-release" />
+          <div class="desc">
+            <h6>Cybersecurity Firm Discovers Major Vulnerabilities in Popular Software Applications</h6>
+            <p>Warns users about critical vulnerabilities discovered in widely used software applications. This timely release urges users to update their software immediately and outlines steps to mitigate potential security risks. </p>
+          </div>
+        </div>
+        <div class="grid-card">
+          <img src="/press-releases/press-release-3.jpg" alt="press-release" />
+          <div class="desc">
+            <h6>Breakthrough in Quantum Computing Opens Doors for Powerful Data Processing and Analysis</h6>
+            <p>A significant breakthrough in quantum computing technology, marking a major step towards harnessing the immense potential of quantum processors. This advancement promises to revolutionize data processing.</p>
+          </div>
+        </div>
+    </div>
+  </main>
+
+</section>
+<Footer />
+
+<style>
+
+.header-c {
+    margin-top: 6%;
+    /* margin-left: 17%; */
+  }
+
+  .header-c nav ul {
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+  }
+
+  .header-c nav ul li a {
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--description-text);
+  }
+
+  .header-c nav ul li:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .main-section {
+    padding-inline: 1em;
+    margin-bottom: 8em;
+    /* border: 1px solid red; */
+  }
+
+
+  .main-section h3 {
+    margin-top: 2em;
+    color: var(--description-text);
+    font-size: 3em;
+  }
+
+  /* .main-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+    border: 1px solid red;
+  } */
+
+  .main-section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.grid-card {
+  min-width: 350px;
+  min-height: 410px;
+  margin-bottom: 1em;
+  /* border: 1px solid red; */
+}
+
+.grid-card:hover {
+  border: var(--tab-border);
+  cursor: pointer;
+}
+
+.grid-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.grid-card h6 {
+  margin-block: 1em;
+  color: var(--description-text);  font-size: 1.5em;
+  font-weight: 550;
+}
+
+.grid-card p {
+  color: var(--blog-text);
+  /* font-size: 1.25em; */
+}
+
+.desc {
+  padding-inline: 1em;
+}
+
+</style>
