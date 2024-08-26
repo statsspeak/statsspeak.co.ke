@@ -41,6 +41,7 @@
 	--date-text: #FAA51A;
 	--constant-blue: #00ABC8;
 	--featured-post-bg: #F0FBFC;
+	--blog-text: #222225;
 }
 
 .dark-mode {
@@ -74,6 +75,7 @@
 	--date-text: #FAA51A;
 	--constant-blue: #00ABC8;
 	--featured-post-bg: linear-gradient(89.81deg, #003759 0.14%, #00ABC8 98.85%);
+	--blog-text: #BEC2D3;
 }
 
 body {
