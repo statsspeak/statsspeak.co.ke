@@ -34,7 +34,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
         <button>View Open Roles</button>
       </div>
       <div>
-        <img src="/careers/work-with-us.jpg" alt="work" />
+        <img src="/careers/serious.jpg" alt="work" />
       </div>
     </div>
 
@@ -48,7 +48,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     </div>
 
     <div class="mission inline-container" >
-      <img src="/careers/mission.jpg" alt="mission" />
+      <img src="/careers/colleagues.jpg" alt="mission" />
     </div>
 
     <div class="work-culture inline-container" >
@@ -74,13 +74,15 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
 
     <div class="job-opportunities inline-container">
       <h3>Job Opportunities</h3>
-      <p>Browse through vacancies. internships and job postings at Statsspeak</p>
+      <p class="desc">Browse through vacancies. internships and job postings at Statsspeak</p>
       <div class="jobs">
         <div class="job-card">
           <h4 class="title" >Product Manager</h4>
           <div class="flex-c" >
             <p>Full Time - <span>On Site</span></p>
-            <ArrSvg />
+            <a href="/">
+              <ArrSvg />
+            </a>
           </div>
           <p>Shape the future of Data and software: Join our passionate team and drive the vision for our next groundbreaking product.</p>
         </div>
@@ -88,7 +90,9 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
           <h4 class="title" >Human Resources Manager</h4>
           <div class="flex-c">
             <p>Full Time - <span>On Site</span></p>
+            <a href="/">
             <ArrSvg />
+            </a>
           </div>
           <p>Join a team that values Employee experience. We believe in collaboration, growth, and making a difference together.</p>
         </div>
@@ -162,40 +166,57 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     margin-top: 5em;
   }
 
+  .work-with-us img{
+    max-width: 680px;
+    max-height: 450px;
+  }
+
   .flex {
     display: flex;
-    margin-top: 4em;
+    margin-top: 10em;
     align-items: center;
-    gap: 2em;
+    gap: 2em;    /* width: 120%; */
+    margin-bottom: 2em;
+    /* border: 1px solid red; */
   }
 
   .flex h3 {
     color: var(--description-text);
     font-size: 1.85em;
+    /* border: 1px solid red; */
+    min-width: 50%;
   }
 
   .flex p {
-    max-width: 60%;
+    min-width: 60%;
     color: var(--blog-text);
     font-size: 1.15em;
-    padding-inline: 3em;
+    padding-inline-end: 6em;
     /* border: 1px solid red; */
+    margin-left: -3em;
   }
 
   .mission {
-    /* padding-left: 3em; */
+    padding-left: 3em;
   }
 
   .mission img {
     margin-top: 5em;
+    width: 1280px;
+    max-height: 525px;
+    object-fit: cover;
   }
 
   .work-culture  {
-    margin-top: 5em;
+    margin-top: 8em;
+    margin-bottom: 5em;
+    padding-block: 4em;
+    /* border: 1px solid red; */
   }
 
   .work-culture h3 {
-    color: var(--description-text)
+    color: var(--description-text);
+    margin-bottom: 2em;
   }
 
   .work-culture-grid {
@@ -234,12 +255,13 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
 
   .job-opportunities h3 {
     color: var(--description-text);
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
 
   .jobs {
     margin-top: 2em;
   }
+
 
   .job-card {
     background: var(--job-card-bg);

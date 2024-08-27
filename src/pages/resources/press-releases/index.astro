@@ -23,13 +23,11 @@ import Footer from "../../../lib/views/home/footer.astro";
     <h3>Press Releases</h3>
     <div class="main-section-grid" >
       <a href="/resources/press-releases/one">
-        <div class="grid-card">
+        <!-- <div class="grid-card">
           <img src="/press-releases/press-release-1.jpg" alt="press-release" />
-        </div>
-      </a>
-      <a href="/resources/press-releases/one">
+        </div> -->
         <div class="grid-card">
-          <img src="/press-releases/press-release-2.jpg" alt="press-release" />
+          <img src="/careers/cyber-sec.jpg" alt="press-release" />
           <div class="desc" >
           <h6>Cybersecurity Firm Discovers Major Vulnerabilities in Popular Software Applications</h6>
           <p>Warns users about critical vulnerabilities discovered in widely used software applications. This timely release urges users to update their software immediately and outlines steps to mitigate potential security risks. </p>
@@ -38,7 +36,16 @@ import Footer from "../../../lib/views/home/footer.astro";
       </a>
       <a href="/resources/press-releases/one">
         <div class="grid-card">
-          <img src="/press-releases/press-release-3.jpg" alt="press-release" />
+          <img src="/careers/data.jpg" alt="press-release" />
+          <div class="desc" >
+          <h6>Cybersecurity Firm Discovers Major Vulnerabilities in Popular Software Applications</h6>
+          <p>Warns users about critical vulnerabilities discovered in widely used software applications. This timely release urges users to update their software immediately and outlines steps to mitigate potential security risks. </p>
+        </div>
+        </div>
+      </a>
+      <a href="/resources/press-releases/one">
+        <div class="grid-card">
+          <img src="/careers/quantum.jpg" alt="press-release" />
           <div class="desc">
             <h6>Breakthrough in Quantum Computing Opens Doors for Powerful Data Processing and Analysis</h6>
             <p>A significant breakthrough in quantum computing technology, marking a major step towards harnessing the immense potential of quantum processors. This advancement promises to revolutionize data processing.</p>
@@ -47,12 +54,16 @@ import Footer from "../../../lib/views/home/footer.astro";
       </a>
       <a href="/resources/press-releases/one">
         <div class="grid-card">
-          <img src="/press-releases/press-release-1.jpg" alt="press-release" />
+          <img src="/careers/mobile.jpg" alt="press-release" />
+          <div class="desc">
+            <h6>Breakthrough in Quantum Computing Opens Doors for Powerful Data Processing and Analysis</h6>
+            <p>A significant breakthrough in quantum computing technology, marking a major step towards harnessing the immense potential of quantum processors. This advancement promises to revolutionize data processing.</p>
+          </div>
         </div>
       </a>
       <a href="/resources/press-releases/one">
         <div class="grid-card">
-          <img src="/press-releases/press-release-2.jpg" alt="press-release" />
+          <img src="/careers/serious.jpg" alt="press-release" />
           <div class="desc">
             <h6>Cybersecurity Firm Discovers Major Vulnerabilities in Popular Software Applications</h6>
             <p>Warns users about critical vulnerabilities discovered in widely used software applications. This timely release urges users to update their software immediately and outlines steps to mitigate potential security risks. </p>
@@ -61,7 +72,7 @@ import Footer from "../../../lib/views/home/footer.astro";
       </a>
       <a href="/resources/press-releases/one">
         <div class="grid-card">
-          <img src="/press-releases/press-release-3.jpg" alt="press-release" />
+          <img src="/careers/teamwork.jpg" alt="press-release" />
           <div class="desc">
             <h6>Breakthrough in Quantum Computing Opens Doors for Powerful Data Processing and Analysis</h6>
             <p>A significant breakthrough in quantum computing technology, marking a major step towards harnessing the immense potential of quantum processors. This advancement promises to revolutionize data processing.</p>
@@ -144,6 +155,8 @@ import Footer from "../../../lib/views/home/footer.astro";
 .grid-card img {
   width: 100%;
   border-radius: 5px;
+  max-height: 256px;
+  object-fit: cover;
 }
 
 .grid-card h6 {
@@ -159,6 +172,7 @@ import Footer from "../../../lib/views/home/footer.astro";
 
 .desc {
   padding-inline: 1em;
+  padding-bottom: 2em;
 }
 
 </style>
