@@ -39,7 +39,7 @@ import Footer from "../../../../lib/views/home/footer.astro";
       <!-- Featured Blog -->
       <div>
         <div>
-          <img src="/blogs/main-blog.jpg" alt="featured-post" />
+          <img src="/blogs/main-blog.jpg" alt="featured-post" class="featured-blog" />
         </div>
         <div class="blog-desc" >
           <p>
@@ -106,8 +106,8 @@ import Footer from "../../../../lib/views/home/footer.astro";
                     <p>Alloys | Dec 16, 2023</p>
                   </div>
                   <div>
-                    <h5>The Art of Software Consulting</h5>
-                    <p>From defining project requirements to selecting the right technology stack, we explore every facet of the software development life cycle. and the intricacies of software consulting.</p>
+                    <h5>Strategies for Safeguarding Your Information</h5>
+                    <p>This article delves into the world of data security, offering insights into best practices, emerging trends, and strategies to protect your information assets.</p>
                   </div>
                 </div>
               </div>
@@ -123,8 +123,8 @@ import Footer from "../../../../lib/views/home/footer.astro";
                     <p>Alloys | Dec 16, 2023</p>
                   </div>
                   <div>
-                    <h5>The Art of Software Consulting</h5>
-                    <p>From defining project requirements to selecting the right technology stack, we explore every facet of the software development life cycle. and the intricacies of software consulting.</p>
+                    <h5>Strategies for Safeguarding Your Information</h5>
+                    <p>This article delves into the world of data security, offering insights into best practices, emerging trends, and strategies to protect your information assets.</p>
                   </div>
                 </div>
               </div>
@@ -232,6 +232,14 @@ import Footer from "../../../../lib/views/home/footer.astro";
   height: 100%;
   overflow: hidden;
   /* border: 1px solid red; */
+}
+
+.featured-blog {
+  /* width: 100%;
+  height: 100%; */
+  width: 1280;
+  max-height: 590px;
+  object-fit: cover;
 }
 
 .other-blogs-grid .blog-card img {

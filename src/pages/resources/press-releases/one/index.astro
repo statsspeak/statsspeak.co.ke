@@ -27,7 +27,7 @@ import BookMarkIcon from "../../../../lib/components/svgs/bookmark-icon.svelte";
     <!-- Main Section  -->
      <main>
         <div class="main-release" >
-          <img src="/press-releases/main-release.jpg" alt="main-release" />
+          <img src="/careers/cs.avif" alt="main-release" />
         </div>
 
         <div class="main-release-header inline-container">
@@ -76,7 +76,7 @@ import BookMarkIcon from "../../../../lib/components/svgs/bookmark-icon.svelte";
             <li>Developing new open-source projects: Identifying critical needs within the data science community and working together to create innovative solutions that are freely available and accessible to all.</li>
           </ul>
 
-          <img src="/press-releases/featured-release.jpg" alt="featured" class="featured" />
+          <img src="/careers/cyber-sec.jpg" alt="featured" class="featured" />
 
           <p>
             Developing new open-source projects: Identifying critical needs within the data science community and working together to create innovative solutions that are freely available and accessible to all.
@@ -146,9 +146,11 @@ About the Open-Source Data Initiative
   }
 
   .main-release img {
-    width: 100%;
-    max-height:100%;
+    min-width: 100%;
+    max-height: 65vh;
     margin-top: 4em;
+    object-fit: cover;
+    object-position: center;
   }
 
   .header-desc {
@@ -212,6 +214,10 @@ About the Open-Source Data Initiative
 
   .featured {
     margin-block: 2em;
+    height: 520px;
+    width: 1280px;
+    object-fit: cover;
+    padding-inline: 2%;
   }
 
 </style>
