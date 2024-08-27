@@ -3,6 +3,7 @@
    import { onMount } from "svelte";
 	import SunSvg from "../../components/svgs/sun-svg.svelte";
 	import MoonSvg from "../../components/svgs/moon-svg.svelte";
+	import ChevronDown from "../../components/svgs/chevron-down.svelte";
 
    let isDarkMode = false; // Default is light mode
 
@@ -86,7 +87,7 @@
        <li><a href="/">Our Team</a></li>
        <li>
         <span class="dropdown">
-          <a href="/resources">Resources <img src="Chevron-down.svg" alt="chev" class="chevron-icon" /></a>
+          <a href="/resources">Resources <span class="chevron-icon" ><ChevronDown  /></span></a>
         </span>
          <div class="dropdown-content">
            <a href="/resources/case-studies">Case Studies</a>
@@ -208,25 +209,29 @@
    .nav .dropdown-content {
      display: none;
      position: absolute;
-     background-color: var(--dropdown-bg);
+     background: var(--linear-gradient);
      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
      min-width: 160px;
      z-index: 1;
+  /* margin-top: .5em; */
+
      /* margin-top: 1.25em; */
    }
 
    .chevron-icon {
-  vertical-align: middle; /* Aligns the chevron vertically with the text */
+  vertical-align: middle;
   width: 12px;
   height: 12px;
+  margin-top: -0.5em; /* Adjust margin-top to vertically center the chevron */
 }
 
 .dropdown {
   color: var(--text-color);
   display: flex;
-  gap: 0.3em; /* Adjust gap to ensure even spacing between text and icon */
+  gap: 0.5em; /* Adjust gap to ensure even spacing between text and icon */
   justify-content: center;
-  align-items: center;
+  align-items: center;/* Aligns the chevron vertically with the text */
+  /* border: 2px solid red; */
 }
 
 nav a {
@@ -254,14 +259,14 @@ nav a {
    } */
 
    .nav .dropdown-content a {
-    color: var(--text-color);
+    color: var(--constant-white);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
    .nav .dropdown-content a:hover {
-     border-bottom: 1px solid var(--constant-blue);
+     border-bottom: 1px solid var(--constant-white);
    }
 
    .nav .dropdown:hover .dropdown-content {
