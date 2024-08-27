@@ -17,7 +17,7 @@
       name: "Joram Kabach",
       title: "Chief Strategy Officer",
       img: "/team-photos/joram-kabach.jpeg",
-      desc: "Joram Kabach is a seasoned operations expert with a passion for driving efficiency and excellence. As the Chief Operations Officer, he oversees our day-to-day operations and ensures that our processes are optimized for success.",
+      desc: "Joram Kabach is a seasoned operations expert with a passion for driving efficiency and excellence. As the Chief Strategy Officer, he oversees our day-to-day operations and ensures that our processes are optimized for success.",
     },
     {
       name: "Anne Ngatia",
