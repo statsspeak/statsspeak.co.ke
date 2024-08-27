@@ -1,0 +1,270 @@
+---
+import TopBar from "../../../lib/views/home/top-bar.svelte";
+import "../../../lib/css/main.css"
+
+import Footer from "../../../lib/views/home/footer.astro";
+import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
+---
+
+<TopBar client:only="svelte" />
+
+<section class="page" >
+
+  <!-- Header  -->
+  <header class="header-c inline-container">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <span>></span>
+        <li><a href="/resources">Resources</a></li>
+        <span>></span>
+        <li><a href="/resources/careers">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+   <main>
+
+    <div class="work-with-us inline-container" >
+      <div class="left" >
+        <span>Work With Us</span>
+        <h4>Careers at Statsspeak</h4>
+        <p>At StatsSpeak, we're passionate about harnessing the power of data to drive innovation and solve real-world problems. We're a fast-growing software development and data firm that attracts some of the brightest minds in the industry. If you're looking for a place to push boundaries, work on cutting-edge technology, and make a real impact</p>
+        <button>View Open Roles</button>
+      </div>
+      <div>
+        <img src="/careers/work-with-us.jpg" alt="work" />
+      </div>
+    </div>
+
+    <div class="flex inline-container" >
+        <h3>
+          Our Mission is to Unleash the potential of data, crafting software that resonates: where insights meet innovation.
+        </h3>
+        <p>
+          Our vision: To be the leading resource for data analysis and software development, enabling businesses to harness the power of information and achieve their full potential. We believe in data-driven decision-making, collaboration, innovation, and exceeding client expectations
+        </p>
+    </div>
+
+    <div class="mission inline-container" >
+      <img src="/careers/mission.jpg" alt="mission" />
+    </div>
+
+    <div class="work-culture inline-container" >
+      <h3>Our Work Culture</h3>
+      <div class="work-culture-grid">
+        <div class="grid-card" >
+          <img src="/careers/culture-1.jpg" alt="work-culture" />
+          <h4>Collaborative Hive</h4>
+          <p>We believe that synergy is the key to success. When we combine our diverse perspectives and talents, we can achieve anything. </p>
+        </div>
+        <div class="grid-card" >
+          <img src="/careers/culture-2.jpg" alt="work-culture" />
+          <h4>Innovation</h4>
+          <p>We encourage creativity, risk-taking, and out-of-the-box thinking to develop new ideas and solutions.</p>
+        </div>
+        <div class="grid-card" >
+          <img src="/careers/culture-3.jpg" alt="work-culture" />
+          <h4>User Focused</h4>
+          <p>We Empower employees with autonomy and flexibility to manage their work and make decisions independently.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-opportunities inline-container">
+      <h3>Job Opportunities</h3>
+      <p>Browse through vacancies. internships and job postings at Statsspeak</p>
+      <div class="jobs">
+        <div class="job-card">
+          <h4 class="title" >Product Manager</h4>
+          <div class="flex-c" >
+            <p>Full Time - <span>On Site</span></p>
+            <ArrSvg />
+          </div>
+          <p>Shape the future of Data and software: Join our passionate team and drive the vision for our next groundbreaking product.</p>
+        </div>
+        <div class="job-card">
+          <h4 class="title" >Human Resources Manager</h4>
+          <div class="flex-c">
+            <p>Full Time - <span>On Site</span></p>
+            <ArrSvg />
+          </div>
+          <p>Join a team that values Employee experience. We believe in collaboration, growth, and making a difference together.</p>
+        </div>
+      </div>
+    </div>
+
+   </main>
+
+</section>
+
+<Footer />
+
+<style>
+    .header-c {
+    margin-top: 6%;
+    /* margin-left: 1em; */
+  }
+
+  .header-c nav ul {
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+  }
+
+  .header-c nav ul li a {
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--description-text);
+  }
+
+  .header-c nav ul li:hover {
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .work-with-us {
+    display: flex;
+    margin-top: 4%;
+    /* border: 1px solid red; */
+  }
+
+  .work-with-us .left {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 50%;
+    padding-inline-end: 2em;
+    /* justify-content: space-between; */
+  }
+
+  .work-with-us .left h4 {
+    color: var(--description-text);
+  }
+
+  .work-with-us .left span {
+    color: var(--date-text);
+    font-weight: 600;
+  }
+  /* .work-with-us .left */
+  .work-with-us .left p {
+    max-width: 85%;
+    color: var(--blog-text);
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin-top: 1.5em;
+  }
+
+  .work-with-us .left button {
+    width: 190px;
+    border-radius: 5px;
+    margin-top: 5em;
+  }
+
+  .flex {
+    display: flex;
+    margin-top: 4em;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .flex h3 {
+    color: var(--description-text);
+    font-size: 1.85em;
+  }
+
+  .flex p {
+    max-width: 60%;
+    color: var(--blog-text);
+    font-size: 1.15em;
+    padding-inline: 3em;
+    /* border: 1px solid red; */
+  }
+
+  .mission {
+    /* padding-left: 3em; */
+  }
+
+  .mission img {
+    margin-top: 5em;
+  }
+
+  .work-culture  {
+    margin-top: 5em;
+  }
+
+  .work-culture h3 {
+    color: var(--description-text)
+  }
+
+  .work-culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+    /* border: 1px solid red; */
+  }
+
+  .grid-card {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    border: 1px solid hsl(0, 0%, 30%);
+    border-radius: 8px;
+  }
+
+  .grid-card h4 {
+    color: var(--description-text);
+  }
+
+  .grid-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .job-opportunities {
+    margin-top: 5em;
+    margin-bottom: 10em;
+  }
+
+  .job-opportunities h3 {
+    color: var(--description-text);
+    margin-bottom: 1em;
+  }
+
+  .jobs {
+    margin-top: 2em;
+  }
+
+  .job-card {
+    background: var(--job-card-bg);
+    margin-bottom: 1em;
+    padding-inline: 1em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    border: 1px solid hsl(0, 0%, 30%);
+    border-radius: 8px;
+  }
+
+  .job-card h4 {
+    color: var(--description-text);
+  }
+
+  .job-card span {
+    color: var(--constant-blue)
+  }
+
+  .job-card .flex-c {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1em;
+    padding-inline-end: 2em;
+    /* border: 1px solid red; */
+  }
+
+</style>
