@@ -2,6 +2,7 @@
 import TopBar from "../../../../lib/views/home/top-bar.svelte";
 import "../../../../lib/css/main.css";
 import Footer from "../../../../lib/views/home/footer.astro";
+import UserIcon from "../../../../lib/components/svgs/user-icon.svelte";
 
 // import '../styles.css';
 ---
@@ -86,6 +87,7 @@ import Footer from "../../../../lib/views/home/footer.astro";
                   </div>
                   <div class="blog-metadata">
                     <div class="blog-author">
+                      <UserIcon />
                       <p>Alloys | Dec 16, 2023</p>
                     </div>
                     <div>
@@ -103,6 +105,7 @@ import Footer from "../../../../lib/views/home/footer.astro";
                 </div>
                 <div class="blog-metadata" >
                   <div class="blog-author">
+                    <UserIcon />
                     <p>Alloys | Dec 16, 2023</p>
                   </div>
                   <div>
@@ -120,6 +123,7 @@ import Footer from "../../../../lib/views/home/footer.astro";
                 </div>
                 <div class="blog-metadata" >
                   <div class="blog-author">
+                    <UserIcon />
                     <p>Alloys | Dec 16, 2023</p>
                   </div>
                   <div>
@@ -311,6 +315,12 @@ import Footer from "../../../../lib/views/home/footer.astro";
 
   .blog-card:hover .overlay {
     opacity: 1;
+  }
+
+  .blog-author {
+    display: flex;
+    gap: .5em;
+    align-items: center;
   }
 
 </style>
