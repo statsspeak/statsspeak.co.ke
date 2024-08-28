@@ -31,7 +31,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
         <span>Work With Us</span>
         <h4>Careers at Statsspeak</h4>
         <p>At StatsSpeak, we're passionate about harnessing the power of data to drive innovation and solve real-world problems. We're a fast-growing software development and data firm that attracts some of the brightest minds in the industry. If you're looking for a place to push boundaries, work on cutting-edge technology, and make a real impact</p>
-        <button>View Open Roles</button>
+        <button><a href="#jobs">View Open Roles</a></button>
       </div>
       <div>
         <img src="/careers/serious.jpg" alt="work" />
@@ -72,7 +72,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
       </div>
     </div>
 
-    <div class="job-opportunities inline-container">
+    <div class="job-opportunities inline-container" id="jobs">
       <h3>Job Opportunities</h3>
       <p class="desc">Browse through vacancies. internships and job postings at Statsspeak</p>
       <div class="jobs">
@@ -131,6 +131,11 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     display: flex;
     margin-top: 4%;
     /* border: 1px solid red; */
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--constant-white);
   }
 
   .work-with-us .left {
