@@ -57,7 +57,12 @@ import BlueCheckmark from "../../components/svgs/blue-checkmark.svelte";
 		</TabPanel>
 
 		<div class="contact">
-			<button class="contact-button">Contact Us</button>
+			<!-- <button class="contact-button">Contact Us</button> -->
+			<p>
+			Our Mission is to Unleash the potential of data, crafting software that resonates: where insights meet innovation and
+			our vision is To be the leading resource for data analysis and software development, enabling businesses to harness the power of information and achieve their full potential. We believe in data-driven decision-making, collaboration, innovation, and exceeding client expectations
+			</p>
+			<button class="contact-button"><a href="#contact-us">Contact Us</a></button>
 		</div>
 	</div>
 	<div class="image-container">
@@ -95,10 +100,22 @@ import BlueCheckmark from "../../components/svgs/blue-checkmark.svelte";
 		min-height: 550px;
 	}
 
+	.contact p {
+		/* border: 1px solid var(--secondary-500); */
+		padding-inline-end: 2em;
+
+	}
+
+	.contact a {
+		color: white;
+		text-decoration: none;
+	}
+
 	.contact-button {
 		min-width: 100px;
 		padding-top: 10px;
 		padding-bottom: 10px;
+		margin-top: 2em;
 	}
 	.subtitle {
 		color: var(--secondary-500);
