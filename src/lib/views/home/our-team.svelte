@@ -21,7 +21,7 @@
     },
     {
       name: "Anne Ngatia",
-      title: "Chief Marketing Officer",
+      title: "Chief Marketing & Finance Officer",
       img: "/team-photos/anne-ngatia.jpeg",
       desc: "Anne Ngatia is a seasoned financial expert with a passion for driving business growth. As the Chief Financial Officer, she is responsible for overseeing the financial health of the organization and ensuring that our financial strategies align with our long-term goals.",
     },
