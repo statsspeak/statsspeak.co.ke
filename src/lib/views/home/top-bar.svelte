@@ -136,6 +136,7 @@
          <li><a href="#our-services">Our Services</a></li>
          <li><a href="#our-team">Our Team</a></li>
          <li><a href="#contact-us">Contact us</a></li>
+         <li><a href="/resources">Resources</a></li>
        </ul>
      </nav>
    </div>
