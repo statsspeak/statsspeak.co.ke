@@ -67,13 +67,7 @@
     {/each}
   </div>
   <div class="blog-section grid-carousel">
-    <Carousel
-      autoplay
-      itemsToShow={1}
-      loop={true}
-      arrows={false}
-      pagination={true}
-      infinite={true}
+    <div
     >
       {#each blogs as blog, index}
         <div class="grid-item" key={index}>
@@ -98,7 +92,7 @@
           </a>
         </div>
       {/each}
-    </Carousel>
+    </div>
   </div>
 </div>
 
@@ -314,7 +308,7 @@
 
   .grid-carousel .grid-item {
     width: 100%;
-    max-width: 600px;
+    /* max-width: 600px; */
     margin-bottom: 2em;
     padding: 1em;
     background-color: #efefef;
@@ -370,12 +364,13 @@
 
   .grid-carousel .grid-item {
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin-bottom: 2em;
     padding: 1em;
     background-color: #efefef;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+    border: 1px solid red;
   }
 
   .grid-carousel .grid-item img {
