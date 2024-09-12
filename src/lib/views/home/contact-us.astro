@@ -68,7 +68,7 @@ let captchaResponse = '';
 		</div>
 	</div>
 	<div class="form">
-		<form action="https://formspree.io/f/xgegdpyz" method="POST" onsubmit={`(e) => onSubmitForm(e)`}></form>
+		<form action="https://formspree.io/f/xgegdpyz" method="POST" onsubmit="onSubmitForm(event)"></form>
 
 			<div class="form-control">
 				<label for="name">Name</label>
@@ -86,14 +86,17 @@ let captchaResponse = '';
 				<label for="message">Message</label>
 				<textarea name="message" placeholder="What's on you mind?"> </textarea>
 			</div>
-			<div class="button-control">
-				<button>Send Message</button>
-			</div>
-			<div
+			<div class='flex'>
+				<div
     class="h-captcha"
     data-sitekey={siteKey}
     data-callback="onCaptchaVerified"
   ></div>
+			<div class="button-control">
+				<button>Send Message</button>
+			</div>
+
+</div>
 		</form>
 	</div>
 </div>
@@ -156,6 +159,14 @@ let captchaResponse = '';
 		width: 100%;
 		padding-inline: 4em;
 		padding-block: 2em;
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		// border: 1px solid red;
+		margin-top: 1em;
 	}
 
 	form {
