@@ -1,3 +1,27 @@
+---
+
+let captchaResponse = '';
+  const siteKey = '6ce0f520-f834-4960-b37e-77166ef8f02a';
+
+  // Function to handle form submission
+  function onSubmitForm(event: Event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    if (!captchaResponse) {
+      alert('Please complete the hCaptcha verification.');
+      return;
+    }
+
+    // Proceed with form submission if captcha is completed
+    (event.target as HTMLFormElement).submit(); // Submit the form to Formspree
+  }
+
+  // Function to capture the hCaptcha token
+  function onCaptchaVerified(token: string): void {
+    captchaResponse = token;
+  }
+---
+
 <div id="contact-us" class="contact-us inline-container">
 	<div class="guide">
 		<svg class="figure" width="652" height="578" viewBox="0 0 652 578" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +59,7 @@
 		</svg>
 		<div class="title-highlight">Lets talk</div>
 		<h4 style="color:white">Reach out to us!</h4>
-		<p>Have a project in mind that you think we’d be a great fit for it? We’d love to know what you’re thinking</p>
+		<p>Have a project in mind that you think we'd be a great fit for it? We'd love to know what you're thinking</p>
 		<div class="contact-set">
 			<h4>Contact Info</h4>
 			<div>+254715644881</div>
@@ -44,7 +68,8 @@
 		</div>
 	</div>
 	<div class="form">
-		<form action="https://formspree.io/f/xgegdpyz" method="POST">
+		<form action="https://formspree.io/f/xgegdpyz" method="POST" onsubmit={`(e) => onSubmitForm(e)`}></form>
+
 			<div class="form-control">
 				<label for="name">Name</label>
 				<input name="name" placeholder="Jane Doe" />
@@ -64,8 +89,16 @@
 			<div class="button-control">
 				<button>Send Message</button>
 			</div>
+			<div
+    class="h-captcha"
+    data-sitekey={siteKey}
+    data-callback="onCaptchaVerified"
+  ></div>
 		</form>
 	</div>
+</div>
+</div>
+</div>
 </div>
 
 <style lang="scss">
@@ -173,3 +206,7 @@
 		}
 	}
 </style>
+
+
+<!-- Load hCaptcha script -->
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
