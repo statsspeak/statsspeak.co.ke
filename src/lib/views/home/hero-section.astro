@@ -1,22 +1,22 @@
 ---
 import HeroDash from "../../components/svgs/hero-big-svg.svelte";
 
-const setupScroll = () => {
-	document.querySelectorAll("a[data-scroll]").forEach(anchor => {
-		const target = anchor.getAttribute("href");
-		if (target) {
-			// Ensure target is not null or undefined
-			anchor.addEventListener("click", evt => {
-				evt.preventDefault();
-				const targetElement = document.querySelector(target);
-				if (targetElement) {
-					// Check if the element exists before calling scrollIntoView
-					targetElement.scrollIntoView({ behavior: "smooth" });
-				}
-			});
-		}
-	});
-};
+// const setupScroll = () => {
+// 	document.querySelectorAll("a[data-scroll]").forEach(anchor => {
+// 		const target = anchor.getAttribute("href");
+// 		if (target) {
+// 			// Ensure target is not null or undefined
+// 			anchor.addEventListener("click", evt => {
+// 				evt.preventDefault();
+// 				const targetElement = document.querySelector(target);
+// 				if (targetElement) {
+// 					// Check if the element exists before calling scrollIntoView
+// 					targetElement.scrollIntoView({ behavior: "smooth" });
+// 				}
+// 			});
+// 		}
+// 	});
+// };
 ---
 
 <div id="top" class="container">
@@ -204,6 +204,6 @@ const setupScroll = () => {
 	}
 </style>
 
-<script type="module" is:inline>
+<!-- <script type="module" is:inline>
 	setupScroll();
-</script>
+</script> -->
