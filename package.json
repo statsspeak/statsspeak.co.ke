@@ -21,6 +21,7 @@
 		"typescript": "^5.5.3"
 	},
 	"devDependencies": {
+		"@astrojs/partytown": "^2.1.2",
 		"prettier": "^3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.77.6"

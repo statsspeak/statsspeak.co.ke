@@ -1,4 +1,6 @@
 ---
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+
 interface Props {
 	title: string;
 }
@@ -9,48 +11,37 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Google Analytics Code  -->
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<!-- <GoogleAnalytics /> -->
 		<title>{title}</title>
 		<!-- Google tag (gtag.js) -->
 
-<!-- Google tag (gtag.js) -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-94RY12H43C">
-</script>
-
-<script>
-  interface Window {
-    dataLayer: any[];
-  }
-
-  (window as unknown as Window).dataLayer = (window as unknown as Window).dataLayer || [];
-  function gtag(...args: any[]){(window as unknown as Window).dataLayer.push(args);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-94RY12H43C');
-</script>
+		<script async type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-94RY12H43C"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-94RY12H43C");
+		</script>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-</html>
-</html>
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
 	}
 	html {
 		font-family: system-ui, sans-serif;

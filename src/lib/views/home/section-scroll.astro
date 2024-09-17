@@ -3,22 +3,22 @@ let classname = ""; // Initialize with a default value
 export { classname as class };
 
 // This script will now run on the client side after the component is loaded
-const setupScroll = () => {
-	document.querySelectorAll("a[data-scroll]").forEach(anchor => {
-		const target = anchor.getAttribute("href");
-		if (target) {
-			// Ensure target is not null or undefined
-			anchor.addEventListener("click", evt => {
-				evt.preventDefault();
-				const targetElement = document.querySelector(target);
-				if (targetElement) {
-					// Check if the element exists before calling scrollIntoView
-					targetElement.scrollIntoView({ behavior: "smooth" });
-				}
-			});
-		}
-	});
-};
+// const setupScroll = () => {
+// 	document.querySelectorAll("a[data-scroll]").forEach(anchor => {
+// 		const target = anchor.getAttribute("href");
+// 		if (target) {
+// 			// Ensure target is not null or undefined
+// 			anchor.addEventListener("click", evt => {
+// 				evt.preventDefault();
+// 				const targetElement = document.querySelector(target);
+// 				if (targetElement) {
+// 					// Check if the element exists before calling scrollIntoView
+// 					targetElement.scrollIntoView({ behavior: "smooth" });
+// 				}
+// 			});
+// 		}
+// 	});
+// };
 ---
 
 <ul class={classname}>
@@ -47,6 +47,6 @@ const setupScroll = () => {
 	}
 </style>
 
-<script type="module" is:inline>
+<!-- <script type="module" is:inline>
 	setupScroll();
-</script>
+</script> -->
