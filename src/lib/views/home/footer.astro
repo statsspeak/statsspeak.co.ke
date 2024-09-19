@@ -1,343 +1,354 @@
 ---
-  import Linkedin from '../../components/svgs/linkedin.svg.svelte';
-  import Twitter from '../../components/svgs/twitter-svg.svelte';
-  import Facebook from '../../components/svgs/facebook-svg.svelte';
-  import SSLogoSVG from '../../components/svgs/ss-logo-svg.svelte';
-  import SectionScrollNav from './section-scroll.astro';
+import Linkedin from "../../components/svgs/linkedin.svg.svelte";
+import Twitter from "../../components/svgs/twitter-svg.svelte";
+import Facebook from "../../components/svgs/facebook-svg.svelte";
+import SSLogoSVG from "../../components/svgs/ss-logo-svg.svelte";
+import SectionScrollNav from "./section-scroll.astro";
 
-  import Facebooksm from '../../components/svgs/facebook-sm-svg.svelte';
-  import Twittersm from "../../components/svgs/twitter-sm-svg.svelte";
- import LinkedInsm from "../../components/svgs/linkedIn-sm-svg.svelte";
+import Facebooksm from "../../components/svgs/facebook-sm-svg.svelte";
+import Twittersm from "../../components/svgs/twitter-sm-svg.svelte";
+import LinkedInsm from "../../components/svgs/linkedIn-sm-svg.svelte";
 ---
 
-
 <div class="footer">
-  <div class="footer-section pitch">
-      <SSLogoSVG bind:textColor />
-      <p>
-          With a unique blend of data expertise and software craftsmanship, we are dedicated to
-          empowering ambitious enterprises and driving their success
-      </p>
-  </div>
-  <div class="footer-section">
-      <h4>Contact</h4>
-      <div class="footer-section-list">
-        <div class="contact-icon" >
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#00ABC8"/>
-            <g clip-path="url(#clip0_291_19231)">
-            <path d="M17.366 18.682C18.3043 20.3305 19.6695 21.6957 21.318 22.634L22.202 21.396C22.3442 21.1969 22.5543 21.0569 22.7928 21.0023C23.0313 20.9478 23.2814 20.9825 23.496 21.1C24.9103 21.8729 26.4722 22.3378 28.079 22.464C28.3298 22.4839 28.5638 22.5975 28.7345 22.7823C28.9052 22.9671 29 23.2094 29 23.461V27.923C29.0001 28.1706 28.9083 28.4094 28.7424 28.5932C28.5765 28.777 28.3483 28.8927 28.102 28.918C27.572 28.973 27.038 29 26.5 29C17.94 29 11 22.06 11 13.5C11 12.962 11.027 12.428 11.082 11.898C11.1073 11.6517 11.223 11.4235 11.4068 11.2576C11.5906 11.0917 11.8294 10.9999 12.077 11H16.539C16.7906 11 17.0329 11.0948 17.2177 11.2655C17.4025 11.4361 17.5161 11.6702 17.536 11.921C17.6622 13.5278 18.1271 15.0897 18.9 16.504C19.0175 16.7186 19.0522 16.9687 18.9977 17.2072C18.9431 17.4456 18.8031 17.6558 18.604 17.798L17.366 18.682ZM14.844 18.025L16.744 16.668C16.2048 15.5041 15.8354 14.2688 15.647 13H13.01C13.004 13.166 13.001 13.333 13.001 13.5C13 20.956 19.044 27 26.5 27C26.667 27 26.834 26.997 27 26.99V24.353C25.7312 24.1646 24.4959 23.7952 23.332 23.256L21.975 25.156C21.4287 24.9437 20.898 24.6931 20.387 24.406L20.329 24.373C18.3676 23.2567 16.7433 21.6324 15.627 19.671L15.594 19.613C15.3069 19.102 15.0563 18.5713 14.844 18.025Z" fill="#00ABC8"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_291_19231">
-            <rect width="24" height="24" fill="white" transform="translate(8 8)"/>
-            </clipPath>
-            </defs>
-            </svg>
-          <a href="tel:+254715644881">+254715644881</a>
-        </div>
-        <div class="contact-icon" >
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#00ABC8"/>
-            <g clip-path="url(#clip0_291_19235)">
-            <path d="M11 11H29C29.2652 11 29.5196 11.1054 29.7071 11.2929C29.8946 11.4804 30 11.7348 30 12V28C30 28.2652 29.8946 28.5196 29.7071 28.7071C29.5196 28.8946 29.2652 29 29 29H11C10.7348 29 10.4804 28.8946 10.2929 28.7071C10.1054 28.5196 10 28.2652 10 28V12C10 11.7348 10.1054 11.4804 10.2929 11.2929C10.4804 11.1054 10.7348 11 11 11ZM28 15.238L20.072 22.338L12 15.216V27H28V15.238ZM12.511 13L20.061 19.662L27.502 13H12.511Z" fill="#00ABC8"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_291_19235">
-            <rect width="24" height="24" fill="white" transform="translate(8 8)"/>
-            </clipPath>
-            </defs>
-            </svg>
-          <a href="mailto:info@statsspeak.co.ke">info@statsspeak.co.ke</a>
-        </div>
-        <div class="contact-icon" >
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#00ABC8"/>
-            <g clip-path="url(#clip0_291_19239)">
-            <path d="M20 28.8999L24.95 23.9499C25.9289 22.9709 26.5955 21.7236 26.8656 20.3658C27.1356 19.0079 26.9969 17.6005 26.4671 16.3215C25.9373 15.0424 25.04 13.9492 23.8889 13.1801C22.7378 12.411 21.3844 12.0004 20 12.0004C18.6156 12.0004 17.2622 12.411 16.1111 13.1801C14.96 13.9492 14.0628 15.0424 13.5329 16.3215C13.0031 17.6005 12.8644 19.0079 13.1345 20.3658C13.4045 21.7236 14.0711 22.9709 15.05 23.9499L20 28.8999ZM20 31.7279L13.636 25.3639C12.3773 24.1052 11.5202 22.5016 11.1729 20.7558C10.8257 19.0099 11.0039 17.2004 11.6851 15.5558C12.3663 13.9113 13.5198 12.5057 14.9999 11.5168C16.4799 10.5278 18.22 10 20 10C21.78 10 23.5201 10.5278 25.0001 11.5168C26.4802 12.5057 27.6337 13.9113 28.3149 15.5558C28.9961 17.2004 29.1743 19.0099 28.8271 20.7558C28.4798 22.5016 27.6227 24.1052 26.364 25.3639L20 31.7279ZM20 20.9999C20.5304 20.9999 21.0391 20.7892 21.4142 20.4141C21.7893 20.0391 22 19.5304 22 18.9999C22 18.4695 21.7893 17.9608 21.4142 17.5857C21.0391 17.2106 20.5304 16.9999 20 16.9999C19.4696 16.9999 18.9609 17.2106 18.5858 17.5857C18.2107 17.9608 18 18.4695 18 18.9999C18 19.5304 18.2107 20.0391 18.5858 20.4141C18.9609 20.7892 19.4696 20.9999 20 20.9999ZM20 22.9999C18.9391 22.9999 17.9217 22.5785 17.1716 21.8283C16.4214 21.0782 16 20.0608 16 18.9999C16 17.9391 16.4214 16.9216 17.1716 16.1715C17.9217 15.4213 18.9391 14.9999 20 14.9999C21.0609 14.9999 22.0783 15.4213 22.8284 16.1715C23.5786 16.9216 24 17.9391 24 18.9999C24 20.0608 23.5786 21.0782 22.8284 21.8283C22.0783 22.5785 21.0609 22.9999 20 22.9999Z" fill="#00ABC8"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_291_19239">
-            <rect width="24" height="24" fill="white" transform="translate(8 8)"/>
-            </clipPath>
-            </defs>
-            </svg>
-          <a href="https://www.google.com/maps/place/Mercure+Nairobi+Upper+Hill/" target="_blank" rel="noopener noreferrer">10th Floor, Mercure, Upperhill, Nairobi</a>
-        </div>
-      </div>
-  </div>
-  <div class="footer-section">
-      <h4>Company</h4>
-      <SectionScrollNav class="company-list" />
-  </div>
-  <div class="footer-section">
-      <h4>Resources</h4>
-      <div class="footer-section-list">
-            <a href="/resources/case-studies">case studies</a>
-            <a href="/resources/blog-articles">Blog Articles</a>
-            <a href="/resources/press-releases">Press Releases</a>
-            <a href="/resources/careers">Careers</a>
-      </div>
-  </div>
-  <div class="footer-section socials">
-      <h4>Our Socials</h4>
-      <div class="social-media" >
-          <a href="https://www.linkedin.com/company/statsspeak" target="_blank">
-            <Linkedin />
-          </a>
-          <a>
-            <Twitter />
-          </a>
-          <a>
-            <Facebook />
-          </a>
-      </div>
-      {/* Mobile social media links */}
-      <div class="sm-social-media" >
-        <a href="https://www.linkedin.com/company/statsspeak" target="_blank">
-          <LinkedInsm />
-        </a>
-        <a>
-          <Twittersm />
-        </a>
-        <a>
-          <Facebooksm />
-        </a>
-    </div>
-  </div>
+	<div class="footer-section pitch">
+		<SSLogoSVG bind:textColor />
+		<p>
+			With a unique blend of data expertise and software craftsmanship, we are dedicated to empowering ambitious
+			enterprises and driving their success
+		</p>
+	</div>
+	<div class="footer-section">
+		<h4>Contact</h4>
+		<div class="footer-section-list">
+			<div class="contact-icon">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#00ABC8"></rect>
+					<g clip-path="url(#clip0_291_19231)">
+						<path
+							d="M17.366 18.682C18.3043 20.3305 19.6695 21.6957 21.318 22.634L22.202 21.396C22.3442 21.1969 22.5543 21.0569 22.7928 21.0023C23.0313 20.9478 23.2814 20.9825 23.496 21.1C24.9103 21.8729 26.4722 22.3378 28.079 22.464C28.3298 22.4839 28.5638 22.5975 28.7345 22.7823C28.9052 22.9671 29 23.2094 29 23.461V27.923C29.0001 28.1706 28.9083 28.4094 28.7424 28.5932C28.5765 28.777 28.3483 28.8927 28.102 28.918C27.572 28.973 27.038 29 26.5 29C17.94 29 11 22.06 11 13.5C11 12.962 11.027 12.428 11.082 11.898C11.1073 11.6517 11.223 11.4235 11.4068 11.2576C11.5906 11.0917 11.8294 10.9999 12.077 11H16.539C16.7906 11 17.0329 11.0948 17.2177 11.2655C17.4025 11.4361 17.5161 11.6702 17.536 11.921C17.6622 13.5278 18.1271 15.0897 18.9 16.504C19.0175 16.7186 19.0522 16.9687 18.9977 17.2072C18.9431 17.4456 18.8031 17.6558 18.604 17.798L17.366 18.682ZM14.844 18.025L16.744 16.668C16.2048 15.5041 15.8354 14.2688 15.647 13H13.01C13.004 13.166 13.001 13.333 13.001 13.5C13 20.956 19.044 27 26.5 27C26.667 27 26.834 26.997 27 26.99V24.353C25.7312 24.1646 24.4959 23.7952 23.332 23.256L21.975 25.156C21.4287 24.9437 20.898 24.6931 20.387 24.406L20.329 24.373C18.3676 23.2567 16.7433 21.6324 15.627 19.671L15.594 19.613C15.3069 19.102 15.0563 18.5713 14.844 18.025Z"
+							fill="#00ABC8"></path>
+					</g>
+					<defs>
+						<clipPath id="clip0_291_19231">
+							<rect width="24" height="24" fill="white" transform="translate(8 8)"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+				<a href="tel:+254715644881">+254715644881</a>
+			</div>
+			<div class="contact-icon">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#00ABC8"></rect>
+					<g clip-path="url(#clip0_291_19235)">
+						<path
+							d="M11 11H29C29.2652 11 29.5196 11.1054 29.7071 11.2929C29.8946 11.4804 30 11.7348 30 12V28C30 28.2652 29.8946 28.5196 29.7071 28.7071C29.5196 28.8946 29.2652 29 29 29H11C10.7348 29 10.4804 28.8946 10.2929 28.7071C10.1054 28.5196 10 28.2652 10 28V12C10 11.7348 10.1054 11.4804 10.2929 11.2929C10.4804 11.1054 10.7348 11 11 11ZM28 15.238L20.072 22.338L12 15.216V27H28V15.238ZM12.511 13L20.061 19.662L27.502 13H12.511Z"
+							fill="#00ABC8"></path>
+					</g>
+					<defs>
+						<clipPath id="clip0_291_19235">
+							<rect width="24" height="24" fill="white" transform="translate(8 8)"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+				<a href="mailto:info@statsspeak.co.ke">info@statsspeak.co.ke</a>
+			</div>
+			<div class="contact-icon">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="#00ABC8"></rect>
+					<g clip-path="url(#clip0_291_19239)">
+						<path
+							d="M20 28.8999L24.95 23.9499C25.9289 22.9709 26.5955 21.7236 26.8656 20.3658C27.1356 19.0079 26.9969 17.6005 26.4671 16.3215C25.9373 15.0424 25.04 13.9492 23.8889 13.1801C22.7378 12.411 21.3844 12.0004 20 12.0004C18.6156 12.0004 17.2622 12.411 16.1111 13.1801C14.96 13.9492 14.0628 15.0424 13.5329 16.3215C13.0031 17.6005 12.8644 19.0079 13.1345 20.3658C13.4045 21.7236 14.0711 22.9709 15.05 23.9499L20 28.8999ZM20 31.7279L13.636 25.3639C12.3773 24.1052 11.5202 22.5016 11.1729 20.7558C10.8257 19.0099 11.0039 17.2004 11.6851 15.5558C12.3663 13.9113 13.5198 12.5057 14.9999 11.5168C16.4799 10.5278 18.22 10 20 10C21.78 10 23.5201 10.5278 25.0001 11.5168C26.4802 12.5057 27.6337 13.9113 28.3149 15.5558C28.9961 17.2004 29.1743 19.0099 28.8271 20.7558C28.4798 22.5016 27.6227 24.1052 26.364 25.3639L20 31.7279ZM20 20.9999C20.5304 20.9999 21.0391 20.7892 21.4142 20.4141C21.7893 20.0391 22 19.5304 22 18.9999C22 18.4695 21.7893 17.9608 21.4142 17.5857C21.0391 17.2106 20.5304 16.9999 20 16.9999C19.4696 16.9999 18.9609 17.2106 18.5858 17.5857C18.2107 17.9608 18 18.4695 18 18.9999C18 19.5304 18.2107 20.0391 18.5858 20.4141C18.9609 20.7892 19.4696 20.9999 20 20.9999ZM20 22.9999C18.9391 22.9999 17.9217 22.5785 17.1716 21.8283C16.4214 21.0782 16 20.0608 16 18.9999C16 17.9391 16.4214 16.9216 17.1716 16.1715C17.9217 15.4213 18.9391 14.9999 20 14.9999C21.0609 14.9999 22.0783 15.4213 22.8284 16.1715C23.5786 16.9216 24 17.9391 24 18.9999C24 20.0608 23.5786 21.0782 22.8284 21.8283C22.0783 22.5785 21.0609 22.9999 20 22.9999Z"
+							fill="#00ABC8"></path>
+					</g>
+					<defs>
+						<clipPath id="clip0_291_19239">
+							<rect width="24" height="24" fill="white" transform="translate(8 8)"></rect>
+						</clipPath>
+					</defs>
+				</svg>
+				<a
+					href="https://www.google.com/maps/place/Mercure+Nairobi+Upper+Hill/"
+					target="_blank"
+					rel="noopener noreferrer">10th Floor, Mercure, Upperhill, Nairobi</a
+				>
+			</div>
+		</div>
+	</div>
+	<div class="footer-section">
+		<h4>Company</h4>
+		<SectionScrollNav class="company-list" />
+	</div>
+	<div class="footer-section">
+		<h4>Resources</h4>
+		<div class="footer-section-list">
+			<a href="/resources/case-studies">Case Studies</a>
+			<a href="/resources/blog-articles">Blog Articles</a>
+			<a href="/resources/press-releases">Press Releases</a>
+			<a href="/resources/careers">Careers</a>
+		</div>
+	</div>
+	<div class="footer-section socials">
+		<h4>Our Socials</h4>
+		<div class="social-media">
+			<a href="https://www.linkedin.com/company/statsspeak" target="_blank">
+				<Linkedin />
+			</a>
+			<a>
+				<Twitter />
+			</a>
+			<a>
+				<Facebook />
+			</a>
+		</div>
+		{/* Mobile social media links */}
+		<div class="sm-social-media">
+			<a href="https://www.linkedin.com/company/statsspeak" target="_blank">
+				<LinkedInsm />
+			</a>
+			<a>
+				<Twittersm />
+			</a>
+			<a>
+				<Facebooksm />
+			</a>
+		</div>
+	</div>
 </div>
-<div class="inline-container" >
-<div class="terms right">
-  <p><a href="https://www.iubenda.com/privacy-policy/98221384" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe" title="Privacy Policy">Privacy Policy</a></p> |
-  <p class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe" >Terms & Conditions</p> |
-  <p><a href="https://www.iubenda.com/privacy-policy/98221384/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe" title="Cookie Policy">Cookie Policy</a></p>
+<div class="inline-container">
+	<div class="terms right">
+		<p>
+			<a
+				href="https://www.iubenda.com/privacy-policy/98221384"
+				class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe"
+				title="Privacy Policy">Privacy Policy</a>
+		</p> |
+		<p class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe">Terms & Conditions</p> |
+		<p>
+			<a
+				href="https://www.iubenda.com/privacy-policy/98221384/cookie-policy"
+				class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe"
+				title="Cookie Policy">Cookie Policy</a>
+		</p>
+	</div>
+	<div class="terms left">
+		<p style="margin-left: auto;">&copy; {new Date().getFullYear()} Statsspeak</p>
+		<a href="/admin">Admin</a>
+	</div>
 </div>
-<div class="terms left">
-  <p style="margin-left: auto;">&copy; {new Date().getFullYear()} Statsspeak</p>
-  <a href="/admin">Admin</a>
-</div>
-</div>
-
 
 <style lang="scss">
-  .footer-highlight {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-left: 12px;
-      background: linear-gradient(89.81deg, #00acc8 0.14%, #003759 98.85%);
-      height: 72px;
-      border-radius: 12px;
+	.footer-highlight {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 12px;
+		background: linear-gradient(89.81deg, #00acc8 0.14%, #003759 98.85%);
+		height: 72px;
+		border-radius: 12px;
 
-      & h5 {
-          color: white;
-      }
-  }
+		& h5 {
+			color: white;
+		}
+	}
 
-  .footer {
-    width: 100%;
-    max-width: 1800px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    padding: 56px 24px;
-    margin: 0 auto;
-    border-top: var(--tab-border);
-    border-bottom: var(--footer-border);
+	.footer {
+		width: 100%;
+		max-width: 1800px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 24px;
+		padding: 56px 24px;
+		margin: 0 auto;
+		border-top: var(--tab-border);
+		border-bottom: var(--footer-border);
 
-    & p {
-        font-family: var(--font-family-secondary);
-        color: var(--footer-text);
-    }
+		& p {
+			font-family: var(--font-family-secondary);
+			color: var(--footer-text);
+		}
 
-    & h4 {
-        font-size: 1.5rem;
-        color: var(--description-text);
-    }
-  }
+		& h4 {
+			font-size: 1.5rem;
+			color: var(--description-text);
+		}
+	}
 
-  .social-media {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 0.5em;
-  }
+	.social-media {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		margin-top: 0.5em;
+	}
 
-  .social-media a:hover {
-    cursor: pointer;
-  }
+	.social-media a:hover {
+		cursor: pointer;
+	}
 
-  .sm-social-media {
-      display: none;
-    }
+	.sm-social-media {
+		display: none;
+	}
 
-  .footer-section-list a {
-    color: var(--footer-contact-text);
-  }
+	.footer-section-list a {
+		color: var(--footer-contact-text);
+	}
 
-  .company-list a {
-    color: var(--footer-contact-text);
-  }
+	.company-list a {
+		color: var(--footer-contact-text);
+	}
 
-  .pitch {
-      display: grid;
-      gap: 32px;
+	.pitch {
+		display: grid;
+		gap: 32px;
 
-      & p {
-          font-size: small;
-      }
-  }
+		& p {
+			font-size: small;
+		}
+	}
 
-  .contact-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+	.contact-icon {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
 
-  :global(.pitch svg) {
-      width: 90px;
-  }
+	:global(.pitch svg) {
+		width: 90px;
+	}
 
-  :global(.footer-section-list) {
-      display: grid;
-      gap: 18px;
-      font-family: var(--font-family-secondary);
-      padding-top: 24px;
-    }
+	:global(.footer-section-list) {
+		display: grid;
+		gap: 18px;
+		font-family: var(--font-family-secondary);
+		padding-top: 24px;
+	}
 
-  :global(.footer-section-list a) {
-    font-family: var(--font-family-secondary);
-    color: var(--footer-contact-text);
-    text-decoration: none;
-  }
+	:global(.footer-section-list a) {
+		font-family: var(--font-family-secondary);
+		color: var(--footer-contact-text);
+		text-decoration: none;
+	}
 
-  .terms {
-    display: flex;
-    font-family: var(--font-family-secondary);
-    color: var(--gray-400);
-    padding-bottom: 26px;
-    align-items: center;
-    gap: 12px;
+	.terms {
+		display: flex;
+		font-family: var(--font-family-secondary);
+		color: var(--gray-400);
+		padding-bottom: 26px;
+		align-items: center;
+		gap: 12px;
 
-    a {
-        color: inherit;
-        border-left: 1px solid gray;
-        padding-left: 12px;
-    }
-  }
+		a {
+			color: inherit;
+			border-left: 1px solid gray;
+			padding-left: 12px;
+		}
+	}
 
-  .inline-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	.inline-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  /* Media Queries */
-  @media (max-width: 1024px) {
-    .footer {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      padding: 40px 20px;
-    }
+	/* Media Queries */
+	@media (max-width: 1024px) {
+		.footer {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			padding: 40px 20px;
+		}
+	}
 
+	@media (max-width: 768px) {
+		.footer {
+			grid-template-columns: 1fr;
+			padding: 32px 16px;
+		}
 
-  }
+		.inline-container {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 12px;
+		}
 
-  @media (max-width: 768px) {
-    .footer {
-      grid-template-columns: 1fr;
-      padding: 32px 16px;
-    }
+		.social-media {
+			flex-direction: row;
+			gap: 12px;
+		}
 
-    .inline-container {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-    }
+		.sm-social-media {
+			display: none;
+		}
+	}
 
-    .social-media {
-      flex-direction: row;
-      gap: 12px;
-    }
+	@media (max-width: 480px) {
+		.footer {
+			padding: 24px 12px;
+		}
 
-    .sm-social-media {
-      display: none;
-    }
+		.footer-section-list {
+			gap: 8px;
+		}
 
-  }
+		.terms {
+			padding-bottom: 16px;
+			font-size: 0.875rem;
 
-  @media (max-width: 480px) {
-    .footer {
-      padding: 24px 12px;
-    }
+			a {
+				border-left: none;
+				padding-left: 0;
+			}
+		}
 
-    .footer-section-list {
-      gap: 8px;
-    }
+		.social-media {
+			display: none;
+		}
 
-    .terms {
-      padding-bottom: 16px;
-      font-size: 0.875rem;
+		.sm-social-media {
+			display: block;
+		}
 
-      a {
-        border-left: none;
-        padding-left: 0;
-      }
-    }
+		.sm-social-media {
+			display: flex;
+			gap: 1em;
+			margin-top: 0.5em;
+			// border: 1px solid red;
+		}
 
-    .social-media {
-      display: none;
-    }
+		.social-media a:hover {
+			cursor: pointer;
+		}
 
-    .sm-social-media {
-      display: block;
-    }
+		.inline-container {
+			padding: 12px;
+			gap: 8px;
 
-    .sm-social-media {
-    display: flex;
-    gap: 1em;
-    margin-top: 0.5em;
-    // border: 1px solid red;
-  }
-
-  .social-media a:hover {
-    cursor: pointer;
-  }
-
-    .inline-container {
-      padding: 12px;
-      gap: 8px;
-
-      .terms.left {
-        margin-left: 0;
-      }
-    }
-  }
+			.terms.left {
+				margin-left: 0;
+			}
+		}
+	}
 </style>
 
-
 <script type="module">
-    const isDarkMode = () => document.body.classList.contains('dark-mode');
-    const textColor = isDarkMode() ? '#fff' : '#575756';
-    document.querySelectorAll('ss-logo-svg').forEach(el => {
-      el.setAttribute('textColor', textColor);
-    });
+	const isDarkMode = () => document.body.classList.contains("dark-mode");
+	const textColor = isDarkMode() ? "#fff" : "#575756";
+	document.querySelectorAll("ss-logo-svg").forEach(el => {
+		el.setAttribute("textColor", textColor);
+	});
 
-    (function (w, d) {
-        var loader = function () {
-            var s = d.createElement("script"),
-                tag = d.getElementsByTagName("script")[0];
-            s.src = "https://cdn.iubenda.com/iubenda.js";
-            tag.parentNode.insertBefore(s, tag);
-        };
-        if (w.addEventListener) {
-            w.addEventListener("load", loader, false);
-        } else if (w.attachEvent) {
-            w.attachEvent("onload", loader);
-        } else {
-            w.onload = loader;
-        }
-    })(window, document);
-
-
-  </script>
-
+	(function (w, d) {
+		var loader = function () {
+			var s = d.createElement("script"),
+				tag = d.getElementsByTagName("script")[0];
+			s.src = "https://cdn.iubenda.com/iubenda.js";
+			tag.parentNode.insertBefore(s, tag);
+		};
+		if (w.addEventListener) {
+			w.addEventListener("load", loader, false);
+		} else if (w.attachEvent) {
+			w.attachEvent("onload", loader);
+		} else {
+			w.onload = loader;
+		}
+	})(window, document);
+</script>
