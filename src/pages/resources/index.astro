@@ -46,8 +46,8 @@ const blogs = [
 
 ---
 
+<TopBar client:only="svelte" />
 <div class="page resources-section">
-  <TopBar client:only="svelte" />
   <section class="header">
     <nav>
       <ul>
@@ -153,8 +153,8 @@ const blogs = [
     </div>
   </section>
   <div class="outer-container  resources-page-container" >
-    <ReviewStudies client:only="svelte" />
     <PressReleases client:only="svelte" />
+    <ReviewStudies client:only="svelte" />
   </div>
   <Footer />
 </div>
@@ -217,11 +217,14 @@ a {
   margin-inline: 5%;
   min-width: auto;
   min-height: auto;
+  /* border: 1px solid red; */
 }
 
 .featured-article {
   width: 100%;
+  /* height: 100%; */
   max-width: 100%;
+    /* border: 1px solid red; */
 }
 
 .article-card {
@@ -323,10 +326,18 @@ a {
 @media (min-width: 481px) and (max-width: 767px) {
   .resources-container {
     margin-inline: 5%;
+    border: 1px solid red;
   }
 
   .article-desc h3 {
     font-size: 1.5em;
+  }
+
+  .featured-article {
+    width: 100%;
+    /* height: 100%; */
+    max-width: 100%;
+    border: 1px solid red;
   }
 
   .all-articles-container ul .article-card h3 {
