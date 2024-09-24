@@ -105,6 +105,7 @@
 .heading-section {
   display: grid;
   grid-template-columns: 0.7fr 1fr;
+  /* border: 1px solid red; */
 }
 
 
