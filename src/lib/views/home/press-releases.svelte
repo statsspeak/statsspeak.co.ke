@@ -139,8 +139,8 @@
   overflow: hidden;
   border: inherit;
   border-radius: 5px;
-  min-width: 500px;
-
+  max-width: 500px;
+  /* border: 1px solid red; */
   /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6); */
 }
 
@@ -254,7 +254,7 @@
 
   .grid-carousel .grid-item {
     width: 100%;
-    max-width: 600px;
+    min-width: 400px;
     max-height: 400px;
     margin-bottom: 2em;
     padding: 1em;
@@ -285,13 +285,6 @@
     text-align: center;
   }
 
-
-
-  .description {
-    margin-left: 0;
-    margin-top: 1em;
-  }
-
   .grid-gallery {
     display: none;
   }
@@ -315,6 +308,7 @@
     background-color: #efefef;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+    /* border: 1px solid red; */
   }
 
   .grid-carousel .grid-item img {
@@ -344,9 +338,6 @@
     font-size: 1.2em;
   }
 
-  .description {
-    font-size: 1em;
-  }
 
   .grid-gallery {
     display: none;
@@ -371,7 +362,7 @@
     background-color: #efefef;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .grid-carousel .grid-item img {

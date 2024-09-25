@@ -56,8 +56,8 @@ const blogs = [
         <li><a href="#" >Resources</a></li>
       </ul>
     </nav>
-    <h3 class="section-heading">Featured Article</h3>
     <div class="resources-container">
+    <h3 class="section-heading">Featured Article</h3>
       <div class="featured-article"  >
         <div class="article-card">
           <div class="article-card-image">
@@ -204,7 +204,7 @@ a {
 }
 
 .section-heading {
-  margin-left: 5%;
+  /* margin-left: 5%; */
   margin-top: 1em;
   color: var(--description-text);
 }
@@ -222,7 +222,7 @@ a {
 
 .featured-article {
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   max-width: 100%;
     /* border: 1px solid red; */
 }
@@ -235,7 +235,8 @@ a {
 
 .article-card-image img {
   width: 100%;
-  max-width: 100%;
+  height: 100%;
+  /* max-width: 100%; */
   border-radius: 10px;
   object-fit: cover;
   padding-bottom: 1em;
@@ -323,69 +324,21 @@ a {
 }
 
 /* Responsive Design */
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) {
   .resources-container {
-    margin-inline: 5%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+   min-height: 100vh;
   }
 
-  .article-desc h3 {
-    font-size: 1.5em;
+  .article-card {
+    height: max-content;
+    /* border: 1px solid red; */
   }
 
-  .featured-article {
-    width: 100%;
-    /* height: 100%; */
-    max-width: 100%;
-    border: 1px solid red;
+  .article-card img {
+    min-height: 800px;
   }
 
-  .all-articles-container ul .article-card h3 {
-    font-size: 1.3rem;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .resources-container {
-    margin-inline: 5%;
-  }
-
-  .article-desc h3 {
-    font-size: 1.7em;
-  }
-
-  .all-articles-container ul .article-card h3 {
-    font-size: 1.5rem;
-  }
-}
-
-
-@media (min-width: 1024px) {
-  .resources-container {
-    margin-inline: 10%;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .section-heading {
-    margin-left: 10%;
-  }
-
-  .header nav {
-    margin-left: 5%;
-  }
-
-  .all-articles {
-    margin-top: -5%;
-    padding: 1em;
-  }
-
-  .article-desc h3 {
-    font-size: 2.2em;
-  }
-
-  .all-articles-container ul .article-card h3 {
-    font-size: 2rem;
-  }
-}
 </style>
