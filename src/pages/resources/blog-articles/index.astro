@@ -138,10 +138,11 @@ import "../../../lib/css/main.css";
   .flex {
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid red; */
   }
 
   .featured-post {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
@@ -160,7 +161,7 @@ import "../../../lib/css/main.css";
   .main-post {
     /* border: 1px solid red; */
     max-width: 50%;
-    padding-inline: 4em;
+    /* padding-inline: 4em; */
   }
 
   .main-post h3 {
@@ -252,10 +253,13 @@ import "../../../lib/css/main.css";
   /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
     .featured-post {
-        display: flex;
-        flex-direction: column;
         padding-inline: 2%;
-        border: none;
+    }
+
+    .header-c {
+      /* border: 1px solid red; */
+      margin-top: 6em;
+      margin-left: 2%;
     }
 
 
@@ -263,7 +267,8 @@ import "../../../lib/css/main.css";
 
 @media (max-width: 768px) {
     .header-c {
-        margin-left: 5%;
+        margin-left: 0;
+        border: 1px solid red;
     }
 
     .header-c nav ul li a {
