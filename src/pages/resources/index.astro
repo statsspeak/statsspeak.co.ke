@@ -6,7 +6,9 @@ import TopBar from "../../lib/views/home/top-bar.svelte";
 import ReviewStudies from "../../lib/views/home/reviews-studies.svelte"
 ---
 
-<TopBar client:only="svelte" />
+<div class="topbar" >
+  <TopBar client:only="svelte" />
+</div>
 <div class="page resources-section">
   <section class="header">
     <nav>
@@ -135,6 +137,10 @@ import ReviewStudies from "../../lib/views/home/reviews-studies.svelte"
 
 
 <style>
+
+.topbar {
+  border: 1px solid red;
+}
 
 .header {
   min-width: 100vw;
