@@ -141,22 +141,12 @@ import Footer from "../../../lib/views/home/footer.astro";
     /* border: 1px solid red; */
     margin-block: 6%;
     transition: all 0.3s ease;
-
   }
 
-  .flex {
-    /* border: 1px solid red; */
-    display: flex;
-    min-width: 100%;
-    gap: 2em;
-    justify-content: space-between;
-    margin-top: 8em;
-  }
 
   .header-c {
-    /* border: 1px solid red; */
-    /* max-width: 1600px; */
     margin-left: 10%;
+    margin-top: 8%;
   }
 
   .header-c nav ul {
@@ -205,24 +195,18 @@ import Footer from "../../../lib/views/home/footer.astro";
     cursor: pointer;
   }
 
-  .case-desc {
-    /* border: 1px solid red; */
-    max-width: 900px;
-    line-height: 1.6;
-    margin-top: -4em;
+  .flex, .right-sec {
+    margin-top: 2em;
   }
+
+
 
   .case-desc h3 {
     color: var(--description-text);
     margin-block: 2em;
   }
 
-  .right-sec {
-    /* border: 1px solid red; */
-    margin-inline: 8em;
-    padding-inline: 2em;
-    margin-top: -4em;
-  }
+
 
   .metadata {
     display: flex;
@@ -281,6 +265,36 @@ import Footer from "../../../lib/views/home/footer.astro";
     /* width: 300px; */
     text-decoration: none;
     color: var(--description-text)
+  }
+
+  @media (min-width: 1200px) {
+    .flex {
+    /* border: 1px solid red; */
+    display: flex;
+    min-width: 100%;
+    gap: 2em;
+    justify-content: space-between;
+    margin-top: 8em;
+  }
+
+  .header-c {
+    margin-top: 0%;
+  }
+
+  .case-desc {
+    /* border: 1px solid red; */
+    max-width: 900px;
+    line-height: 1.6;
+    margin-top: -4em;
+  }
+
+  .right-sec {
+    /* border: 1px solid red; */
+    margin-inline: 8em;
+    padding-inline: 2em;
+    margin-top: -4em;
+  }
+
   }
 
 </style>
