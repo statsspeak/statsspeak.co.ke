@@ -88,7 +88,7 @@ import Footer from "../../../lib/views/home/footer.astro";
 <style>
 
 .header-c {
-    margin-top: 6%;
+    margin-top: 8%;
     /* margin-left: 17%; */
   }
 
@@ -125,17 +125,9 @@ import Footer from "../../../lib/views/home/footer.astro";
     text-decoration: none;
   }
 
-  /* .main-section-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2em;
-    margin-top: 2em;
-    border: 1px solid red;
-  } */
-
   .main-section-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2em;
   margin-top: 2em;
 }
@@ -173,6 +165,22 @@ import Footer from "../../../lib/views/home/footer.astro";
 .desc {
   padding-inline: 1em;
   padding-bottom: 2em;
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+  .main-section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.header-c {
+    margin-top: 6%;
+    /* margin-left: 17%; */
+  }
+
 }
 
 </style>
