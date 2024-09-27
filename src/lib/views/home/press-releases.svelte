@@ -131,9 +131,10 @@
   grid-gap: 2em;
   /* border: 1px solid red; */
   margin-left: -2%;
+  min-width: 100%;
 }
 
-.grid-gallery .grid-item {
+ .grid-item {
   position: relative;
   /* background-color: #efefef; */
   overflow: hidden;
@@ -144,26 +145,26 @@
   /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6); */
 }
 
-.grid-gallery .grid-item:hover {
+ .grid-item:hover {
   border: 1px solid var(--gray-500);
 }
 
-.grid-gallery .grid-item img {
+ .grid-item img {
   width: 100%;
   height: 45%;
   object-fit: fill;
   transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.grid-gallery .grid-item:hover img {
+ .grid-item:hover img {
   transform: scale(1.1);
 }
 
-.grid-gallery .grid-item a {
+ .grid-item a {
   cursor: pointer;
 }
 
-.grid-gallery .grid-item .overlay {
+ .grid-item .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -174,11 +175,11 @@
   transition: opacity 0.5s;
 }
 
-.grid-gallery .grid-item:hover .overlay {
+ .grid-item:hover .overlay {
   opacity: 1;
 }
 
-.grid-gallery .grid-item .overlay-text {
+ .grid-item .overlay-text {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -200,17 +201,17 @@
   margin-top: 1em;
 }
 
-.grid-gallery .grid-item:nth-child(1) {
+ .grid-item:nth-child(1) {
   grid-column: 1 / 2;
   grid-row: 1 / span 2;
 }
 
-.grid-gallery .grid-item:nth-child(2) {
+ .grid-item:nth-child(2) {
   grid-column: 2 / 3;
   grid-row: 1 / span 2;
 }
 
-.grid-gallery .grid-item:nth-child(3) {
+ .grid-item:nth-child(3) {
   grid-column: 3 / 4;
   grid-row: 1 / span 2;
 }
@@ -233,12 +234,12 @@
   display: none;
 }
 
-.grid-gallery .grid-item img, .grid-carousel .grid-item img {
+ .grid-item img, .grid-carousel .grid-item img {
   object-fit: cover; /* Change from fill to cover */
   max-height: 250px; /* Example max-height, adjust as needed */
 }
 
-.grid-gallery .grid-item, .grid-carousel .grid-item {
+ .grid-item, .grid-carousel .grid-item {
   min-height: 400px; /* Ensure there's enough space for text, adjust as needed */
 }
 
@@ -254,11 +255,11 @@
 
   .grid-carousel .grid-item {
     width: 100%;
-    min-width: 400px;
+    min-width: 100%;
     max-height: 400px;
     margin-bottom: 2em;
     padding: 1em;
-    background-color: #efefef;
+    /* background-color: #efefef; */
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
   }
@@ -305,7 +306,7 @@
     /* max-width: 600px; */
     margin-bottom: 2em;
     padding: 1em;
-    background-color: #efefef;
+    /* background-color: #efefef; */
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
     /* border: 1px solid red; */
@@ -359,7 +360,7 @@
     /* max-width: 400px; */
     margin-bottom: 2em;
     padding: 1em;
-    background-color: #efefef;
+    /* background-color: #efefef; */
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
     /* border: 1px solid red; */
