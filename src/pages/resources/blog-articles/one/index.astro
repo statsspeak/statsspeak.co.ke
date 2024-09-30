@@ -195,11 +195,7 @@ import UserIcon from "../../../../lib/components/svgs/user-icon.svelte";
     color: var(--description-text);
 }
 
-.blog-desc {
-    margin-block: 2em;
-    max-width: 80%;
-    /* border: 1px solid red; */
-}
+
 
 .blog-desc p {
     font-size: 1.125em;
@@ -303,11 +299,18 @@ import UserIcon from "../../../../lib/components/svgs/user-icon.svelte";
 }
 
 /* Responsive styles */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .header-c {
         margin-top: 6%;
-        margin-left: 9%;
+        margin-left: 14%;
+        /* border: 1px solid red; */
     }
+
+    .blog-desc {
+    margin-block: 2em;
+    max-width: 80%;
+    /* border: 1px solid red; */
+}
 
     .main-blog {
         padding-inline: 2%;
