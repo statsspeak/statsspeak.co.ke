@@ -107,7 +107,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
 
 <style>
     .header-c {
-    margin-top: 6%;
+    margin-top: 10%;
     /* margin-left: 1em; */
   }
 
@@ -127,10 +127,19 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     border-bottom: 1px solid var(--text-color);
   }
 
-  .work-with-us {
+  .flex {
     display: flex;
-    margin-top: 4%;
-    /* border: 1px solid red; */
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin-block: 2em;
+    width: 100%;
+    padding-inline: 2em;
+  }
+
+  .flex p {
+    /* padding-inline: 3em; */
+    /* margin-left: 2em; */
   }
 
   a {
@@ -138,14 +147,15 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     color: var(--constant-white);
   }
 
+
+  .work-with-us {
+    /* border: 1px solid red; */
+    margin-top: 5em;
+  }
+
   .work-with-us .left {
     /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    max-width: 50%;
-    padding-inline-end: 2em;
-    /* justify-content: space-between; */
+    margin-bottom: 2em;
   }
 
   .work-with-us .left h4 {
@@ -176,14 +186,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     max-height: 450px;
   }
 
-  .flex {
-    display: flex;
-    margin-top: 10em;
-    align-items: center;
-    gap: 2em;    /* width: 120%; */
-    margin-bottom: 2em;
-    /* border: 1px solid red; */
-  }
+
 
   .flex h3 {
     color: var(--description-text);
@@ -192,24 +195,15 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     min-width: 50%;
   }
 
-  .flex p {
-    min-width: 60%;
-    color: var(--blog-text);
-    font-size: 1.15em;
-    padding-inline-end: 6em;
-    /* border: 1px solid red; */
-    margin-left: -3em;
-  }
 
-  .mission {
-    padding-left: 3em;
-  }
+
+
 
   .mission img {
-    margin-top: 5em;
-    width: 1280px;
-    max-height: 525px;
+    min-width: 100%;
+    height: 500px;
     object-fit: cover;
+    border-radius: 5px;
   }
 
   .work-culture  {
@@ -224,13 +218,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     margin-bottom: 2em;
   }
 
-  .work-culture-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-    margin-top: 2em;
-    /* border: 1px solid red; */
-  }
+
 
   .grid-card {
     /* border: 1px solid red; */
@@ -240,6 +228,7 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     padding: 2em;
     border: 1px solid hsl(0, 0%, 30%);
     border-radius: 8px;
+    margin-bottom: 2em;
   }
 
   .grid-card h4 {
@@ -292,6 +281,70 @@ import ArrSvg from "../../../lib/components/svgs/arr-svg.svelte";
     margin-block: 1em;
     padding-inline-end: 2em;
     /* border: 1px solid red; */
+  }
+
+  /* Responsive Design */
+  @media (min-width: 1200px) {
+
+    .header-c {
+    margin-top: 6%;
+    /* margin-left: 1em; */
+  }
+
+    .work-with-us {
+    display: flex;
+    margin-top: 4%;
+    }
+
+    .work-with-us .left {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 50%;
+    padding-inline-end: 2em;
+    /* justify-content: space-between; */
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10em;
+    align-items: center;
+    gap: 2em;    /* width: 120%; */
+    margin-bottom: 2em;
+    /* border: 1px solid red; */
+  }
+
+  .flex p {
+    padding-inline: 3em;
+    min-width: 60%;
+    color: var(--blog-text);
+    font-size: 1.15em;
+    padding-inline-end: 6em;
+    /* border: 1px solid red; */
+    margin-left: -3em;
+  }
+
+  .mission {
+    padding-left: 3em;
+  }
+
+  .mission img {
+    margin-top: 5em;
+    width: 1280px;
+    max-height: 525px;
+    object-fit: cover;
+  }
+
+  .work-culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+    /* border: 1px solid red; */
+  }
+
   }
 
 </style>
