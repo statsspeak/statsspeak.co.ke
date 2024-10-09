@@ -317,6 +317,7 @@
 
   .grid-carousel {
     display: flex;
+    /* gap: 2em; */
     flex-direction: column;
     align-items: center;
     margin-top: 2em;
@@ -334,6 +335,8 @@
     background-color: #efefef;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+    border: 1px solid red;
+    margin-inline: .75em;
   }
 
   .grid-carousel .grid-item img {
