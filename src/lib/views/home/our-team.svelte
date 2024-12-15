@@ -27,7 +27,7 @@
       title: "Chief Marketing & Communications Officer",
       img: "/team-photos/anne-ngatia.jpeg",
       linkedin: 'https://www.linkedin.com/in/anne-ngatia-10560134/',
-      desc: "Anne Ngatia is a seasoned financial expert with a passion for driving business growth. As the Chief Financial Officer, she is responsible for overseeing the financial health of the organization and ensuring that our financial strategies align with our long-term goals.",
+      desc: "Anne Ngatia brings a unique blend of marketing, storytelling, and project management skills to the table. As the Chief Marketing & Communications Officer, she leads our marketing strategies to attract and engage businesses, consumers and clients, in turn enhancing our brand's image and overall reputation.",
     },
     {
       name: "Alloys Mila",
