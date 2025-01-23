@@ -1,77 +1,77 @@
 <script lang="ts">
-   import SsLogoSvg from "../../components/svgs/ss-logo-svg.svelte";
-   import { onMount } from "svelte";
-	import SunSvg from "../../components/svgs/sun-svg.svelte";
-	import MoonSvg from "../../components/svgs/moon-svg.svelte";
-	import ChevronDown from "../../components/svgs/chevron-down.svelte";
+import SsLogoSvg from "../../components/svgs/ss-logo-svg.svelte";
+import { onMount } from "svelte";
+import SunSvg from "../../components/svgs/sun-svg.svelte";
+import MoonSvg from "../../components/svgs/moon-svg.svelte";
+import ChevronDown from "../../components/svgs/chevron-down.svelte";
 
-   let isDarkMode = false; // Default is light mode
+let isDarkMode = false; // Default is light mode
 
-   const setTheme = (theme: "light" | "dark") => {
-     const darkModeToggle = document.querySelector(".mode-toggle");
+const setTheme = (theme: "light" | "dark") => {
+	const darkModeToggle = document.querySelector(".mode-toggle");
 
-     if (theme === "dark") {
-       document.documentElement.classList.add("dark-mode");
-       localStorage.setItem("theme", "dark");
-       isDarkMode = true;
-     } else {
-       document.documentElement.classList.remove("dark-mode");
-       localStorage.setItem("theme", "light");
-       isDarkMode = false;
-     }
-   };
+	if (theme === "dark") {
+		document.documentElement.classList.add("dark-mode");
+		localStorage.setItem("theme", "dark");
+		isDarkMode = true;
+	} else {
+		document.documentElement.classList.remove("dark-mode");
+		localStorage.setItem("theme", "light");
+		isDarkMode = false;
+	}
+};
 
-   const toggleTheme = () => {
-     const currentTheme = localStorage.getItem("theme") || "light";
-     const newTheme = currentTheme === "dark" ? "light" : "dark";
-     setTheme(newTheme as "light" | "dark");
-   };
+const toggleTheme = () => {
+	const currentTheme = localStorage.getItem("theme") || "light";
+	const newTheme = currentTheme === "dark" ? "light" : "dark";
+	setTheme(newTheme as "light" | "dark");
+};
 
-   const mapScrollIntoView = (selector: string): void => {
-     const element = document.querySelector(selector);
-     if (element) {
-       element.scrollIntoView({ behavior: "smooth", block: "start" });
-     }
-   };
+const mapScrollIntoView = (selector: string): void => {
+	const element = document.querySelector(selector);
+	if (element) {
+		element.scrollIntoView({ behavior: "smooth", block: "start" });
+	}
+};
 
-   onMount(() => {
-     // Check if user has previously set dark mode preference (localStorage)
-     const savedTheme = localStorage.getItem("theme") || "light";
+onMount(() => {
+	// Check if user has previously set dark mode preference (localStorage)
+	const savedTheme = localStorage.getItem("theme") || "light";
 
-     setTheme(savedTheme as "light" | "dark");
+	setTheme(savedTheme as "light" | "dark");
 
-     // Add event listener for the toggle button
-     const toggleButton = document.querySelector(".mode-toggle");
-     toggleButton?.addEventListener("click", toggleTheme);
-   });
+	// Add event listener for the toggle button
+	const toggleButton = document.querySelector(".mode-toggle");
+	toggleButton?.addEventListener("click", toggleTheme);
+});
 
-   let menuOpen = false;
+let menuOpen = false;
 
-   function toggleMenu() {
-     menuOpen = !menuOpen;
-     const navMenu = document.querySelector(".nav-menu");
-     const overlay = document.querySelector(".overlay");
-     if (navMenu) {
-       navMenu.classList.toggle("show-menu");
-     }
-     if (overlay) {
-       overlay.classList.toggle("show-overlay");
-     }
-   }
+function toggleMenu() {
+	menuOpen = !menuOpen;
+	const navMenu = document.querySelector(".nav-menu");
+	const overlay = document.querySelector(".overlay");
+	if (navMenu) {
+		navMenu.classList.toggle("show-menu");
+	}
+	if (overlay) {
+		overlay.classList.toggle("show-overlay");
+	}
+}
 
-   function handleKeydown(event: KeyboardEvent) {
-     if (event.key === "Escape" && menuOpen) {
-       toggleMenu();
-     }
-   }
+function handleKeydown(event: KeyboardEvent) {
+	if (event.key === "Escape" && menuOpen) {
+		toggleMenu();
+	}
+}
 
-   onMount(() => {
-     document.addEventListener("keydown", handleKeydown);
-     return () => {
-       document.removeEventListener("keydown", handleKeydown);
-     };
-   });
- </script>
+onMount(() => {
+	document.addEventListener("keydown", handleKeydown);
+	return () => {
+		document.removeEventListener("keydown", handleKeydown);
+	};
+});
+</script>
 
  <div id="top-bar" class="shadow">
    <div class="logo">

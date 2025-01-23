@@ -1,30 +1,33 @@
 <script>
-  import Carousel from 'svelte-carousel';
-	import UserIcon from '../../components/svgs/user-icon.svelte';
+import Carousel from "svelte-carousel";
+import UserIcon from "../../components/svgs/user-icon.svelte";
 
-  const blogs = [
-    {
-      image: '/blogs/blog-1.jpg',
-      author: 'Anne',
-      date: 'Jun 14 2023',
-      title: "A Beginner's guide to Data Consulting",
-      description: 'From understanding the significance of quality data to implementing data-driven decision-making, we unravel the complexities of managing and optimizing your data.'
-    },
-    {
-      image: '/blogs/blog-2.png',
-      author: 'Alloys',
-      date: 'Dec 16 2023',
-      title: 'Advanced Techniques in Data Analysis',
-      description: 'Explore advanced techniques and methodologies to extract meaningful insights from complex data sets.'
-    },
-    {
-      image: '/blogs/blog-3.png',
-      author: 'Anne',
-      date: 'Aug 05 2023',
-      title: 'Data Security and Privacy Best Practices',
-      description: 'Learn about the best practices in data security and privacy to protect your business and client information.'
-    },
-  ];
+const blogs = [
+	{
+		image: "/blogs/blog-1.jpg",
+		author: "Anne",
+		date: "Jun 14 2023",
+		title: "A Beginner's guide to Data Consulting",
+		description:
+			"From understanding the significance of quality data to implementing data-driven decision-making, we unravel the complexities of managing and optimizing your data.",
+	},
+	{
+		image: "/blogs/blog-2.png",
+		author: "Alloys",
+		date: "Dec 16 2023",
+		title: "Advanced Techniques in Data Analysis",
+		description:
+			"Explore advanced techniques and methodologies to extract meaningful insights from complex data sets.",
+	},
+	{
+		image: "/blogs/blog-3.png",
+		author: "Anne",
+		date: "Aug 05 2023",
+		title: "Data Security and Privacy Best Practices",
+		description:
+			"Learn about the best practices in data security and privacy to protect your business and client information.",
+	},
+];
 </script>
 
 <div id="blog" class="inline-container">

@@ -1,22 +1,21 @@
 ---
-  import "../lib/css/main.css";
-  import AboutUs from "../lib/views/home/about-us.astro";
-  import TopBar from "../lib/views/home/top-bar.svelte";
-  import HeroSection from "../lib/views/home/hero-section.astro";
-  import TrustedBy from "../lib/views/home/trusted-by.astro";
-  import WhyChooseUs from "../lib/views/home/why-choose-us.astro";
-  import OurServices from "../lib/views/home/our-services.astro";
-  import OurTeam from "../lib/views/home/our-team.svelte";
-  import CaseStudies from "../lib/views/home/case-studies.svelte";
-  import Blog from "../lib/views/home/blog.svelte";
-  import ContactUs from "../lib/views/home/contact-us.astro";
-  import Footer from "../lib/views/home/footer.astro";
+import "../lib/css/main.css";
+import AboutUs from "../lib/views/home/about-us.astro";
+import TopBar from "../lib/views/home/top-bar.svelte";
+import HeroSection from "../lib/views/home/hero-section.svelte";
+import TrustedBy from "../lib/views/home/trusted-by.astro";
+import WhyChooseUs from "../lib/views/home/why-choose-us.astro";
+import OurServices from "../lib/views/home/our-services.astro";
+import OurTeam from "../lib/views/home/our-team.svelte";
+import CaseStudies from "../lib/views/home/case-studies.svelte";
+import Blog from "../lib/views/home/blog.svelte";
+import ContactUs from "../lib/views/home/contact-us.astro";
+import Footer from "../lib/views/home/footer.astro";
 ---
 
-
 <div class="page">
-  <TopBar client:only="svelte"/>
-  <HeroSection />
+  <TopBar client:only="svelte" />
+  <HeroSection client:only="svelte" />
   <TrustedBy />
   <AboutUs />
   <WhyChooseUs />
@@ -26,17 +25,20 @@
   <Blog client:only="svelte" />
   <ContactUs />
   <div class="inline-container footer-highlight footer">
-  <h5><a href="#contact-us">Transform Your Business with Insights</a></h5>
+    <h5><a href="#contact-us">Transform Your Business with Insights</a></h5>
   </div>
   <Footer />
   <div id="cookies-banner">
     <div class="cookie-container">
       <div class="item">
         <!-- <i class="fa-solid fa-cookie-bite"></i> -->
-         <img src="cookie-svg.svg"/>
+        <img src="cookie-svg.svg" />
       </div>
       <div class="item">
-        <p>We use third-party cookies in order to personalize your site experience.</p>
+        <p>
+          We use third-party cookies in order to personalize your site
+          experience.
+        </p>
       </div>
       <div class="item">
         <button id="allow">Allow</button>
@@ -46,25 +48,25 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const cookiesBanner = document.getElementById('cookies-banner');
-      const allowButton = document.getElementById('allow');
-      const declineButton = document.getElementById('decline');
+    document.addEventListener("DOMContentLoaded", function () {
+      const cookiesBanner = document.getElementById("cookies-banner");
+      const allowButton = document.getElementById("allow");
+      const declineButton = document.getElementById("decline");
 
       if (!cookiesBanner || !allowButton || !declineButton) {
-        console.error('One or more required elements not found');
+        console.error("One or more required elements not found");
         return;
       }
 
       // Function to check cookie consent
       function checkCookieConsent() {
-        const consent = getCookie('cookieConsent');
-        const cookiesBanner = document.getElementById('cookies-banner');
+        const consent = getCookie("cookieConsent");
+        const cookiesBanner = document.getElementById("cookies-banner");
         if (cookiesBanner) {
-          if (consent === 'true') {
-            cookiesBanner.style.display = 'none';
+          if (consent === "true") {
+            cookiesBanner.style.display = "none";
           } else {
-            cookiesBanner.style.display = 'flex';
+            cookiesBanner.style.display = "flex";
           }
         } else {
           console.error('Element with id "cookies-banner" not found');
@@ -73,10 +75,10 @@
 
       // Function to get a cookie by name
       function getCookie(name: string): string | null {
-        let cookieArray = document.cookie.split(';');
-        for(let i = 0; i < cookieArray.length; i++) {
-          let cookiePair = cookieArray[i].split('=');
-          if(name === cookiePair[0].trim()) {
+        let cookieArray = document.cookie.split(";");
+        for (let i = 0; i < cookieArray.length; i++) {
+          let cookiePair = cookieArray[i].split("=");
+          if (name === cookiePair[0].trim()) {
             return decodeURIComponent(cookiePair[1]);
           }
         }
@@ -88,137 +90,137 @@
         let expires = "";
         if (days) {
           let date = new Date();
-          date.setTime(date.getTime() + (days*24*60*60*1000));
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
           expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
       }
 
       // Event listener for "Allow" button
-      allowButton.addEventListener('click', function() {
-        setCookie('cookieConsent', 'true', 365);
-        cookiesBanner.style.display = 'none';
+      allowButton.addEventListener("click", function () {
+        setCookie("cookieConsent", "true", 365);
+        cookiesBanner.style.display = "none";
       });
 
       // Event listener for "Decline" button
-      declineButton.addEventListener('click', function() {
+      declineButton.addEventListener("click", function () {
         // Optionally handle decline. Here, just hiding the banner.
-        cookiesBanner.style.display = 'none';
+        cookiesBanner.style.display = "none";
       });
 
       // Check cookie consent on page load
       checkCookieConsent();
     });
-</script>  </script>  </script>
+  </script>
 </div>
+
 <style>
-
-.footer {
-  margin-top: 10em;
-  margin-bottom: 4em;
-}
-
-.footer a {
-  text-decoration: none;
-  color: var(--description-color)
-}
-
-.footer:hover {
-  cursor: pointer;
-}
-
-.footer-highlight {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-left: 12px;
-      background: linear-gradient(89.81deg, #00acc8 0.14%, #003759 98.85%);
-      height: 72px;
-      border-radius: 12px;
-
-      & h5 {
-          color: white;
-      }
+  .footer {
+    margin-top: 10em;
+    margin-bottom: 4em;
   }
 
-  #cookies-banner{
-  font-size: 0.9rem;
-  width: 50%;
-  position: fixed;
-  bottom: 0;
-  color: white;
-  border-radius: 10px;
-  background-color: #333333;
-  z-index: 1;
-  margin-bottom: 16px;
-  margin-left: 24%;
-}
-
-.cookie-container {
-  min-height: 100px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 70px auto 200px;
-  justify-items: center;
-  align-items: center;
-  padding-inline-end: 2em;
-}
-
-.cookie-container img {
-  /* padding: 5px; */
-  /* background-color: #1a1a1a; */
-  /* border-radius: 50%; */
-  /* font-size: 1.5rem; */
-  height: 24px;
-  width: 24px;
-}
-
-.item {
-  display: flex;
-  gap: 1em;
-  /* border: 1px solid red; */
-}
-
-.item p{
-  font-size: 1.4em;
-}
-
-#allow,
-#decline {
-  width: 90px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 10px;
-  font-family: inherit;
-  font-size: 0.8rem;
-  cursor: pointer;
-  border: 1px solid rgba(211, 211, 211, 0.3);
-  background-color: #1a1a1a;
-  color: white;
-}
-
-#decline {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-@media(max-width:800px){
-  #cookies-banner{
-    width: 100%;
-    margin: auto;
-    border-radius: 0;
+  .footer a {
+    text-decoration: none;
+    color: var(--description-color);
   }
 
-  .cookie-container{
+  .footer:hover {
+    cursor: pointer;
+  }
+
+  .footer-highlight {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    background: linear-gradient(89.81deg, #00acc8 0.14%, #003759 98.85%);
+    height: 72px;
+    border-radius: 12px;
+
+    & h5 {
+      color: white;
+    }
   }
-}
+
+  #cookies-banner {
+    font-size: 0.9rem;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    border-radius: 10px;
+    background-color: #333333;
+    z-index: 1;
+    margin-bottom: 16px;
+    margin-left: 24%;
+  }
+
+  .cookie-container {
+    min-height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70px auto 200px;
+    justify-items: center;
+    align-items: center;
+    padding-inline-end: 2em;
+  }
+
+  .cookie-container img {
+    /* padding: 5px; */
+    /* background-color: #1a1a1a; */
+    /* border-radius: 50%; */
+    /* font-size: 1.5rem; */
+    height: 24px;
+    width: 24px;
+  }
+
+  .item {
+    display: flex;
+    gap: 1em;
+    /* border: 1px solid red; */
+  }
+
+  .item p {
+    font-size: 1.4em;
+  }
+
+  #allow,
+  #decline {
+    width: 90px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border: 1px solid rgba(211, 211, 211, 0.3);
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+  #decline {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  @media (max-width: 800px) {
+    #cookies-banner {
+      width: 100%;
+      margin: auto;
+      border-radius: 0;
+    }
+
+    .cookie-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
 </style>

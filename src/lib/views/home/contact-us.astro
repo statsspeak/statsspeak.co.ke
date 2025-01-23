@@ -1,25 +1,25 @@
 ---
 
-let captchaResponse = '';
-  const siteKey = '6ce0f520-f834-4960-b37e-77166ef8f02a';
+let captchaResponse = "";
+const siteKey = "6ce0f520-f834-4960-b37e-77166ef8f02a";
 
-  // Function to handle form submission
-  function onSubmitForm(event: Event) {
-    event.preventDefault(); // Prevent default form submission behavior
+// Function to handle form submission
+function onSubmitForm(event: Event) {
+	event.preventDefault(); // Prevent default form submission behavior
 
-    if (!captchaResponse) {
-      alert('Please complete the hCaptcha verification.');
-      return;
-    }
+	if (!captchaResponse) {
+		alert("Please complete the hCaptcha verification.");
+		return;
+	}
 
-    // Proceed with form submission if captcha is completed
-    (event.target as HTMLFormElement).submit(); // Submit the form to Formspree
-  }
+	// Proceed with form submission if captcha is completed
+	(event.target as HTMLFormElement).submit(); // Submit the form to Formspree
+}
 
-  // Function to capture the hCaptcha token
-  function onCaptchaVerified(token: string): void {
-    captchaResponse = token;
-  }
+// Function to capture the hCaptcha token
+function onCaptchaVerified(token: string): void {
+	captchaResponse = token;
+}
 ---
 
 <div id="contact-us" class="contact-us inline-container">

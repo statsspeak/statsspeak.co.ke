@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
-  import type { Writable } from 'svelte/store';
+import { getContext } from "svelte";
+import type { Writable } from "svelte/store";
 
-  export let value: string;
+export let value: string;
 
-  const activeTab = getContext<Writable<string>>('tabs');
+const activeTab = getContext<Writable<string>>("tabs");
 
-  function handleClick() {
-    if (activeTab) {
-      activeTab.set(value);
-    }
-  }
+function handleClick() {
+	if (activeTab) {
+		activeTab.set(value);
+	}
+}
 </script>
 
 <button

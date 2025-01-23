@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let textColor = "#575756";
-	let color = "#00ACC8"
+export let textColor = "#575756";
+let color = "#00ACC8";
 </script>
 <svg width="111" height="53" viewBox="0 0 111 53" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<mask

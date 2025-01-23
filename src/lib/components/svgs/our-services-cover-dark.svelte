@@ -1,10 +1,10 @@
 <script lang="ts">
-	let className: string;
-	export { className as class };
+let className: string;
+export { className as class };
 
-	// width="1440"
-	// height="618"
-	// viewBox="0 0 1440 618"
+// width="1440"
+// height="618"
+// viewBox="0 0 1440 618"
 </script>
 
 <svg class={className} width="1440" height="557" viewBox="0 0 1440 557" fill="none" xmlns="http://www.w3.org/2000/svg">

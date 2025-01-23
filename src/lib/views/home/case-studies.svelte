@@ -1,14 +1,14 @@
 <script>
-  import Carousel from 'svelte-carousel'
+import Carousel from "svelte-carousel";
 
-  const images = [
-  '/case-studies/case-1.jpg',
-  '/case-studies/MoH.png',
-  '/case-studies/case-3.jpg',
-  '/case-studies/amref.jpg',
-  '/case-studies/case-4.jpg'
-  ];
-  </script>
+const images = [
+	"/case-studies/case-1.jpg",
+	"/case-studies/MoH.png",
+	"/case-studies/case-3.jpg",
+	"/case-studies/amref.jpg",
+	"/case-studies/case-4.jpg",
+];
+</script>
 
 
   <div id="our-team" class="inline-container">

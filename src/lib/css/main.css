@@ -24,7 +24,7 @@
 	--blog-heading: #061c3d;
 	--footer-text: var(--gray-400);
 	--contact-form: #00abc8;
-	--footer-border: 1px solid #1211271;
+	--footer-border: 1px solid #121127;
 	--service-border: none;
 	--team-card-bg: #fcfcfc;
 	--tab-border: 1px solid hsl(0, 0%, 80%);
@@ -38,12 +38,12 @@
 	--team-card-bg: #00abc8;
 	--footer-contact-text: #575756;
 	--constant-white: #ffffff;
-	--date-text: #FAA51A;
-	--constant-blue: #00ABC8;
-	--featured-post-bg: #F0FBFC;
+	--date-text: #faa51a;
+	--constant-blue: #00abc8;
+	--featured-post-bg: #f0fbfc;
 	--blog-text: #222225;
-	--dropdown-bg: linear-gradient(89.81deg, #003759 0.14%, #00ABC8 98.85%);
-	--job-card-bg:  #FFFFFF;
+	--dropdown-bg: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%);
+	--job-card-bg: #ffffff;
 }
 
 .dark-mode {
@@ -74,22 +74,19 @@
 	--contact-form-border-rd: none;
 	--team-card-bg: linear-gradient(89.81deg, #006f94 0.14%, #00abc8 98.85%);
 	--footer-contact-text: #bec2d3;
-	--date-text: #FAA51A;
-	--constant-blue: #00ABC8;
-	--featured-post-bg: linear-gradient(89.81deg, #003759 0.14%, #00ABC8 98.85%);
-	--blog-text: #BEC2D3;
-	--dropdown-bg: #171C2F;
-	--job-card-bg: #001A33;
-
+	--date-text: #faa51a;
+	--constant-blue: #00abc8;
+	--featured-post-bg: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%);
+	--blog-text: #bec2d3;
+	--dropdown-bg: #171c2f;
+	--job-card-bg: #001a33;
 }
 
 body {
 	font-family: var(--font-family-primary);
 	background-color: var(--background-color);
 	color: var(--text-color);
-	transition:
-		background-color 0.3s,
-		color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
 }
 
 /* Other styles */

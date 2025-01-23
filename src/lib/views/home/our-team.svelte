@@ -1,75 +1,75 @@
 <script lang="ts">
-  let currentIndex = 0;
-  const teamMembers = [
-    {
-      name: "Washington Ogol",
-      title: "Chief Executive Officer",
-      img: "/team-photos/washington-ogol.jpeg",
-      linkedin: 'https://www.linkedin.com/in/washington-ogol/',
-      desc: "In the realm of leadership, Washington Ogol stands out as a beacon of team collaboration. As the Chief Executive Officer, he embodies a profound affinity for team membership, exemplifying a people-focused approach that permeates our organizational culture.",
-    },
-    {
-      name: "Anthony Ngatia",
-      title: "Chief Health Officer",
-      img: "/team-photos/Antony.jpeg",
-      linkedin: 'https://www.linkedin.com/in/antony-ngatia-public-health/',
-      desc: "Anthony Ngatia is a dedicated health professional with over 15 years of experience in public health and wellness. As the Chief Health Officer, he leads our health initiatives, ensuring the well-being of our community through innovative programs and strategic health policies. Anthony's expertise in preventive healthcare and his passion for improving health outcomes make him an invaluable asset to our team.",
-    },
-    {
-      name: "Joram Kabach",
-      title: "Chief Strategy Officer",
-      img: "/team-photos/joram-kabach.jpeg",
-      linkedin: 'https://www.linkedin.com/in/kabach-joram/',
-      desc: "Joram Kabach is a seasoned operations expert with a passion for driving efficiency and excellence. As the Chief Strategy Officer, he oversees our day-to-day operations and ensures that our processes are optimized for success.",
-    },
-    {
-      name: "Anne Ngatia",
-      title: "Chief Marketing & Communications Officer",
-      img: "/team-photos/anne-ngatia.jpeg",
-      linkedin: 'https://www.linkedin.com/in/anne-ngatia-10560134/',
-      desc: "Anne Ngatia brings a unique blend of marketing, storytelling, and project management skills to the table. As the Chief Marketing & Communications Officer, she leads our marketing strategies to attract and engage businesses, consumers and clients, in turn enhancing our brand's image and overall reputation.",
-    },
-    {
-      name: "Alloys Mila",
-      title: "Chief Technology Officer",
-      img: "/team-photos/alloys-mila.jpeg",
-      linkedin: 'https://www.linkedin.com/in/alloysmila/',
-      desc: "Alloys Mila is a visionary technologist with a knack for turning ideas into reality. As the Chief Technology Officer, he leads our technology team in developing innovative solutions that drive business growth and enhance customer experiences.",
-    },
-    {
-      name: "Kelvin Adungosi",
-      title: "Chief Data Engineer",
-      img: "/team-photos/kelvin-adungosi.jpeg",
-      linkedin: 'https://www.linkedin.com/in/kelvin-adungosi/',
-      desc: "Kelvin Adungosi is a data wizard with a passion for turning data into actionable insights. As the Chief Data Engineer, he leads our data team in developing cutting-edge data solutions that drive business growth and enhance customer experiences.",
-    },
-    {
-      name: "Nancy Kinyua",
-      title: "Head Geospatial Engineer",
-      img: "/team-photos/Nancy.png",
-      linkedin: 'https://www.linkedin.com/in/nancy-kinyua/',
-      desc: "Nancy Kinyua is a seasoned geospatial expert with a passion for driving business growth. As the Head Geospatial Engineer, she is responsible for overseeing the geospatial health of the organization and ensuring that our geospatial strategies align with our long-term goals.",
-    },
-    {
-      name: "Joanita Kisembo",
-      title: "Head Project Manager",
-      img: "/team-photos/Joan.jpg",
-      linkedin: 'https://www.linkedin.com/in/joanita-kisembo-56a692263/',
-      desc: "Joanita Kisembo is a seasoned project manager with a passion for driving business growth. As the Head Project Manager, she is responsible for overseeing the project health of the organization and ensuring that our project strategies align with our long-term goals.",
-    },
-  ];
+let currentIndex = 0;
+const teamMembers = [
+	{
+		name: "Washington Ogol",
+		title: "Chief Executive Officer",
+		img: "/team-photos/washington-ogol.jpeg",
+		linkedin: "https://www.linkedin.com/in/washington-ogol/",
+		desc: "In the realm of leadership, Washington Ogol stands out as a beacon of team collaboration. As the Chief Executive Officer, he embodies a profound affinity for team membership, exemplifying a people-focused approach that permeates our organizational culture.",
+	},
+	{
+		name: "Anthony Ngatia",
+		title: "Chief Health Officer",
+		img: "/team-photos/Antony.jpeg",
+		linkedin: "https://www.linkedin.com/in/antony-ngatia-public-health/",
+		desc: "Anthony Ngatia is a dedicated health professional with over 15 years of experience in public health and wellness. As the Chief Health Officer, he leads our health initiatives, ensuring the well-being of our community through innovative programs and strategic health policies. Anthony's expertise in preventive healthcare and his passion for improving health outcomes make him an invaluable asset to our team.",
+	},
+	{
+		name: "Joram Kabach",
+		title: "Chief Strategy Officer",
+		img: "/team-photos/joram-kabach.jpeg",
+		linkedin: "https://www.linkedin.com/in/kabach-joram/",
+		desc: "Joram Kabach is a seasoned operations expert with a passion for driving efficiency and excellence. As the Chief Strategy Officer, he oversees our day-to-day operations and ensures that our processes are optimized for success.",
+	},
+	{
+		name: "Anne Ngatia",
+		title: "Chief Marketing & Communications Officer",
+		img: "/team-photos/anne-ngatia.jpeg",
+		linkedin: "https://www.linkedin.com/in/anne-ngatia-10560134/",
+		desc: "Anne Ngatia brings a unique blend of marketing, storytelling, and project management skills to the table. As the Chief Marketing & Communications Officer, she leads our marketing strategies to attract and engage businesses, consumers and clients, in turn enhancing our brand's image and overall reputation.",
+	},
+	{
+		name: "Alloys Mila",
+		title: "Chief Technology Officer",
+		img: "/team-photos/alloys-mila.jpeg",
+		linkedin: "https://www.linkedin.com/in/alloysmila/",
+		desc: "Alloys Mila is a visionary technologist with a knack for turning ideas into reality. As the Chief Technology Officer, he leads our technology team in developing innovative solutions that drive business growth and enhance customer experiences.",
+	},
+	{
+		name: "Kelvin Adungosi",
+		title: "Chief Data Engineer",
+		img: "/team-photos/kelvin-adungosi.jpeg",
+		linkedin: "https://www.linkedin.com/in/kelvin-adungosi/",
+		desc: "Kelvin Adungosi is a data wizard with a passion for turning data into actionable insights. As the Chief Data Engineer, he leads our data team in developing cutting-edge data solutions that drive business growth and enhance customer experiences.",
+	},
+	{
+		name: "Nancy Kinyua",
+		title: "Head Geospatial Engineer",
+		img: "/team-photos/Nancy.png",
+		linkedin: "https://www.linkedin.com/in/nancy-kinyua/",
+		desc: "Nancy Kinyua is a seasoned geospatial expert with a passion for driving business growth. As the Head Geospatial Engineer, she is responsible for overseeing the geospatial health of the organization and ensuring that our geospatial strategies align with our long-term goals.",
+	},
+	{
+		name: "Joanita Kisembo",
+		title: "Head Project Manager",
+		img: "/team-photos/Joan.jpg",
+		linkedin: "https://www.linkedin.com/in/joanita-kisembo-56a692263/",
+		desc: "Joanita Kisembo is a seasoned project manager with a passion for driving business growth. As the Head Project Manager, she is responsible for overseeing the project health of the organization and ensuring that our project strategies align with our long-term goals.",
+	},
+];
 
-  function nextMember() {
-    currentIndex = (currentIndex + 1) % teamMembers.length;
-  }
+function nextMember() {
+	currentIndex = (currentIndex + 1) % teamMembers.length;
+}
 
-  function prevMember() {
-    currentIndex = (currentIndex - 1 + teamMembers.length) % teamMembers.length;
-  }
+function prevMember() {
+	currentIndex = (currentIndex - 1 + teamMembers.length) % teamMembers.length;
+}
 
-  function selectMember(index: number) {
-    currentIndex = index;
-  }
+function selectMember(index: number) {
+	currentIndex = index;
+}
 </script>
 
 <div id="our-team" class="inline-container">

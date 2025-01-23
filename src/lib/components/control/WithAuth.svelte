@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
+import { goto } from "$app/navigation";
+import { onMount } from "svelte";
 
-	export let user: null | UserSession;
+export let user: null | UserSession;
 
-	function goToLogin() {
-		const pathname = document?.location.pathname;
+function goToLogin() {
+	const pathname = document?.location.pathname;
 
-		if (pathname !== '/login') {
-			goto('login');
-		}
+	if (pathname !== "/login") {
+		goto("login");
 	}
+}
 
-	onMount(() => {
-		if (user === null) goToLogin();
-	});
+onMount(() => {
+	if (user === null) goToLogin();
+});
 </script>
 
 {#if user !== null}

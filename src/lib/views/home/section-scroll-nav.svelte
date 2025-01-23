@@ -1,13 +1,13 @@
 <script lang="ts">
-	let classname: string;
-	export { classname as class };
+let classname: string;
+export { classname as class };
 
-	function mapScrollIntoView(tagName: string) {
-		return function (evt: Event) {
-			evt.preventDefault();
-			document?.querySelector(tagName)?.scrollIntoView({ behavior: 'smooth' });
-		};
-	}
+function mapScrollIntoView(tagName: string) {
+	return function (evt: Event) {
+		evt.preventDefault();
+		document?.querySelector(tagName)?.scrollIntoView({ behavior: "smooth" });
+	};
+}
 </script>
 
 <ul class={classname}>

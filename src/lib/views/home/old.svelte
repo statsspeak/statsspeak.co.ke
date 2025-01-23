@@ -1,27 +1,41 @@
 <script lang="ts">
-import { onMount } from "svelte";
-import HeroDash from "../../components/svgs/hero-big-svg.svelte";
-import Typewriter from "../../components/ui/typewriter.svelte";
+import HeroDash from "$lib/components/svgs/hero-big-svg.svelte";
 
-const texts = [
-	"Software Engineering",
-	"Data Science",
-	"Data Engineering",
-	"Analytics",
-].map((str) => `Your own ${str.toLowerCase()} team`);
+function mapScrollIntoView(tagName: string) {
+	return function (evt: Event) {
+		evt.preventDefault();
+		document
+			?.querySelector(tagName)
+			?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+	};
+}
+
+let count = 0;
+
+function handleClick(event: MouseEvent) {
+	count += 1;
+	console.log("Button clicked, count:", count);
+}
 </script>
 
 <div id="top" class="container">
 	<div class="main-hero shadow">
 		<div class="info">
 			<div class="info-text">
-				  <Typewriter texts={texts} />
+				<h1 style="color: white;">Your Own Data Science Team</h1>
+
 				<br /><br />
-				<p style="color: white;">At a Fraction of the Cost</p>
+				<p style="color: white;">
+					At a Fraction of the Cost
+				</p>
 			</div>
-			<button class="hero-button" style="height: 56px; z-index:1">
-				<a href="#contact-us" data-scroll> Contact our Solutions Team </a>
-			</button>
+			<button
+				class="hero-button"
+				style="height: 56px; z-index:1"
+				on:click={mapScrollIntoView('#contact-us')}>
+				Contact our Solutions Team
+				</button
+			>
 		</div>
 		<div>
 			<HeroDash />
@@ -42,23 +56,20 @@ const texts = [
 			opacity="0.1"
 			d="M1.5 -50.5C276.5 99 20 416.5 770.5 235C1174 137.418 1296.5 772 1564 438"
 			stroke="white"
-			stroke-width="5"></path>
+			stroke-width="5"
+		/>
 	</svg>
 </div>
 
 <style>
-
 	.shadow {
-		/* background: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%); */
-		background: var(--linear-gradient);
+		background: linear-gradient(89.81deg, #003759 0.14%, #00abc8 98.85%);
 		box-shadow:
 			0px 1px 3px rgb(0 0 0 / 0.5),
 			0px 1px 2px rgb(0 0 0 / 0.1);
 	}
 	.container {
 		position: relative;
-		background-color: white;
-		/* border: 1px solid red; */
 	}
 
 	.square-highlight {
@@ -94,17 +105,10 @@ const texts = [
 	}
 
 	.hero-button {
-		/* background-color: white; */
-		background-color: var(--hero-button-bg);
-		/* color: var(--primary-500); */
+		background-color: white;
+		color: var(--primary-500);
 		height: 32px;
 		border-radius: 4px;
-	}
-
-	.hero-button a {
-		color: var(--hero-button-text);
-		text-decoration: none;
-		/* color: #00abc8; */
 	}
 
 	.main-hero {
@@ -117,7 +121,7 @@ const texts = [
 		padding-top: 120px;
 		justify-content: center;
 		align-items: center;
-		/* border: 1px solid red; */
+
 		& .info {
 			display: flex;
 			flex-direction: column;
@@ -134,68 +138,66 @@ const texts = [
 
 	/* Media Queries */
 	@media (min-width: 320px) and (max-width: 480px) {
-		.main-hero {
-			padding-top: 80px;
-			padding-inline: 0.5em;
-			height: 100vh;
-		}
+			.main-hero {
+					padding-top: 80px;
+					padding-inline: .5em;
+					height: 100vh;
+			}
 
-		.main-hero .info {
-			padding-top: 32px;
-		}
+			.main-hero .info {
+					padding-top: 32px;
+			}
 
-		.main-hero .info .info-text {
-			margin-top: 6%;
-			padding-inline: 1.5em;
-		}
+			.main-hero .info .info-text {
+					margin-top: 6%;
+					padding-inline: 1.5em;
+			}
 
-		.main-hero .info .info-text h1 {
-			font-size: 2.5em;
-			line-height: normal;
-		}
+			.main-hero .info .info-text h1 {
+					font-size: 2.5em;
+					line-height: normal;
+			}
 	}
 
 	@media (min-width: 481px) and (max-width: 768px) {
-		.main-hero {
-			padding-top: 80px;
-			padding-inline: 1em;
-			height: 100vh;
-		}
+			.main-hero {
+					padding-top: 80px;
+					padding-inline: 1em;
+					height: 100vh;
+			}
 
-		.main-hero .info {
-			padding-top: 32px;
-		}
+			.main-hero .info {
+					padding-top: 32px;
+			}
 
-		.main-hero .info .info-paragraph {
-			font-size: 1.5rem;
-		}
+			.main-hero .info .info-paragraph {
+					font-size: 1.5rem;
+			}
 
-		.main-hero .info .info-heading {
-			font-size: 3.5em;
-		}
+			.main-hero .info .info-heading {
+					font-size: 3.5em;
+			}
 	}
 
 	@media (min-width: 769px) and (max-width: 1024px) {
-		.main-hero {
-			padding-top: 80px;
-			padding-inline: 1em;
-			height: 100vh;
-		}
+			.main-hero {
+					padding-top: 80px;
+					padding-inline: 1em;
+					height: 100vh;
+			}
 
-		.main-hero .info {
-			padding-top: 32px;
-		}
+			.main-hero .info {
+					padding-top: 32px;
+			}
 
-		.main-hero .info .info-paragraph {
-			font-size: 1.5rem;
-		}
+			.main-hero .info .info-paragraph {
+					font-size: 1.5rem;
+			}
 
-		.main-hero .info .info-heading {
-			font-size: 3.5em;
-		}
+			.main-hero .info .info-heading {
+					font-size: 3.5em;
+			}
 	}
-</style>
 
-<!-- <script type="module" is:inline>
-	setupScroll();
-</script> -->
+
+</style>
