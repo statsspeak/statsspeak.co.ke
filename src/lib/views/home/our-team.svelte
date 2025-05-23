@@ -48,7 +48,7 @@ const teamMembers = [
 		title: "Consultant",
 		img: "/team-photos/Nancy.png",
 		linkedin: "https://www.linkedin.com/in/nancy-kinyua/",
-		desc: "Nancy Kinyua is a seasoned geospatial expert with a passion for driving business growth. As the Head Geospatial Engineer, she is responsible for overseeing the geospatial health of the organization and ensuring that our geospatial strategies align with our long-term goals.",
+		desc: "Nancy Kinyua is a seasoned geospatial expert with a passion for driving business growth. As the Lead Geospatial Consultant, she is responsible for overseeing the geospatial health of the organization and ensuring that our geospatial strategies align with our long-term goals.",
 	},
 	{
 		name: "Joanita Kisembo",
