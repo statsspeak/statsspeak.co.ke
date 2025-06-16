@@ -37,13 +37,6 @@ const teamMembers = [
 		desc: "Alloys Mila is a visionary technologist with a knack for turning ideas into reality. As the Chief Technology Officer, he leads our technology team in developing innovative solutions that drive business growth and enhance customer experiences.",
 	},
 	{
-		name: "Kelvin Adungosi",
-		title: "Chief Data Engineer",
-		img: "/team-photos/kelvin-adungosi.jpeg",
-		linkedin: "https://www.linkedin.com/in/kelvin-adungosi/",
-		desc: "Kelvin Adungosi is a data wizard with a passion for turning data into actionable insights. As the Chief Data Engineer, he leads our data team in developing cutting-edge data solutions that drive business growth and enhance customer experiences.",
-	},
-	{
 		name: "Nancy Kinyua",
 		title: "Consultant",
 		img: "/team-photos/Nancy.png",
